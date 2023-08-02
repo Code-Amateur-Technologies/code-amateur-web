@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=DM Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+/* common components */
+.blue-gradient {
+  @apply bg-gradient-to-r from-celestialblue to-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+.glassmorphism {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset-10px--50px-94px-0-rgb(199,199,199,0.2)] backdrop-blur p-5;
+}
+.dark-button {
+  @apply w-fit mt-5 py-4 sm:py-6 px-8 sm:px-10 rounded-full border bg-gunmetal flex self-center text-lg sm:text-xl text-center text-white transition-all hover:bg-white hover:text-gunmetal hover:border-gunmetal;
+}
+.light-button {
+  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full border border-white bg-white text-lg sm:text-xl text-center tracking-tight text-celestialblue hover:border-celestialblue;
+}
+
+/* common flex component */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+.flex-start {
+  @apply flex justify-start items-start;
+}
+.flex-end {
+  @apply flex justify-end items-center;
+}
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+/* Header Component */
+.header {
+  @apply w-full my-4 sm:my-5 px-4 sm:px-20 flex-between bg-white
+}
+.headerlogo-text {
+  @apply max-sm:hidden font-semibold text-lg tracking-wide;
+}
+.header-link {
+  @apply py-2 px-5 font-medium text-xl hover:text-celestialblue;
+}
+.header-dropdown {
+  @apply pt-[3%] pb-[5%] px-[4%] hidden group-hover:flex flex-col lg:flex-row fixed right-0 bg-white
+}
+.dropdown-link {
+  @apply w-[46%] m-2 p-8 rounded-3xl bg-white text-4xl font-medium text-start text-gunmetal hover:bg-gray-200 hover:scale-105 duration-75;
+}
+
+/* Home Component */
+.home-firstsection {
+  @apply py-8 px-4 sm:p-20 flex flex-col lg:flex-row sm:justify-between
+}
+.home-firstheading {
+  @apply text-4xl sm:text-8xl font-medium tracking-tighter text-center lg:text-left
+}
+.home-secondsection {
+  @apply lg:h-[500px] py-8 px-4 sm:p-20 flex flex-col items-center lg:flex-row lg:justify-between
+}
+.home-secondheading {
+  @apply text-2xl sm:text-7xl font-medium tracking-tighter text-gunmetal text-center md:text-left
+}
+.home-operationslides {
+  @apply w-full sm:w-2/3 md:w-full lg:w-1/3 h-full mt-10 lg:mt-0 p-8 sm:py-16 border-8 rounded-3xl border-celestialblue
+}
+.home-offering {
+  @apply lg:w-1/4 p-8 rounded-3xl bg-gray-100 items-start sm:justify-between flex-col text-gunmetal
+}
+.home-description {
+  @apply py-2 px-5 text-center text-xl;
+}
+
+/* Offer Component */
+.offer-dot {
+  @apply cursor-pointer h-5 w-5 mx-2 bg-white rounded-full inline-block transition duration-500 ease-in-out hover:bg-celestialblue;
+}
+.offer-thirdsection {
+  @apply py-8 px-4 sm:p-20 flex flex-between flex-col-reverse lg:flex-row bg-celestialblue text-white
+}
+.offer-button {
+  @apply w-fit p-6 rounded-full bg-white flex self-center;
+}
+
+/* About Component */
+.about-firstheading {
+  @apply lg:w-3/5 text-4xl sm:text-7xl font-medium tracking-tight
+}
+.about-slogan {
+  @apply text-6xl sm:text-8xl text-center font-medium blue-gradient
+}
+.about-secondsection {
+  @apply py-8 px-4 sm:p-20 border-y-2 flex flex-col-reverse lg:flex-row
+}
+.about-gridcontainer {
+  @apply grid md:grid-cols-3 gap-4 text-xl
+}
+.about-box {
+  @apply p-5 sm:p-10 border-8 rounded-3xl border-white bg-transparent
+}
+.about-pill {
+  @apply w-fit mb-5 py-2 px-5 rounded-full border bg-gunmetal text-center text-3xl lg:text-5xl text-white;
+}
+
+/* Clients Component */
+.client-navigation {
+  @apply px-3 py-6 border-y-4 rounded-3xl border-gray-400
+}
+
+/* Customer Opinion Component */
+.customeropinion-heading {
+  @apply lg:w-1/2 text-3xl sm:text-7xl tracking-tighter text-white text-center sm:text-left
+}
+.customeropinion-gridcontainer {
+  @apply my-10 grid sm:grid-flow-col sm:gap-4 text-2xl font-medium text-white
+}
+.customeropinion-button {
+  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full bg-spacecadet flex self-center;
+}
+
+/* Contact Component */
+.contact-page {
+  @apply w-full lg:w-2/3 p-8 sm:p-12 rounded-3xl bg-celestialblue flex flex-col;
+}
+.form-heading {
+  @apply text-3xl sm:text-8xl text-white leading-tight font-medium;
+}
+.form-input {
+  @apply mt-7 py-2 px-4 border-b-2 border-white bg-transparent outline-0 text-base text-white placeholder:text-gray-200 placeholder:font-semibold;
+}
+.form-error {
+  @apply pt-2 px-4 text-base text-red-600;
+}
+.form-button {
+  @apply w-fit mt-7 mx-3 py-5 px-9 rounded-full bg-gunmetal text-center text-lg sm:text-xl text-white transition-all hover:border-gray-200 enabled:hover:bg-white enabled:hover:text-celestialblue disabled:opacity-75;
+}
+
+/* Footer Component */
+.footer-heading {
+  @apply text-4xl md:text-8xl font-medium text-celestialblue;
+}
+.footer-button {
+  @apply w-fit my-2 sm:mx-3 py-3 lg:py-8 px-6 lg:px-16 rounded-full border border-gunmetal text-base lg:text-4xl transition-all hover:text-celestialblue;
+}
+.footer-linkheading {
+  @apply text-4xl md:text-8xl font-medium tracking-tighter text-gunmetal
+}
+.footer-link {
+  @apply my-3 mx-5 py-2 px-4 rounded-full bg-gray-200 text-sm md:text-xl text-gunmetal underline-offset-2 hover:text-celestialblue hover:underline;
+}
+.footer-divider {
+  @apply h-px my-10 bg-gray-200 border-0
+}
+.footer-description {
+  @apply text-center text-sm md:text-xl;
+}
