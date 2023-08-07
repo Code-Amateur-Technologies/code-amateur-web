@@ -1,31 +1,11 @@
 import Image from "next/image";
 import Clients from "@/components/Clients";
 import CustomerOpinion from "@/components/CustomerOpinions";
-
-interface AboutBox {
-  id: number;
-  value: string;
-  text: string;
-}
+import { AboutBox, aboutBox } from "@/data/data";
 
 export default function About(): JSX.Element {
-  const aboutBox: AboutBox[] = [
-    {
-      id: 1,
-      value: "51200",
-      text: "Viverra in pellentesque massa justo commodo. Dignissim id egestastridad es lare",
-    },
-    {
-      id: 2,
-      value: "99%",
-      text: "Morbi mollis scelerisque dictumst enim odio rhoncus pellentesque esterum viverra.",
-    },
-    {
-      id: 3,
-      value: "96",
-      text: "Congue porttitor et convallis leo lectus lobortis lorem habitantultrices loboritor.",
-    },
-  ];
+  const data: AboutBox[] = aboutBox;
+  
   return (
     <div className="text-gunmetal">
       <section className="py-8 px-4 sm:p-20">
@@ -86,7 +66,7 @@ export default function About(): JSX.Element {
           </div>
         </div>
         <div className="about-gridcontainer">
-          {aboutBox.map((items) => (
+          {data.map((items) => (
             <div key={items.id} className="about-box">
               <div className="about-pill">{items.value}</div>
               <p className="text-sm lg:text-2xl">{items.text}</p>

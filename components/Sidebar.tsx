@@ -1,13 +1,27 @@
-"use client";
+import Link from "next/link";
+import { useState, useEffect, MouseEventHandler } from "react";
 
-function Sidebar() {
-  
+function Sidebar(props: { showSidebar: MouseEventHandler<HTMLAnchorElement> | undefined; }) {
+
   return (
     <div>
-      <li className="text-xl text-celestialblue">Home</li>
-      <li className="text-xl text-celestialblue">Offer</li>
-      <li className="text-xl text-celestialblue">about</li>
-      <li className="text-xl text-celestialblue">contact</li>
+        <div className="h-screen w-[90%] px-4 flex-col flex-center fixed right-0 bg-white text-3xl">
+          <Link onClick={props.showSidebar} className="text-gunmetal" href={"/"}>
+            <p>Home</p>
+          </Link>
+          <Link onClick={props.showSidebar} className="text-gunmetal" href={"/services"}>
+            <p>Our Services</p>
+          </Link>
+          <Link onClick={props.showSidebar} className="text-gunmetal" href={"/blog"}>
+            <p>Blog</p>
+          </Link>
+          <Link onClick={props.showSidebar} className="text-gunmetal" href={"/about"}>
+            <p>about</p>
+          </Link>
+          <Link onClick={props.showSidebar} className="text-gunmetal" href={"/contact"}>
+            <p>contact</p>
+          </Link>
+        </div>
     </div>
   );
 }

@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { RightArrow } from "@/components/Icons";
 import Clients from "@/components/Clients";
-import HomeOfferings from "@/components/HomeOfferings";
 import CustomerOpinion from "@/components/CustomerOpinions";
 import OperationsSlides from "@/components/OperationsSlides";
+import HomeServicesSlider from "@/components/HomeServicesSlider";
 
 export default function Home() {
   return (
@@ -17,13 +18,7 @@ export default function Home() {
         </div>
         <Link className="dark-button lg:self-end" href={""}>
           <p className="mx-2">what we do</p>
-          <Image
-            className="fill-white"
-            src={"/assets/icons/arrow-right.svg"}
-            alt={""}
-            width={30}
-            height={30}
-          />
+          <RightArrow />
         </Link>
       </section>
       {/* <video autoPlay className="rounded-2xl border">
@@ -35,15 +30,9 @@ export default function Home() {
           <h1 className="home-secondheading">
             Our main goal is to set your business on the hills
           </h1>
-          <Link href={"/offer"} className="dark-button md:self-start">
-            <p className="mx-2">see offer</p>
-            <Image
-              className="fill-white"
-              src={"/assets/icons/arrow-right.svg"}
-              alt={""}
-              width={30}
-              height={30}
-            />
+          <Link href={"/services"} className="dark-button md:self-start">
+            <p className="mx-2">see Our Services</p>
+            <RightArrow />
           </Link>
         </div>
         <OperationsSlides />
@@ -52,7 +41,7 @@ export default function Home() {
         <h1 className="lg:w-1/2 home-secondheading">
           We believe the right design will bring your business to life
         </h1>
-        <HomeOfferings />
+        <HomeServicesSlider />
       </section>
       <CustomerOpinion />
     </div>
