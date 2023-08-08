@@ -3,24 +3,24 @@
     "id": 1,
     "service": "Product & Buisness Strategy",
     "description": "Fermentum natoque semper suscipit vulputate phasellus nibh augue.",
-    "serviceIcon": "/assets/icons/dropdown_product.svg"
+    "serviceIcon": "/assets/icons/service_product.svg"
   },
   {
     "id": 2,
     "service": "UX and UI Design Process",
     "description": "Fermentum natoque semper suscipit vulputate phasellus nibh augue.",
-    "serviceIcon": "/assets/icons/dropdown_UX.svg"
+    "serviceIcon": "/assets/icons/service_UX.svg"
   },
   {
     "id": 3,
     "service": "Front-end Development",
     "description": "Fermentum natoque semper suscipit vulputate phasellus nibh augue.",
-    "serviceIcon": "/assets/icons/dropdown_frontend.svg"
+    "serviceIcon": "/assets/icons/service_frontend.svg"
   },
   {
     "id": 4,
     "service": "Back-end Development",
     "description": "Fermentum natoque semper suscipit vulputate phasellus nibh augue.",
-    "serviceIcon": "/assets/icons/dropdown_backend.svg"
+    "serviceIcon": "/assets/icons/service_backend.svg"
   }
 ]

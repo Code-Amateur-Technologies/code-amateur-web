@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Key } from "react";
-import { RightArrow } from "./Icons";
+import { RightArrow } from "../utils/Icons";
 
 const HomeServicesCard = (props: {
   service: string;

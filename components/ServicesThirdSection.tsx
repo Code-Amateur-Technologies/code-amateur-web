@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { RightArrow, LeftArrow } from "./Icons";
+import { RightArrow, LeftArrow } from "../utils/Icons";
 
 export default function ServicesThirdSection() {
   return (

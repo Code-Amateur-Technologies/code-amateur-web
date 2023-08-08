@@ -2,29 +2,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { RightArrow } from "./Icons";
+import { Service, services } from "@/data/data";
+import { RightArrow } from "../utils/Icons";
 
 export default function ServicesSlides() {
   const [index, setIndex] = useState<number>(0);
-  const services = [
-    { id: 1, text: "Product Strategy", img: "/assets/slideshow/img1.png" },
-    { id: 2, text: "UX and UI", img: "/assets/slideshow/img2.png" },
-    { id: 3, text: "Front-End", img: "/assets/slideshow/img3.png" },
-    { id: 4, text: "Back-End", img: "/assets/slideshow/img4.png" },
-  ];
+  const data: Service[] = services;
 
   return (
     <div className="py-8 px-4 sm:p-20 bg-gray-200">
       <div className="flex flex-col lg:flex-row">
         <Image
-          src={services[index].img}
+          src={data[index].img}
           alt={""}
           width={1200}
           height={900}
           className="lg:w-1/2 mb-10 mr-10 rounded-3xl"
         />
         <div className="text-3xl sm:text-7xl font-medium tracking-tighter text-gunmetal">
-          <p>{services[index].text}</p>
+          <p>{services[index].service}</p>
           <Link href={""} className="light-button mt-5">
             <p className="mx-2">Ask for a quote</p>
             <RightArrow />
@@ -32,7 +28,7 @@ export default function ServicesSlides() {
         </div>
       </div>
       <div className="pt-5 text-center">
-        {services.map((items) => (
+        {data.map((items) => (
           <span
             className={
               index === items.id - 1

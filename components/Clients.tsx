@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Client, clientList } from "@/data/data";
-import { ClientNextArrow, ClientPrevArrow } from "./Icons";
+import { ClientNextArrow, ClientPrevArrow } from "../utils/Icons";
 
 export default function Clients() {
   const [value, setValue] = useState(0);

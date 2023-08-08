@@ -107,6 +107,17 @@
 .services-button {
   @apply w-fit p-6 rounded-full bg-white flex self-center text-gunmetal;
 }
+.services-check {
+  @apply h-fit mr-4 p-2 bg-gray-200 rounded-xl text-celestialblue
+}
+
+/* Blog Component */
+.blog-list {
+  @apply flex flex-col md:flex-row md:justify-between lg:justify-start flex-wrap
+}
+.blog-card {
+  @apply md:w-[45%] lg:w-[30%] my-10 lg:mr-10 border border-gunmetal shadow-xl rounded-3xl
+}
 
 /* About Component */
 .about-firstheading {

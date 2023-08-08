@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { RightArrow, LeftArrow } from "./Icons";
+import { RightArrow, LeftArrow } from "../utils/Icons";
 import HomeServicesCard from "./HomeServicesCard";
 import services from "@/data/services.json";
 

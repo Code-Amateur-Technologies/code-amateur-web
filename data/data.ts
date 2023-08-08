@@ -3,36 +3,41 @@ export interface Service {
   service: string;
   description: string;
   serviceIcon: string;
+  img: string;
 }
 
 export const services: Service[] = [
   {
-    id: 1,
+    id: 1, 
     service: "Product Strategy",
     description:
       "Fermentum natoque semper suscipit vulputate phasellus nibh augue.",
-    serviceIcon: "/assets/icons/dropdown_product.svg",
+    serviceIcon: "/assets/icons/service_product.svg",
+    img: "/assets/slideshow/img1.png"
   },
   {
     id: 2,
     service: "UX and UI Design",
     description:
       "Fermentum natoque semper suscipit vulputate phasellus nibh augue.",
-    serviceIcon: "/assets/icons/dropdown_UX.svg",
+    serviceIcon: "/assets/icons/service_UX.svg",
+    img: "/assets/slideshow/img2.png"
   },
   {
     id: 3,
     service: "Front-end Development",
     description:
       "Fermentum natoque semper suscipit vulputate phasellus nibh augue.",
-    serviceIcon: "/assets/icons/dropdown_frontend.svg",
+    serviceIcon: "/assets/icons/service_frontend.svg",
+    img: "/assets/slideshow/img3.png"
   },
   {
     id: 4,
     service: "Back-end Development",
     description:
       "Fermentum natoque semper suscipit vulputate phasellus nibh augue.",
-    serviceIcon: "/assets/icons/dropdown_backend.svg",
+    serviceIcon: "/assets/icons/service_backend.svg",
+    img: "/assets/slideshow/img4.png"
   },
 ];
 

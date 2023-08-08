@@ -30,7 +30,7 @@ export default function About(): JSX.Element {
             aliquam erat nullam. Venenatis sapien justo, varius massa.
           </p>
           <p>
-            <p className="text-celestialblue">Laoreet odio ac tristique </p> sit
+            <span className="text-celestialblue">Laoreet odio ac tristique </span> sit
             ullamcorper eget duis.
           </p>
         </div>

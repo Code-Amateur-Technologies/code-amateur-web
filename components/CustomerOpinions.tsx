@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Opinion, customerOpinions } from "@/data/data";
-import { RightArrow, LeftArrow } from "./Icons";
+import { RightArrow, LeftArrow } from "../utils/Icons";
 import commentIcon from "@/public/assets/icons/customer_comment.svg";
 
 export default function CustomerOpinion() {

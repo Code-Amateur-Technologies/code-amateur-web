@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ServicesSlides from "@/components/ServicesSlides";
 import ServicesThirdSection from "@/components/ServicesThirdSection";
-import {RightArrow} from "@/components/Icons";
+import { RightArrow, CheckMark } from "@/utils/Icons";
 
 export default function Services() {
   return (
@@ -46,40 +46,31 @@ export default function Services() {
           height={745}
           className="lg:w-1/2 rounded-3xl"
         />
-        <div className="md:py-24 sm:px-10 flex justify-between flex-col">
+        <div className="lg:w-1/2 sm:px-10 flex justify-center flex-col">
           <h2 className="py-4 text-2xl sm:text-5xl font-medium tracking-tighter">
             Sed est consectetur ut metus, enim duis. Velit sollicitudin.
           </h2>
           <div className="mb-4 flex">
-            <Image
-              src={"/assets/icons/tick_square.svg"}
-              alt={""}
-              width={40}
-              height={40}
-            />
-            <p className="ml-4 text-sm sm:text-xl">
+            <div className="services-check">
+              <CheckMark />
+            </div>
+            <p className="text-sm sm:text-xl">
               Viverra in pellentesque massa justo commodo.
             </p>
           </div>
-          <div className="mb-4 flex">
-            <Image
-              src={"/assets/icons/tick_square.svg"}
-              alt={""}
-              width={40}
-              height={40}
-            />
-            <p className="ml-4 text-sm sm:text-xl">
+          <div className="mb-4 flex md:flex-between">
+            <div className="services-check">
+              <CheckMark />
+            </div>
+            <p className="text-sm sm:text-xl">
               Imperdiet interdum morbi urna nibh interdum. Nunc leo congue.
             </p>
           </div>
-          <div className="mb-4 flex">
-            <Image
-              src={"/assets/icons/tick_square.svg"}
-              alt={""}
-              width={40}
-              height={40}
-            />
-            <p className="ml-4 text-sm sm:text-xl">
+          <div className="mb-4 flex md:flex-between">
+            <div className="services-check">
+              <CheckMark />
+            </div>
+            <p className="text-sm sm:text-xl">
               Feugiat faucibus nec malesuada a. In nec a neque lorem potenti.
             </p>
           </div>

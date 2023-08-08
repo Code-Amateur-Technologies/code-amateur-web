@@ -12,8 +12,8 @@ function Sidebar(props: { showSidebar: MouseEventHandler<HTMLAnchorElement> | un
           <Link onClick={props.showSidebar} className="text-gunmetal" href={"/services"}>
             <p>Our Services</p>
           </Link>
-          <Link onClick={props.showSidebar} className="text-gunmetal" href={"/blog"}>
-            <p>Blog</p>
+          <Link onClick={props.showSidebar} className="text-gunmetal" href={"/blogs"}>
+            <p>Blogs</p>
           </Link>
           <Link onClick={props.showSidebar} className="text-gunmetal" href={"/about"}>
             <p>about</p>

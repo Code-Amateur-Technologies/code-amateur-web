@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { RightArrow } from "@/components/Icons";
+import { RightArrow } from "@/utils/Icons";
 import Clients from "@/components/Clients";
 import CustomerOpinion from "@/components/CustomerOpinions";
 import OperationsSlides from "@/components/OperationsSlides";
