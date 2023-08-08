@@ -27,7 +27,7 @@ export function DropdownArrow() {
     >
       <path
         d="M17 9.5L12 14.5L7 9.5"
-        strokeWidth="1"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

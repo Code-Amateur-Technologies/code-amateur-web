@@ -7,11 +7,11 @@ export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetchData();
+    fetchBlogs();
   }, []);
 
-  const fetchData = async () => {
-    const Link = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/`;
+  const fetchBlogs = async () => {
+    const Link = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@username`;
     const { data } = await axios.get(Link);
     const { items } = data;
     console.log(items);

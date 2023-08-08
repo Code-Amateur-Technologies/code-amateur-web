@@ -6,8 +6,6 @@ interface FormValues {
   name: string;
   email: string;
   phone: string;
-  address: string;
-  subject: string;
   message: string;
 }
 
@@ -17,8 +15,6 @@ export default function ContactForm() {
       name: "",
       email: "",
       phone: "",
-      address: "",
-      subject: "",
       message: "",
     },
   });
@@ -73,25 +69,6 @@ export default function ContactForm() {
           placeholder="Phone"
         ></input>
 
-        <input
-          id="address"
-          type="text"
-          {...register("address")}
-          className="form-input"
-          placeholder="Address"
-        ></input>
-
-        <input
-          id="subject"
-          type="text"
-          {...register("subject", { required: "Please give a valid Subject" })}
-          className="form-input"
-          placeholder="Subject *"
-        ></input>
-        {errors.subject?.message && (
-          <p className="form-error">{errors.subject?.message}</p>
-        )}
-
         <textarea
           id="message"
           {...register("message", { required: "Please enter your Message" })}
@@ -102,7 +79,7 @@ export default function ContactForm() {
           <p className="form-error">{errors.message?.message}</p>
         )}
 
-        <button className="form-button" type="submit" disabled={!isDirty}>
+        <button className="dark-button" type="submit" disabled={!isDirty}>
           Send a message
         </button>
       </form>
