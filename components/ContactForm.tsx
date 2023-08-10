@@ -79,7 +79,7 @@ export default function ContactForm() {
           <p className="form-error">{errors.message?.message}</p>
         )}
 
-        <button className="dark-button" type="submit" disabled={!isDirty}>
+        <button className="dark-button lg:self-start" type="submit" disabled={!isDirty}>
           Send a message
         </button>
       </form>

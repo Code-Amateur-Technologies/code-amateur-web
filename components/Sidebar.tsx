@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect, MouseEventHandler } from "react";
 
-function Sidebar(props: { showSidebar: MouseEventHandler<HTMLAnchorElement> | undefined; }) {
+function Sidebar(props: { showSidebar: MouseEventHandler<HTMLAnchorElement>; }) {
 
   return (
     <div>

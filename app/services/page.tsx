@@ -48,14 +48,15 @@ export default function Services() {
         />
         <div className="lg:w-1/2 sm:px-10 flex justify-center flex-col">
           <h2 className="py-4 text-2xl sm:text-5xl font-medium tracking-tighter">
-            Sed est consectetur ut metus, enim duis. Velit sollicitudin.
+            Our tech stack is:
           </h2>
           <div className="mb-4 flex">
             <div className="services-check">
               <CheckMark />
             </div>
             <p className="text-sm sm:text-xl">
-              Viverra in pellentesque massa justo commodo.
+              React, React Native, Angular, Ionic, Node, Mongo, MySQL, DevOps.
+              All types of web, mobile and desktop app and software development.
             </p>
           </div>
           <div className="mb-4 flex md:flex-between">
@@ -63,7 +64,7 @@ export default function Services() {
               <CheckMark />
             </div>
             <p className="text-sm sm:text-xl">
-              Imperdiet interdum morbi urna nibh interdum. Nunc leo congue.
+              We also work on Data Analysis, Cyber security, Business Analysis.
             </p>
           </div>
           <div className="mb-4 flex md:flex-between">
@@ -71,7 +72,9 @@ export default function Services() {
               <CheckMark />
             </div>
             <p className="text-sm sm:text-xl">
-              Feugiat faucibus nec malesuada a. In nec a neque lorem potenti.
+              Expertise in the various BI tools like Tableau, Looker, Power
+              BI,Chartio and Qlikview and in ETL tools like Alteryx, Easymorph,
+              Dataiku Dx and Informatica.
             </p>
           </div>
         </div>

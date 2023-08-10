@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="w-full">
         <Header />
-        <main>{children}</main>
+        <main className="page">{children}</main>
         <Footer />
       </body>
     </html>

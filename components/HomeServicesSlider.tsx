@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { RightArrow, LeftArrow } from "../utils/Icons";
 import HomeServicesCard from "./HomeServicesCard";
+import { RightArrow, LeftArrow } from "../utils/Icons";
 import services from "@/data/services.json";
 
 export default function HomeServicesSlider() {
@@ -20,7 +20,7 @@ export default function HomeServicesSlider() {
     <div className="overflow-hidden">
       <div className="mt-12 flex overflow-x-hidden scroll-smooth" ref={boxRef}>
         {services.map((services) => (
-          // 3. flex-[0_0_50%] set the width of each card to 25% of the viewport
+          // flex-[0_0_50%] set the width of each card to 25% of the viewport
           // for mobile devices we use 90% width
           <div key={services.id} className="flex-[0_0_90%] md:flex-[0_0_30%] mr-10">
             <HomeServicesCard {...services} />

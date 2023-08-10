@@ -21,10 +21,10 @@ export default function ServicesSlides() {
         />
         <div className="text-3xl sm:text-7xl font-medium tracking-tighter text-gunmetal">
           <p>{services[index].service}</p>
-          <Link href={""} className="light-button mt-5">
+          {/* <Link href={""} className="light-button mt-5">
             <p className="mx-2">Ask for a quote</p>
             <RightArrow />
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="pt-5 text-center">

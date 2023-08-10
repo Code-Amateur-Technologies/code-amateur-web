@@ -71,11 +71,13 @@ export interface Client {
 }
 
 export const clientList: Client[] = [
-  { id: 1, client: "/assets/clients/clients_pic1.svg" },
-  { id: 2, client: "/assets/clients/clients_pic2.svg" },
-  { id: 3, client: "/assets/clients/clients_pic3.svg" },
-  { id: 4, client: "/assets/clients/clients_pic4.svg" },
-  { id: 5, client: "/assets/clients/clients_pic5.svg" },
+  { id: 1, client: "/assets/clients/logo_love_local.png" },
+  { id: 2, client: "/assets/clients/logo_fnp.png" },
+  { id: 3, client: "/assets/clients/logo_orderex.png" },
+  { id: 4, client: "/assets/clients/logo_hungry_media.png" },
+  { id: 5, client: "/assets/clients/logo_ygoin.png" },
+  { id: 6, client: "/assets/clients/logo_SBTS_group.png" },
+  { id: 7, client: "/assets/clients/logo_hot_box_cookies.png" },
 ];
 
 export interface Opinion {

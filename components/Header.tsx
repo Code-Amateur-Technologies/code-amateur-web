@@ -16,7 +16,7 @@ export default function Header(): JSX.Element {
     <nav className="header">
       <Link href="/" className="gap-4 flex-center">
         <Image
-          src="/assets/images/company_logo.png"
+          src="/assets/images/logo_code_amateurs.png"
           alt={"Picture"}
           width={90}
           height={90}
@@ -28,7 +28,7 @@ export default function Header(): JSX.Element {
         <Link href={"/"} className={`header-link ${path == "/" ? "text-celestialblue" : ""}`}>
           Home
         </Link>
-        <div className="group">
+        <div className="group dropdown">
           <Link href={"/services"} className={`header-link flex-center ${path == "/services" ? "text-celestialblue" : ""}`} >
             Our Services
             <DropdownArrow/>

@@ -17,6 +17,7 @@ export default function BlogCard(props: {
     description = description
       ?.replace(/<h3>.*<\/h3>|<figcaption>.*<\/figcaption>|<[^>]*>/gm, "")
       .substring(0, 60);
+
     if (description.length <= 60 - defaultContinue.length) {
       description += defaultContinue;
     }
@@ -45,7 +46,7 @@ export default function BlogCard(props: {
           className="border-2 border-white rounded-full"
         />
       </div>
-      <div className="p-4 ">
+      <div className="p-4">
         <h1 className="text-xl font-medium">{props.list.title}</h1>
         <p className="my-5">{shortenDescription(props.list.description)}</p>
         <div className="my-2 flex items-center">

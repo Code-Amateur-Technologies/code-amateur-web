@@ -71,7 +71,12 @@
   @apply py-8 px-[5%] hidden group-hover:flex flex-col lg:flex-row fixed right-0 bg-white
 }
 .dropdown-link {
-  @apply w-1/2 p-8 rounded-3xl bg-white text-4xl font-medium tracking-tight text-start text-gunmetal hover:bg-gray-200 hover:scale-105 duration-75;
+  @apply w-1/2 p-8 rounded-3xl bg-white text-4xl font-medium tracking-tight text-start text-gunmetal hover:bg-gray-200 hover:scale-105 transition-all duration-200 ease-in-out;
+}
+
+/* Change page background on dropdown hover */
+body:has(.dropdown:hover) .page {
+  @apply bg-gray-200
 }
 
 /* Home Component */
@@ -140,8 +145,8 @@
 }
 
 /* Clients Component */
-.client-list {
-  @apply p-10 lg:p-20 border-y-2 md:flex md:justify-between hidden
+.client-slider {
+  @apply flex items-center overflow-x-hidden scroll-smooth
 }
 .client-navigation {
   @apply px-1 py-5 border rounded-3xl border-gray-400 text-celestialblue

@@ -5,12 +5,12 @@ import { AboutBox, aboutBox } from "@/data/data";
 
 export default function About(): JSX.Element {
   const data: AboutBox[] = aboutBox;
-  
+
   return (
     <div className="text-gunmetal">
       <section className="py-8 px-4 sm:p-20">
         <h2 className="about-firstheading">
-          We believe that teamwork brings the best results
+          The Leading Information Technology Startup Company
         </h2>
         <Image
           src={"/assets/images/about_heading.png"}
@@ -26,12 +26,16 @@ export default function About(): JSX.Element {
       <section className="about-secondsection">
         <div className="lg:w-3/5 text-2xl md:text-5xl font-medium tracking-tighter">
           <p className="w-full mb-10">
-            Quam in augue montes, varius dui eu. Maecenas nibh morbi amet
-            aliquam erat nullam. Venenatis sapien justo, varius massa.
+            Founded in 2020, our incredible team of engineers, programmers,
+            designers and marketing experts have worked tirelessly to bring Code
+            Amateur Technologies Private Limited to the forefront of the
+            industry.
           </p>
           <p>
-            <span className="text-celestialblue">Laoreet odio ac tristique </span> sit
-            ullamcorper eget duis.
+            <span className="text-celestialblue">
+              With our innovative and insightful technology
+            </span>
+            , we strive to enhance our users’ every day experiences.
           </p>
         </div>
         <div className="lg:w-2/5 flex-center">
@@ -55,13 +59,15 @@ export default function About(): JSX.Element {
           />
           <div className="lg:w-1/2 flex-center flex-col">
             <h2 className="my-4 text-2xl md:text-5xl font-medium">
-              Sed est consectetur ut metus, enim duis. Velit sollicitudin.
+              In order to provide excellent solutions, we dedicate time and
+              resources to research the market needs and our users’ habits and
+              motives.
             </h2>
             <p className="text-sm md:text-xl">
-              Viverra in pellentesque massa justo commodo. Dignissim id egestas
-              rhoncus, sit aliquet egestas lacus. Neque at est neque mauris
-              commodo in. Mauris habitant at eget orci convallis risus
-              vestibulum.
+              We have, and will continue to work tirelessly to become the
+              technological standard, providing big picture insights which
+              industry leaders not only approve of, but also depend on. Get in
+              touch to learn more.
             </p>
           </div>
         </div>
