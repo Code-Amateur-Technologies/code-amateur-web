@@ -40,10 +40,10 @@
   @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset-10px--50px-94px-0-rgb(199,199,199,0.2)] backdrop-blur p-5;
 }
 .dark-button {
-  @apply w-fit mt-5 py-4 sm:py-6 px-8 sm:px-10 rounded-full border-2 border-transparent bg-gunmetal flex self-center text-lg sm:text-xl text-center text-white transition-all hover:bg-white hover:text-gunmetal hover:border-gunmetal;
+  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full border-2 border-transparent bg-gunmetal flex self-center text-lg sm:text-xl font-medium text-center tracking-tight text-white transition-all hover:bg-white hover:text-gunmetal hover:border-gunmetal;
 }
 .light-button {
-  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full border-2 bg-white flex text-lg font-medium text-center tracking-tight text-celestialblue hover:border-celestialblue;
+  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full border-2 bg-white flex self-center text-lg sm:text-xl font-medium text-center tracking-tight text-celestialblue hover:border-celestialblue;
 }
 
 /* common flex component */
@@ -148,8 +148,11 @@ body:has(.dropdown:hover) .page {
 .client-slider {
   @apply flex items-center overflow-x-hidden scroll-smooth
 }
+.client-box {
+  @apply flex flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_25%] justify-center
+}
 .client-navigation {
-  @apply px-1 py-5 border rounded-3xl border-gray-400 text-celestialblue
+  @apply px-1 py-5 border-2 rounded-3xl border-gray-400 text-celestialblue hover:border-celestialblue
 }
 
 /* Customer Opinion Component */

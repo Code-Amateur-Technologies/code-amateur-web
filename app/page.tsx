@@ -30,7 +30,7 @@ export default function Home() {
           <h1 className="home-secondheading">
             Our main goal is to set your business on the hills
           </h1>
-          <Link href={"/services"} className="dark-button md:self-start">
+          <Link href={"/services"} className="mt-6 dark-button md:self-start">
             <p className="mx-2">see Our Services</p>
             <RightArrow />
           </Link>
