@@ -3,9 +3,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import Dropdown from "./HeaderDropdown";
 import Sidebar from "./Sidebar";
-import { DropdownArrow, HeaderMenu } from "../utils/Icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Header(): JSX.Element {
   const path = usePathname();
@@ -28,13 +28,9 @@ export default function Header(): JSX.Element {
         <Link href={"/"} className={`header-link ${path == "/" ? "text-celestialblue" : ""}`}>
           Home
         </Link>
-        <div className="group dropdown">
-          <Link href={"/services"} className={`header-link flex-center ${path == "/services" ? "text-celestialblue" : ""}`} >
-            Our Services
-            <DropdownArrow/>
-          </Link>
-          <Dropdown />
-        </div>
+        <Link href={"/services"} className={`header-link flex-center ${path == "/services" ? "text-celestialblue" : ""}`} >
+          Our Services
+        </Link>
         <Link href={"/blogs"} className={`header-link ${path == "/blogs" ? "text-celestialblue" : ""}`}>
           Blogs
         </Link>
@@ -47,7 +43,7 @@ export default function Header(): JSX.Element {
       </div>
       <div className="block md:hidden">
         <button onClick={showSidebar}>
-          <HeaderMenu />
+        <FontAwesomeIcon icon={faBars} size="xl" />
         </button>
         {sidebar && <Sidebar showSidebar={showSidebar} />}
       </div>

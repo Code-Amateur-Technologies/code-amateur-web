@@ -1,28 +1,30 @@
 import Link from "next/link";
-import { Key } from "react";
-import { RightArrow } from "../utils/Icons";
+import { RightArrow } from "../utils/customIcons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const HomeServicesCard = (props: {
+export default function HomeServicesCard (props: {
   service: string;
   description: string;
-  id: Key;
-  serviceIcon: string;
-}) => {
+  serviceIcon: any;
+}) {
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between">
-      <div className="home-service" key={props.id}>
+    <div className="home-servicecard">
+      <div>
+        <FontAwesomeIcon icon={props.serviceIcon} size="2xl" />
         <h1 className="my-10 text-2xl sm:text-5xl font-medium tracking-tighter">
           {props.service}
         </h1>
         <p className="text-sm sm:text-xl font-normal">{props.description}</p>
-        <div className="my-12">
-          <Link href={"/services"} className="light-button">
-            See Our Services
-            <RightArrow />
-          </Link>
-        </div>
+      </div>
+      <div className="my-12">
+        <Link
+          href={"/services"}
+          className="light-button border-2 border-transparent"
+        >
+          see our services
+          <RightArrow />
+        </Link>
       </div>
     </div>
   );
 };
-export default HomeServicesCard;

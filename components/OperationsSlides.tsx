@@ -9,9 +9,9 @@ interface Data {
 export default function OperationsSlides() {
   const [index, setIndex] = useState<number>(0);
   const data: Data[] = [
-    { id: 1, stepName: "Examination of the Problem" },
-    { id: 2, stepName: "Finding the Solution" },
-    { id: 3, stepName: "Implementing the Solution" },
+    { id: 1, stepName: "Analyzing the Problem" },
+    { id: 2, stepName: "Drafting the Solution" },
+    { id: 3, stepName: "Implementing a scalable Solution" },
   ];
 
   useEffect(() => {
@@ -25,9 +25,9 @@ export default function OperationsSlides() {
 
   return (
     <div className="home-operationslides">
-      <h1 className="mb-10 text-sm sm:text-xl">Check out how we operate</h1>
-      <p className="mb-4 text-sm sm:text-xl">0{data[index].id}</p>
-      <p className="text-lg sm:text-4xl font-medium tracling-tight">
+      <h1 className="mb-4 sm:mb-10 text-base sm:text-xl">Check out how we operate</h1>
+      <p className="mb-4 text-base sm:text-xl">0{data[index].id}</p>
+      <p className="text-xl sm:text-4xl font-medium tracling-tight">
         {data[index].stepName}
       </p>
     </div>

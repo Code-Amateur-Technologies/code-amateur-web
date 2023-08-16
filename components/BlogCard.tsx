@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ProfileIcon, CalenderIcon } from "@/utils/Icons";
+import { faUser, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function BlogCard(props: {
   list: {
@@ -28,34 +28,20 @@ export default function BlogCard(props: {
 
   return (
     <Link href={props.list.link} className="blog-card">
-      <div className="w-full">
-        <img
-          src={props.list.thumbnail}
-          alt={""}
-          width={400}
-          height={200}
-          className="w-full rounded-t-3xl object-contain"
-        />
-      </div>
-      <div className="-my-[25px] ml-5 rounded-full inherit bg-white">
-        <Image
-          src={"/assets/images/default_profile.png"}
-          alt={""}
-          width={50}
-          height={50}
-          className="border-2 border-white rounded-full"
-        />
-      </div>
+      <img
+        src={props.list.thumbnail}
+        className="w-full h-[200px] rounded-t-3xl"
+      />
       <div className="p-4">
         <h1 className="text-xl font-medium">{props.list.title}</h1>
         <p className="my-5">{shortenDescription(props.list.description)}</p>
         <div className="my-2 flex items-center">
-          <ProfileIcon />
-          <p className="text-xs font-medium">{props.list.author}</p>
+          <FontAwesomeIcon icon={faUser} size="xs" />
+          <p className="ml-2 text-sm font-medium">{props.list.author}</p>
         </div>
         <div className="my-2 flex items-center">
-          <CalenderIcon />
-          <p className="text-xs">{props.list.pubDate}</p>
+          <FontAwesomeIcon icon={faCalendarDays} size="xs" />
+          <p className="ml-2 text-sm">{props.list.pubDate}</p>
         </div>
       </div>
     </Link>

@@ -79,8 +79,8 @@ export default function ContactForm() {
           <p className="form-error">{errors.message?.message}</p>
         )}
 
-        <button className="mt-6 dark-button lg:self-start" type="submit" disabled={!isDirty}>
-          Send a message
+        <button className="mt-6 dark-button lg:self-start hover:border-transparent disabled:opacity-75 disabled:pointer-events-none" type="submit" disabled={!isDirty}>
+          send a message
         </button>
       </form>
       <DevTool control={control} />

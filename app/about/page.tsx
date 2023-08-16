@@ -1,7 +1,30 @@
 import Image from "next/image";
 import Clients from "@/components/Clients";
 import CustomerOpinion from "@/components/CustomerOpinions";
-import { AboutBox, aboutBox } from "@/data/data";
+
+interface AboutBox {
+  id: number;
+  value: string;
+  text: string;
+}
+
+const aboutBox: AboutBox[] = [
+  {
+    id: 1,
+    value: "100+",
+    text: "Compeleted projects",
+  },
+  {
+    id: 2,
+    value: "99%",
+    text: "Success rate",
+  },
+  {
+    id: 3,
+    value: "50+",
+    text: "Team strength",
+  },
+];
 
 export default function About(): JSX.Element {
   const data: AboutBox[] = aboutBox;
@@ -9,22 +32,32 @@ export default function About(): JSX.Element {
   return (
     <div className="text-gunmetal">
       <section className="py-8 px-4 sm:p-20">
-        <h2 className="about-firstheading">
-          The Leading Information Technology Startup Company
-        </h2>
+        <h1 className="mb-4 sm:mb-10 about-firstheading">
+          The Leading Information Technology Company
+        </h1>
         <Image
           src={"/assets/images/about_heading.png"}
-          alt={""}
+          alt={"picture of a productive group meeting"}
           width={1920}
           height={959}
-          className="w-full py-10 rounded-3xl"
+          className="w-full rounded-3xl"
         />
-        <h2 className="about-slogan">
+        <h1 className="about-slogan">
           Strategy <br /> Creativity <br /> Teamwork
-        </h2>
+        </h1>
+        <p className="sm:px-10 about-text text-center">
+          We’re a young and talented group of entrepreneurs and engineers with a
+          groundbreaking idea designed to contribute towards a better tomorrow.
+          We provide smart solutions for companies of all sizes and pride
+          ourselves on our unparalleled, dedicated service. At Code Amateur
+          Technologies Private Limited, we believe that the right understanding
+          and technological edge can lead companies towards a successful future.
+          Contact us today to set up a meeting with one of our sales
+          representatives.
+        </p>
       </section>
       <section className="about-secondsection">
-        <div className="lg:w-3/5 text-2xl md:text-5xl font-medium tracking-tighter">
+        <div className="lg:w-3/5 about-text">
           <p className="w-full mb-10">
             Founded in 2020, our incredible team of engineers, programmers,
             designers and marketing experts have worked tirelessly to bring Code
@@ -40,34 +73,32 @@ export default function About(): JSX.Element {
         </div>
         <div className="lg:w-2/5 flex-center">
           <Image
-            src={"/assets/images/company_logo.png"}
+            src={"/assets/images/logo_company_icon.png"}
             alt={""}
-            width={482}
-            height={278}
+            width={200}
+            height={200}
           />
         </div>
       </section>
       <Clients />
-      <section className="py-8 px-4 sm:p-20 bg-gray-100">
+      <section className="py-8 px-4 sm:p-20 bg-slate-100">
         <div className="mb-14 lg:flex justify-between">
           <Image
             src={"/assets/images/about_content.png"}
             alt={""}
-            width={780}
-            height={759}
-            className="lg:w-1/3 rounded-3xl"
+            width={700}
+            height={700}
+            className="lg:w-2/5 rounded-3xl"
           />
           <div className="lg:w-1/2 flex-center flex-col">
-            <h2 className="my-4 text-2xl md:text-5xl font-medium">
-              In order to provide excellent solutions, we dedicate time and
-              resources to research the market needs and our users’ habits and
-              motives.
-            </h2>
-            <p className="text-sm md:text-xl">
+            <h1 className="my-4 text-2xl md:text-5xl font-medium">
+              We provide excellent solutions according to market needs and our
+              users’ habits and motives.
+            </h1>
+            <p className="text-xl md:text-2xl">
               We have, and will continue to work tirelessly to become the
               technological standard, providing big picture insights which
-              industry leaders not only approve of, but also depend on. Get in
-              touch to learn more.
+              industry leaders not only approve of, but also depend on.
             </p>
           </div>
         </div>

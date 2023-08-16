@@ -6,30 +6,19 @@
 
 * {
   font-family: "DM Sans", sans-serif;
+  @apply tracking-tight
 }
 
-.gradient {
-  height: fit-content;
-  z-index: 3;
-  width: 100%;
-  background-image: radial-gradient(
-      at 27% 37%,
-      hsla(215, 98%, 61%, 1) 0px,
-      transparent 0%
-    ),
-    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
-    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  filter: blur(100px) saturate(150%);
-  top: 80px;
-  opacity: 0.15;
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 /* common components */
@@ -39,11 +28,14 @@
 .glassmorphism {
   @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset-10px--50px-94px-0-rgb(199,199,199,0.2)] backdrop-blur p-5;
 }
+.firstheading {
+  @apply text-4xl sm:text-8xl font-medium tracking-tighter text-center lg:text-left
+}
 .dark-button {
   @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full border-2 border-transparent bg-gunmetal flex self-center text-lg sm:text-xl font-medium text-center tracking-tight text-white transition-all hover:bg-white hover:text-gunmetal hover:border-gunmetal;
 }
 .light-button {
-  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full border-2 bg-white flex self-center text-lg sm:text-xl font-medium text-center tracking-tight text-celestialblue hover:border-celestialblue;
+  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full bg-white flex self-center text-lg sm:text-xl font-medium text-center tracking-tight text-celestialblue hover:border-celestialblue;
 }
 
 /* common flex component */
@@ -51,7 +43,7 @@
   @apply flex justify-center items-center;
 }
 .flex-start {
-  @apply flex justify-start items-start;
+  @apply flex justify-start items-center;
 }
 .flex-end {
   @apply flex justify-end items-center;
@@ -62,29 +54,15 @@
 
 /* Header Component */
 .header {
-  @apply p-3 sm:py-5 sm:px-20 border-b border-gunmetal flex-between sticky top-0 bg-white
+  @apply p-3 sm:py-5 sm:px-20 border-b border-slate-100 shadow-xl flex-between sticky top-0 bg-white
 }
 .header-link {
   @apply py-2 px-5 font-medium text-xl hover:text-celestialblue;
 }
-.header-dropdown {
-  @apply py-8 px-[5%] hidden group-hover:flex flex-col lg:flex-row fixed right-0 bg-white
-}
-.dropdown-link {
-  @apply w-1/2 p-8 rounded-3xl bg-white text-4xl font-medium tracking-tight text-start text-gunmetal hover:bg-gray-200 hover:scale-105 transition-all duration-200 ease-in-out;
-}
-
-/* Change page background on dropdown hover */
-body:has(.dropdown:hover) .page {
-  @apply bg-gray-200
-}
 
 /* Home Component */
 .home-firstsection {
-  @apply py-8 px-4 sm:p-20 flex flex-col lg:flex-row sm:justify-between
-}
-.home-firstheading {
-  @apply text-4xl sm:text-8xl font-medium tracking-tighter text-center lg:text-left
+  @apply py-8 px-4 sm:p-20 flex flex-col lg:flex-row sm:justify-between bg-[url('/assets/images/background.svg')] bg-cover
 }
 .home-secondsection {
   @apply lg:h-[500px] py-8 px-4 sm:p-20 flex flex-col items-center lg:flex-row lg:justify-between
@@ -96,10 +74,19 @@ body:has(.dropdown:hover) .page {
   @apply w-full sm:w-2/3 md:w-full lg:w-1/3 h-full mt-10 lg:mt-0 p-8 sm:py-16 border-8 rounded-3xl border-celestialblue
 }
 .home-service {
-  @apply p-8 rounded-3xl bg-gray-100 items-start sm:justify-between flex-col text-gunmetal
+  @apply mr-10
+}
+.home-service:last-child {
+  @apply mr-0
+}
+.home-servicecard {
+  @apply h-full p-8 rounded-3xl bg-gray-100 flex justify-between flex-col text-gunmetal
 }
 .home-description {
   @apply py-2 px-5 text-center text-xl;
+}
+.quote-heading {
+  @apply py-8 px-4 sm:py-40 sm:px-96 text-4xl sm:text-6xl font-medium text-center blue-gradient
 }
 
 /* Services Component */
@@ -118,21 +105,24 @@ body:has(.dropdown:hover) .page {
 
 /* Blog Component */
 .blog-list {
-  @apply flex flex-col md:flex-row md:justify-between lg:justify-start flex-wrap
+  @apply flex flex-col md:flex-row md:justify-between flex-wrap
 }
 .blog-card {
-  @apply md:w-[45%] lg:w-[30%] my-10 lg:mr-10 border border-gunmetal shadow-xl rounded-3xl
+  @apply md:w-[45%] lg:w-[30%] my-10 shadow-xl rounded-3xl
 }
 
 /* About Component */
+.about-text {
+  @apply text-xl md:text-3xl font-medium
+}
 .about-firstheading {
-  @apply lg:w-3/5 text-4xl sm:text-7xl font-medium tracking-tight
+  @apply lg:w-3/5 text-3xl sm:text-6xl font-medium
 }
 .about-slogan {
-  @apply text-6xl sm:text-8xl text-center font-medium blue-gradient
+  @apply py-8 text-6xl sm:text-7xl text-center font-medium leading-tight blue-gradient
 }
 .about-secondsection {
-  @apply py-8 px-4 sm:p-20 border-y-2 flex flex-col-reverse lg:flex-row
+  @apply py-8 px-4 sm:p-20 border-y flex flex-col-reverse lg:flex-row
 }
 .about-gridcontainer {
   @apply grid md:grid-cols-3 gap-4 text-xl
@@ -146,21 +136,29 @@ body:has(.dropdown:hover) .page {
 
 /* Clients Component */
 .client-slider {
-  @apply flex items-center overflow-x-hidden scroll-smooth
+  @apply flex items-center overflow-x-auto scroll-smooth
 }
 .client-box {
   @apply flex flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_25%] justify-center
 }
 .client-navigation {
-  @apply px-1 py-5 border-2 rounded-3xl border-gray-400 text-celestialblue hover:border-celestialblue
+  @apply h-fit px-5 py-6 border-2 rounded-3xl border-slate-100 text-celestialblue hover:border-celestialblue
 }
+
+/* Portfolio */
 
 /* Customer Opinion Component */
 .customeropinion-heading {
-  @apply lg:w-1/2 text-3xl sm:text-7xl tracking-tighter text-white text-center sm:text-left
+  @apply lg:w-1/2 text-[27px] sm:text-7xl tracking-tighter text-white text-center sm:text-left
 }
-.customeropinion-gridcontainer {
-  @apply my-10 grid sm:grid-flow-col sm:gap-4 text-2xl font-medium text-white
+.customeropinion-slider {
+  @apply my-12 flex overflow-x-auto no-scrollbar scroll-smooth text-xl sm:text-2xl font-medium text-white
+}
+.customeropinion-card {
+  @apply p-6 sm:p-12 mr-10 bg-spacecadet rounded-3xl flex justify-between items-start flex-col flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_30%]
+}
+.customeropinion-card:last-child {
+  @apply mr-0
 }
 .customeropinion-button {
   @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full bg-spacecadet flex self-center text-white disabled:opacity-50;
@@ -171,7 +169,7 @@ body:has(.dropdown:hover) .page {
   @apply text-4xl md:text-8xl font-medium text-celestialblue;
 }
 .contact-button {
-  @apply w-fit mb-4 sm:mb-8 py-3 md:py-8 px-6 md:px-16 rounded-full border border-gunmetal text-base md:text-4xl transition-all hover:text-celestialblue;
+  @apply w-fit py-3 md:py-8 px-6 md:px-16 rounded-full border border-gunmetal text-base md:text-4xl transition-all hover:text-celestialblue;
 }
 .contact-form {
   @apply w-full lg:w-2/3 mb-4 sm:mb-0 p-8 sm:p-12 rounded-3xl bg-celestialblue flex flex-col;
@@ -186,10 +184,10 @@ body:has(.dropdown:hover) .page {
   @apply pt-2 px-4 text-base text-red-600;
 }
 .follow-heading {
-  @apply text-4xl md:text-6xl font-medium tracking-tighter text-gunmetal
+  @apply text-4xl md:text-6xl font-medium tracking-tighter text-center
 }
 .follow-link {
-  @apply my-3 mr-5 py-2 px-4 rounded-full bg-gray-200 text-sm md:text-xl text-gunmetal underline-offset-2 hover:text-celestialblue hover:underline;
+  @apply w-fit my-3 mr-5 py-2 px-4 rounded-full bg-gray-100 text-sm md:text-xl  underline-offset-2 hover:text-celestialblue hover:underline;
 }
 
 /* Footer Component */

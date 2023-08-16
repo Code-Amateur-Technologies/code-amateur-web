@@ -1,37 +1,33 @@
-"use client";
 import Link from "next/link";
-import Image from "next/image";
-import { RightArrow } from "@/utils/Icons";
 import Clients from "@/components/Clients";
-import CustomerOpinion from "@/components/CustomerOpinions";
 import OperationsSlides from "@/components/OperationsSlides";
 import HomeServicesSlider from "@/components/HomeServicesSlider";
+import Portfolio from "@/components/Portfolio";
+import CustomerOpinion from "@/components/CustomerOpinions";
+import { RightArrow } from "@/utils/customIcons";
 
 export default function Home() {
   return (
     <div>
       <section className="home-firstsection">
-        <div className="home-firstheading">
-          <h1 className="text-celestialblue">Innovation.</h1>
-          <h1 className="text-gunmetal">Creativity.</h1>
-          <h1 className="text-gunmetal">Effect.</h1>
+        <div className="firstheading">
+          <h1 className="text-celestialblue blue-gradient">Quality.</h1>
+          <h1 className="text-gunmetal">Excellence.</h1>
+          <h1 className="text-gunmetal">Innovation.</h1>
         </div>
-        <Link className="dark-button lg:self-end" href={""}>
-          <p className="mx-2">what we do</p>
+        <Link className="dark-button lg:self-end" href={"/services"}>
+          <p className="mx-2">see our services</p>
           <RightArrow />
         </Link>
       </section>
-      {/* <video autoPlay className="rounded-2xl border">
-          <source src="/assets/video/video.mp4" />
-        </video> */}
       <Clients />
       <section className="home-secondsection">
         <div className="h-full lg:w-1/2 flex flex-col">
           <h1 className="home-secondheading">
-            Our main goal is to set your business on the hills
+            Our main goal is to deliver quality & scalable solutions
           </h1>
-          <Link href={"/services"} className="mt-6 dark-button md:self-start">
-            <p className="mx-2">see Our Services</p>
+          <Link href={"/about"} className="mt-6 dark-button md:self-start">
+            <p className="mx-2">know about us</p>
             <RightArrow />
           </Link>
         </div>
@@ -42,6 +38,12 @@ export default function Home() {
           We believe the right design will bring your business to life
         </h1>
         <HomeServicesSlider />
+      </section>
+      <section className="bg-[url('/assets/images/second_background.svg')] bg-center bg-auto">
+        <h1 className="quote-heading">We believe that the quality of the product is the most important thing for the customer</h1>
+      </section>
+      <section>
+        <Portfolio />
       </section>
       <CustomerOpinion />
     </div>
