@@ -147,22 +147,22 @@ export interface portfolio {
 }
 
 export const portfolioList: portfolio[] = [
-  { id: 1, img: "/assets/portfolio/fnp_mobile.png" },
+  // { id: 1, img: "/assets/portfolio/fnp_mobile.png" },
   { id: 2, img: "/assets/portfolio/fnp_website.png" },
   { id: 3, img: "/assets/portfolio/fnp_app.png" },
-  { id: 4, img: "/assets/portfolio/momos_1.png" },
+  // { id: 4, img: "/assets/portfolio/momos_1.png" },
   { id: 5, img: "/assets/portfolio/momos_2.png" },
   { id: 6, img: "/assets/portfolio/momos_3.png" },
   { id: 7, img: "/assets/portfolio/orderex_1.png" },
-  { id: 8, img: "/assets/portfolio/orderex_2.png" },
-  { id: 9, img: "/assets/portfolio/orderex_3.png" },
+  // { id: 8, img: "/assets/portfolio/orderex_2.png" },
+  // { id: 9, img: "/assets/portfolio/orderex_3.png" },
   { id: 10, img: "/assets/portfolio/prixa_1.png" },
   { id: 11, img: "/assets/portfolio/prixa_2.png" },
-  { id: 12, img: "/assets/portfolio/prixa_3.png" },
+  // { id: 12, img: "/assets/portfolio/prixa_3.png" },
   { id: 13, img: "/assets/portfolio/raena_1.png" },
-  { id: 14, img: "/assets/portfolio/raena_2.png" },
+  // { id: 14, img: "/assets/portfolio/raena_2.png" },
   { id: 15, img: "/assets/portfolio/ygoin_1.png" },
-  { id: 16, img: "/assets/portfolio/ygoin_2.png" },
+  // { id: 16, img: "/assets/portfolio/ygoin_2.png" },
 ];
 
 export interface customerOpinion {
