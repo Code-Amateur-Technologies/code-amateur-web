@@ -157,7 +157,7 @@ export const portfolioList: portfolio[] = [
   // { id: 8, img: "/assets/portfolio/orderex_2.png" },
   // { id: 9, img: "/assets/portfolio/orderex_3.png" },
   { id: 10, img: "/assets/portfolio/prixa_1.png" },
-  { id: 11, img: "/assets/portfolio/prixa_2.png" },
+  // { id: 11, img: "/assets/portfolio/prixa_2.png" },
   // { id: 12, img: "/assets/portfolio/prixa_3.png" },
   { id: 13, img: "/assets/portfolio/raena_1.png" },
   // { id: 14, img: "/assets/portfolio/raena_2.png" },
@@ -174,27 +174,27 @@ export interface customerOpinion {
 export const customerOpinions: customerOpinion[] = [
   {
     id: 1,
-    name: "John Smith",
-    text: "first Fermentum natoque semper suscipit vulputate phasellus nibh augue. Non pharetra quisque ligula inceptos magnis praesent rhoncus. Vehicula sem augue venenatis mollis torquent etiam ornare curae est dis.",
+    name: "Mohammed Kamil",
+    text: "Code Amateur Team was very professional, punctual, super responsive and did the job exactly as requested. Thank you so much for a job well done.",
   },
   {
     id: 2,
-    name: "Carlos Doe",
-    text: "second Elementum lacinia tempus vel praesent elit cubilia etiam aptent urna metus venenatis. Finibus dictum enim habitasse diam venenatis. Congue augue inceptos ornare neque dolor non pulvinar ultricies.",
+    name: "LoveLocal",
+    text: "Its been a delight working with Code Amateur Team. They understood the requirements precisely and went on lengths to make sure the work was taken care of to satisfaction. They very responsive and put in long hours to make sure the deadline was reached. They even went the extra mile to fix a bug which was completely out of scope. Would be a great addition to any team and definitely hire them for future work.",
   },
   {
     id: 3,
-    name: "Michal Scofrano",
-    text: "third Consectetuer si ultrices nunc nostra metus dictum arcu ante facilisi eu. Sagittis conubia nunc odio vivamus dictum faucibus. Felis platea donec malesuada ut aliquam consequat vehicula sapien turpis.",
+    name: "RadioLogex",
+    text: "Code Amateur Team is Intelligent and has an understanding of the project needs. Adapts to sudden changes in requirements, works cooperatively to troubleshoot and adjust, and delivers results until expectations are met.",
   },
   {
     id: 4,
-    name: "caroline Lawrence",
-    text: "fourth Egestas maximus mattis orci malesuada mollis sed morbi venenatis pede. Adipiscing non convallis nam torquent blandit quis. Hendrerit euismod condimentum lectus conubia vitae leo ultricies tortor nullam.",
+    name: "Jonathan M",
+    text: "Code Amateur Team worked tirelessly to ensure that our app was released with vast improvements from where we were previously.They worked 48 hours straight a few times to ensure that we could stay on schedule and maintain a level of quality. I would recommend them to others but we would love to work with them again so good luck stealing them.Their backend developers decreased the number of errors from our api by 80%. Her level of details ensured that we could complete our app with quality.Their Testers found bugs that we didn't even know existed which showcases their level of quality control attention to detail.They build a lot of our code around reducers and greatly improved the performance of our app.What a great team..",
   },
   {
     id: 5,
-    name: "Marge Biel",
-    text: "fifth Egestas molestie condimentum venenatis velit lacus inceptos class quis. Bibendum praesent eros ornare hac cubilia interdum egestas sociosqu volutpat lacus urna. Elit risus iaculis vivamus ipsum curabitur.",
+    name: "",
+    text: "Extremely professional and cooperative with extensive knowledge. Code Amateur Team should be your go-to option without hesitation. Thanks for a job well done.",
   },
 ];

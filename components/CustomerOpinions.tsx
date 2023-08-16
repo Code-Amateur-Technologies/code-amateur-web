@@ -41,8 +41,8 @@ export default function CustomerOpinion() {
               height={50}
               className="pb-5"
             />
-            <p>{items.text}</p>
-            <p className="w-1/3 pt-5 whitespace-nowrap overflow-hidden truncate">
+            <p>{items.text.length > 250 ? `${items.text.substring(0, 250)}...` : items.text }</p>
+            <p className="w-1/2 pt-5 whitespace-nowrap overflow-hidden truncate">
               {items.name}
             </p>
           </div>
