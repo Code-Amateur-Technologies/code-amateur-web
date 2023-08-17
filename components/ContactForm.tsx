@@ -25,8 +25,8 @@ export default function ContactForm() {
     console.log("Tarun Shahi Form Submitted Data", data);
   };
   const onError = (errors: FieldErrors<FormValues>) => {
-    console.log("Tarun Shahi Form Errors:", errors)
-  }
+    console.log("Tarun Shahi Form Errors:", errors);
+  };
 
   return (
     <div>
@@ -34,6 +34,7 @@ export default function ContactForm() {
         <input
           id="name"
           type="text"
+          autoComplete={'' + Math.random()}
           {...register("name", { required: "Your Name is required" })}
           className="form-input"
           placeholder="Name *"
@@ -45,11 +46,8 @@ export default function ContactForm() {
         <input
           id="email"
           type="email"
+          autoComplete={'' + Math.random()}
           {...register("email", {
-            pattern: {
-              value: /^ [A-Z0-9._%+-]+@ [A-Z0-9.-]+. [A-Z] {2,}$/i,
-              message: "Please enter a valid E-mail address",
-            },
             validate: (fieldValue) => {
               return fieldValue !== "" || "Please enter your E-mail";
             },
@@ -64,6 +62,7 @@ export default function ContactForm() {
         <input
           id="phone"
           type="text"
+          autoComplete={'' + Math.random()}
           {...register("phone")}
           className="form-input"
           placeholder="Phone"
@@ -79,11 +78,14 @@ export default function ContactForm() {
           <p className="form-error">{errors.message?.message}</p>
         )}
 
-        <button className="mt-6 dark-button lg:self-start hover:border-transparent disabled:opacity-75 disabled:pointer-events-none" type="submit" disabled={!isDirty}>
+        <button
+          className="mt-6 dark-button lg:self-start hover:border-transparent disabled:opacity-75 disabled:pointer-events-none"
+          type="submit"
+          disabled={!isDirty}
+        >
           send a message
         </button>
       </form>
-      <DevTool control={control} />
     </div>
   );
 }

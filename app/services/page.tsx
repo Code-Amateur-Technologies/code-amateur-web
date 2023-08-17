@@ -5,7 +5,6 @@ import { RightArrow } from "@/utils/customIcons";
 import { Service, services } from "@/data/data";
 
 export default function Services() {
-  const data: Service[] = services;
   return (
     <div className="text-gunmetal">
       <section className="py-8 px-4 sm:p-20">
@@ -39,8 +38,10 @@ export default function Services() {
           <RightArrow />
         </Link>
       </section>
-      {data.map((items) => (
-        <ServiceCard key={items.id} {...items} />
+      {services.map((service) => (
+        <div id={service.hash}>
+          <ServiceCard key={service.id} {...service} />
+        </div>
       ))}
     </div>
   );

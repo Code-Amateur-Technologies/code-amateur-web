@@ -20,9 +20,8 @@ export default function HomeServicesSlider() {
     <div className="overflow-hidden">
       <div className="mt-12 flex overflow-x-auto no-scrollbar scroll-smooth" ref={serviceRef} onScroll={scrollServices}>
         {services.map((service) => (
-          // flex-[0_0_50%] set the width of each card to 30% of the viewport
-          // for mobile devices we use 90% width
-          <div key={service.id} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_30%] home-service">
+          // set the width for different device sizes
+          <div key={service.id} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_28%] home-service">
             <HomeServicesCard {...service} />
           </div>
         ))}

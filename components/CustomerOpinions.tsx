@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import commentIcon from "@/public/assets/icons/customer_comment.svg";
 
 export default function CustomerOpinion() {
-  const data: customerOpinion[] = customerOpinions;
   const opinionRef = useRef<any>();
   const [leftDisabled, setLeftDisabled] = useState<boolean>(true);
   const [rightDisabled, setRighttDisabled] = useState<boolean>();
@@ -32,7 +31,7 @@ export default function CustomerOpinion() {
         ref={opinionRef}
         onScroll={scrollOpinions}
       >
-        {data.map((items) => (
+        {customerOpinions.map((items) => (
           <div className="customeropinion-card" key={items.id}>
             <Image
               src={commentIcon}
@@ -41,10 +40,12 @@ export default function CustomerOpinion() {
               height={50}
               className="pb-5"
             />
-            <p>{items.text.length > 250 ? `${items.text.substring(0, 250)}...` : items.text }</p>
-            <p className="w-1/2 pt-5 whitespace-nowrap overflow-hidden truncate">
-              {items.name}
+            <p>
+              {items.text.length > 250
+                ? `${items.text.substring(0, 250)}...`
+                : items.text}
             </p>
+            <p className="w-1/2 pt-5 whitespace-nowrap overflow-hidden truncate"></p>
           </div>
         ))}
       </div>

@@ -71,7 +71,10 @@
   @apply text-2xl sm:text-7xl font-medium tracking-tighter text-gunmetal text-center md:text-left
 }
 .home-operationslides {
-  @apply w-full sm:w-2/3 md:w-full lg:w-1/3 h-full mt-10 lg:mt-0 p-8 sm:py-16 border-8 rounded-3xl border-celestialblue
+  @apply w-full sm:w-2/3 md:w-full lg:w-1/3 h-full mt-10 lg:mt-0 p-8 sm:py-14 border-8 rounded-3xl border-celestialblue
+}
+.home-operationdot {
+  @apply cursor-pointer h-4 w-4 mx-1 rounded-full transition duration-700 ease-in-out hover:bg-celestialblue
 }
 .home-service {
   @apply mr-10
@@ -90,9 +93,6 @@
 }
 
 /* Services Component */
-.services-dot {
-  @apply cursor-pointer h-4 w-4 mx-1 rounded-full inline-block transition duration-500 ease-in-out hover:bg-celestialblue;
-}
 .services-thirdsection {
   @apply py-8 px-4 sm:p-20 flex flex-between flex-col-reverse lg:flex-row bg-celestialblue text-white
 }
@@ -119,7 +119,7 @@
   @apply lg:w-3/5 text-3xl sm:text-6xl font-medium
 }
 .about-slogan {
-  @apply py-8 text-6xl sm:text-7xl text-center font-medium leading-tight blue-gradient
+  @apply py-8 text-6xl sm:text-7xl font-medium leading-tight blue-gradient
 }
 .about-secondsection {
   @apply py-8 px-4 sm:p-20 border-y flex flex-col-reverse lg:flex-row
@@ -131,7 +131,7 @@
   @apply p-5 sm:p-10 border-8 rounded-3xl border-white bg-transparent
 }
 .about-pill {
-  @apply w-fit mb-5 py-2 px-5 rounded-full border bg-gunmetal text-center text-3xl lg:text-5xl text-white;
+  @apply w-fit mb-5 py-2 px-5 rounded-full border bg-gunmetal flex text-center text-3xl lg:text-5xl text-white;
 }
 
 /* Clients Component */
@@ -142,7 +142,7 @@
   @apply flex flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_25%] justify-center
 }
 .client-navigation {
-  @apply h-fit px-5 py-6 border-2 rounded-3xl border-slate-100 text-celestialblue hover:border-celestialblue
+  @apply h-fit px-5 py-6 border-2 rounded-3xl border-slate-100 text-celestialblue hover:border-celestialblue disabled:opacity-50 disabled:pointer-events-none
 }
 
 /* Portfolio */
@@ -155,7 +155,7 @@
   @apply my-12 flex overflow-x-auto no-scrollbar scroll-smooth text-xl sm:text-2xl font-medium text-white
 }
 .customeropinion-card {
-  @apply p-6 sm:p-12 mr-10 bg-spacecadet rounded-3xl flex justify-between items-start flex-col flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_30%]
+  @apply p-6 sm:p-12 mr-10 bg-spacecadet rounded-3xl flex items-start flex-col flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_30%]
 }
 .customeropinion-card:last-child {
   @apply mr-0
@@ -178,7 +178,7 @@
   @apply text-3xl sm:text-8xl text-white leading-tight font-medium;
 }
 .form-input {
-  @apply mt-7 py-2 px-4 border-b-2 border-white bg-transparent outline-0 text-base text-white placeholder:text-gray-200;
+  @apply mt-7 py-2 px-4 border-b-2 border-white bg-transparent outline-0 text-base text-white placeholder:text-gray-200 autofill:border-white autofill:text-white autofill:bg-transparent;
 }
 .form-error {
   @apply pt-2 px-4 text-base text-red-600;
