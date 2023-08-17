@@ -11,7 +11,7 @@ export default function Blogs() {
   }, []);
 
   const fetchBlogs = async () => {
-    const Link = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@alekrumkamp`;
+    const Link = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@codeamateur`;
     const { data } = await axios.get(Link);
     const { items } = data;
     console.log(items);

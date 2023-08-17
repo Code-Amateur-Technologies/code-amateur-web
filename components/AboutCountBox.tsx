@@ -1,4 +1,4 @@
-import { counter } from "@/utils/counter";
+import Counter from "@/components/Counter";
 interface AboutBox {
   id: number;
   value: number;
@@ -33,8 +33,8 @@ export default function AboutCountBox() {
     <div className="about-gridcontainer">
       {aboutBox.map((items) => (
         <div key={items.id} className="about-box">
-          <div className="about-pill animate-math">
-            <p>{items.value}</p>
+          <div className="about-pill">
+            <Counter value={items.value}/>
             <p>{items.valueString}</p>
           </div>
           <p className="text-sm lg:text-2xl">{items.aboutText}</p>
