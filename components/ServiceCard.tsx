@@ -50,7 +50,7 @@ export default function ServiceCard(props: {
           <div className="px-10 grid grid-rows-5 grid-flow-col gap-3">
             {props.technologies.map((items, index) => (
               <div key={index} className="mb-4 flex">
-                {items.techsvg !== "" ? <img src={items.techsvg} className="text-xs" /> : <FontAwesomeIcon icon={items.techIcon} size="xl" />}
+                {items.techsvg !== "" ? <Image src={items.techsvg}  alt={""} width={25} height={25}/> : <FontAwesomeIcon icon={items.techIcon} size="xl" />}
                 <p className="ml-4 text-sm sm:text-xl">{items.tech}</p>
               </div>
             ))}

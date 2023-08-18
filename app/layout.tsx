@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Code Amateur",
+  title: "Code Amateur we provide services regarding product strategies, UI and Ux development, front-end development, back-end development, Data analytics and Game development in Mohali",
   description: "Leading Technology company",
 };
 

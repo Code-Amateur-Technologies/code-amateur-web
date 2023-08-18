@@ -29,13 +29,13 @@
   @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset-10px--50px-94px-0-rgb(199,199,199,0.2)] backdrop-blur p-5;
 }
 .firstheading {
-  @apply text-4xl sm:text-8xl font-medium tracking-tighter text-center lg:text-left
+  @apply text-4xl sm:text-8xl font-medium text-center lg:text-left
 }
 .dark-button {
-  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full border-2 border-transparent bg-gunmetal flex self-center text-lg sm:text-xl font-medium text-center tracking-tight text-white transition-all hover:bg-white hover:text-gunmetal hover:border-gunmetal;
+  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 border-2 border-transparent rounded-full bg-gunmetal flex self-center text-lg sm:text-xl font-medium text-center text-white transition-all hover:bg-white hover:text-gunmetal hover:border-gunmetal;
 }
 .light-button {
-  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full bg-white flex self-center text-lg sm:text-xl font-medium text-center tracking-tight text-celestialblue hover:border-celestialblue;
+  @apply w-fit py-4 sm:py-6 px-8 sm:px-10 border-2 rounded-full bg-white flex text-lg sm:text-xl font-medium text-center text-celestialblue hover:border-celestialblue;
 }
 
 /* common flex component */
@@ -67,18 +67,18 @@
 .home-secondsection {
   @apply lg:h-[500px] py-8 px-4 sm:p-20 flex flex-col items-center lg:flex-row lg:justify-between
 }
-.home-secondheading {
-  @apply text-2xl sm:text-7xl font-medium tracking-tighter text-gunmetal text-center md:text-left
+.home-serviceslider-heading {
+  @apply lg:w-1/2 text-2xl sm:text-7xl font-medium text-gunmetal text-center md:text-left
 }
 .home-operationslides {
-  @apply w-full sm:w-2/3 md:w-full lg:w-1/3 h-full mt-10 lg:mt-0 p-8 sm:py-14 border-8 rounded-3xl border-celestialblue
+  @apply w-full sm:w-2/3 md:w-full lg:w-1/3 h-full p-8 sm:py-14 border-8 rounded-3xl border-celestialblue
 }
 .home-operationdot {
   @apply cursor-pointer h-4 w-4 mx-1 rounded-full transition duration-700 ease-in-out hover:bg-celestialblue
 }
 .home-servicecard {
-  @apply h-full p-8 rounded-3xl bg-gray-100 flex justify-between flex-col text-gunmetal
-}
+  @apply h-full p-8 rounded-3xl bg-gray-200 flex justify-between flex-col text-gunmetal
+} 
 .home-description {
   @apply py-2 px-5 text-center text-xl;
 }

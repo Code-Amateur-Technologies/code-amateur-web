@@ -1,10 +1,25 @@
+"use client";
 import Link from "next/link";
-import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import ServiceCard from "@/components/ServiceCard";
+import { services } from "@/data/data";
 import { RightArrow } from "@/utils/customIcons";
-import { Service, services } from "@/data/data";
+import { useEffect } from "react";
 
 export default function Services() {
+  const sectionid: string | null = useSearchParams().get("section");
+  const scroll = (value: string) => {
+    const element: any = document.getElementById(value);
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  };
+  useEffect(() => {
+    sectionid != null ? scroll(sectionid) : "";
+  }, [sectionid]);
+
   return (
     <div className="text-gunmetal">
       <section className="py-8 px-4 sm:p-20">
@@ -39,8 +54,8 @@ export default function Services() {
         </Link>
       </section>
       {services.map((service) => (
-        <section id={service.hash}>
-          <ServiceCard key={service.id} {...service} />
+        <section key={service.id} id={service.hash}>
+          <ServiceCard {...service} />
         </section>
       ))}
     </div>

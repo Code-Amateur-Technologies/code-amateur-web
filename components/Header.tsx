@@ -43,7 +43,7 @@ export default function Header(): JSX.Element {
       </div>
       <div className="block md:hidden">
         <button onClick={showSidebar}>
-        <FontAwesomeIcon icon={faBars}  />
+        <FontAwesomeIcon icon={faBars} size="xl" />
         </button>
         {sidebar && <Sidebar showSidebar={showSidebar} />}
       </div>

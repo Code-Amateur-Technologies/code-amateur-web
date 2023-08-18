@@ -15,8 +15,8 @@ export default function Home() {
           <h1 className="text-gunmetal">Excellence.</h1>
           <h1 className="text-gunmetal">Innovation.</h1>
         </div>
-        <Link className="dark-button lg:self-end" href={"/services"}>
-          <p className="mx-2">see our services</p>
+        <Link className="mt-6 dark-button lg:self-end gap-2" href={"/services"}>
+          <p>see our services</p>
           <RightArrow />
         </Link>
       </section>
@@ -26,19 +26,14 @@ export default function Home() {
           <h1 className="home-secondheading">
             Our main goal is to deliver quality & scalable solutions
           </h1>
-          <Link href={"/about"} className="mt-6 dark-button md:self-start">
+          <Link href={"/about"} className="my-6 dark-button md:self-start">
             <p className="mx-2">know about us</p>
             <RightArrow />
           </Link>
         </div>
         <OperationsSlides />
       </section>
-      <section className="py-8 px-4 sm:p-20 grid">
-        <h1 className="lg:w-1/2 home-secondheading">
-          We believe the right design will bring your business to life
-        </h1>
         <HomeServicesSlider />
-      </section>
       <section className="bg-[url('/assets/images/second_background.svg')] bg-center bg-auto">
         <h1 className="quote-heading">We believe that the quality of the product is the most important thing for the customer</h1>
       </section>

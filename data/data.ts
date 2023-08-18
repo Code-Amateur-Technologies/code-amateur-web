@@ -128,7 +128,11 @@ export const services: Service[] = [
     technologies: [
       { tech: "Tableau", techIcon: "", techsvg: "/assets/icons/tableau.svg" },
       { tech: "Power BI", techIcon: "", techsvg: "/assets/icons/power_bi.svg" },
-      { tech: "Chartio", techIcon: "", techsvg: "" },
+      { tech: "Looker", techIcon: "", techsvg: "/assets/icons/looker.svg" },
+      { tech: "Quicksight", techIcon: "", techsvg: "/assets/icons/aws_quicksight.svg" },
+      { tech: "Alteryx", techIcon: "", techsvg: "/assets/icons/alteryx.svg" },
+      { tech: "dataiku", techIcon: "", techsvg: "" },
+      { tech: "Easymorph", techIcon: "", techsvg: "" },
       { tech: "Qlikview", techIcon: "", techsvg: "/assets/icons/qlikview.svg" },
     ],
   },

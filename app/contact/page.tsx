@@ -10,7 +10,7 @@ export default function Contact(): JSX.Element {
           Plot No D199, 7th Floor, 8B, Industrial Area, Sector 74, Sahibzada
           Ajit Singh Nagar, Punjab 160071
         </p>
-        <div className="contact-button">sales@codeamateur.com</div>
+        <button className="contact-button">sales@codeamateur.com</button>
       </section>
       <section className="flex flex-col lg:flex-row">
         <div className="contact-form">

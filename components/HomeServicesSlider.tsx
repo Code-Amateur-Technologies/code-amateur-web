@@ -17,10 +17,13 @@ export default function HomeServicesSlider() {
   }
 
   return (
+    <section className="py-8 px-4 sm:p-20 grid">
+    <h1 className="home-serviceslider-heading">
+          We believe the right design will bring your business to life
+        </h1>
     <div className="overflow-hidden">
       <div className="mt-12 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth" ref={serviceRef} onScroll={scrollServices}>
         {services.map((service) => (
-          // set the width for different device sizes
           <div key={service.id} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_28%]">
             <HomeServicesCard {...service} />
           </div>
@@ -35,5 +38,6 @@ export default function HomeServicesSlider() {
         </button>
       </div>
     </div>
+    </section>
   );
 }
