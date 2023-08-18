@@ -34,14 +34,14 @@ export default function Services() {
           </div>
         </div>
         <Link href={"/contact"} className="dark-button">
-          <p className="mx-2">Contact Us</p>
+          <p className="mx-2">contact us</p>
           <RightArrow />
         </Link>
       </section>
       {services.map((service) => (
-        <div id={service.hash}>
+        <section id={service.hash}>
           <ServiceCard key={service.id} {...service} />
-        </div>
+        </section>
       ))}
     </div>
   );
