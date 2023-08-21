@@ -23,7 +23,7 @@ export default function Home() {
       <Clients />
       <section className="home-secondsection">
         <div className="h-full lg:w-1/2 flex flex-col">
-          <h1 className="home-secondheading">
+          <h1 className="home-headings">
             Our main goal is to deliver quality & scalable solutions
           </h1>
           <Link href={"/about"} className="my-6 dark-button md:self-start">

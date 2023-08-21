@@ -1,5 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Code Amateur" + " | " + "Contact",
+  description: "Leading Technology company",
+};
 
 export default function Contact(): JSX.Element {
   return (
@@ -13,17 +19,20 @@ export default function Contact(): JSX.Element {
         <button className="contact-button">sales@codeamateur.com</button>
       </section>
       <section className="flex flex-col lg:flex-row">
-        <div className="contact-form">
-          <h1 className="form-heading">Contact Us</h1>
-          <ContactForm />
-        </div>
+        <ContactForm />
         <div className="mt-4 md:mt-20 md:ml-10 self-center">
           <h1 className="follow-heading">Follow Us</h1>
           <div className="flex lg:flex-col">
-            <Link href={""} className="follow-link">
+            <Link
+              href={"https://in.linkedin.com/company/code-amateur"}
+              className="follow-link"
+            >
               LinkedIn
             </Link>
-            <Link href={""} className="follow-link">
+            <Link
+              href={"https://www.facebook.com/codeamateur"}
+              className="follow-link"
+            >
               Facebook
             </Link>
           </div>

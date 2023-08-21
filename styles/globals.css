@@ -7,6 +7,7 @@
 * {
   font-family: "DM Sans", sans-serif;
   @apply tracking-tight
+  select-none
 }
 
 @layer utilities {
@@ -67,8 +68,8 @@
 .home-secondsection {
   @apply lg:h-[500px] py-8 px-4 sm:p-20 flex flex-col items-center lg:flex-row lg:justify-between
 }
-.home-serviceslider-heading {
-  @apply lg:w-1/2 text-2xl sm:text-7xl font-medium text-gunmetal text-center md:text-left
+.home-headings {
+  @apply text-2xl sm:text-7xl font-medium text-gunmetal text-center md:text-left
 }
 .home-operationslides {
   @apply w-full sm:w-2/3 md:w-full lg:w-1/3 h-full p-8 sm:py-14 border-8 rounded-3xl border-celestialblue
@@ -146,10 +147,10 @@
   @apply lg:w-1/2 text-[27px] sm:text-7xl tracking-tighter text-white text-center sm:text-left
 }
 .customeropinion-slider {
-  @apply my-12 flex overflow-x-auto no-scrollbar scroll-smooth text-xl sm:text-2xl font-medium text-white
+  @apply my-12 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth text-xl sm:text-2xl font-medium text-white
 }
 .customeropinion-card {
-  @apply p-6 sm:p-12 mr-10 bg-spacecadet rounded-3xl flex items-start flex-col flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_30%]
+  @apply p-6 sm:p-12 bg-spacecadet rounded-3xl flex justify-between flex-col flex-[0_0_90%] md:flex-[0_0_50%] lg:flex-[0_0_30%]
 }
 .customeropinion-card:last-child {
   @apply mr-0
@@ -166,16 +167,13 @@
   @apply w-fit py-3 md:py-8 px-6 md:px-16 rounded-full border border-gunmetal text-base md:text-4xl transition-all hover:text-celestialblue;
 }
 .contact-form {
-  @apply w-full lg:w-2/3 mb-4 sm:mb-0 p-8 sm:p-12 rounded-3xl bg-celestialblue flex flex-col;
+  @apply w-full lg:w-2/3 mb-4 sm:mb-0 p-8 sm:p-12 rounded-3xl bg-celestialblue flex flex-col gap-8;
 }
 .form-heading {
-  @apply text-3xl sm:text-8xl text-white leading-tight font-medium;
+  @apply text-3xl sm:text-8xl text-white font-medium;
 }
 .form-input {
-  @apply mt-7 py-2 px-4 border-b-2 border-white bg-transparent outline-0 text-base text-white placeholder:text-gray-200 autofill:border-white autofill:text-white autofill:bg-transparent;
-}
-.form-error {
-  @apply pt-2 px-4 text-base text-red-600;
+  @apply py-2 px-4 border-b-2 border-white bg-transparent outline-0 text-base text-white placeholder:text-gray-200 autofill:border-white autofill:text-white autofill:bg-transparent;
 }
 .follow-heading {
   @apply text-4xl md:text-6xl font-medium tracking-tighter text-center
@@ -189,5 +187,32 @@
   @apply h-px bg-gray-200 border-0
 }
 .footer-description {
-  @apply py-8 md:py-20 text-center text-sm sm:text-xl;
+  @apply py-8 md:py-20 text-center text-sm sm:text-xl text-gunmetal;
+}
+
+/* Animations */
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  
+  to {
+    transform: scale(1);
+  }
+}
+.animation-pop-in {
+  animation: grow 0.50s ease-in;
+}
+
+@keyframes bottom-slide-in {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.animation-bottom-slide {
+  animation: bottom-slide-in 1s ease-out;
 }

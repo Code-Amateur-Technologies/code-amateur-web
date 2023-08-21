@@ -1,10 +1,15 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Clients from "@/components/Clients";
 import AboutCountBox from "@/components/AboutCountBox";
 import CustomerOpinion from "@/components/CustomerOpinions";
 
-export default function About(): JSX.Element {
+export const metadata: Metadata = {
+  title: "Code Amateur" + " | " + "About Us",
+  description: "Leading Technology company",
+};
 
+export default function About(): JSX.Element {
   return (
     <div className="text-gunmetal">
       <section className="py-8 px-4 sm:p-20">
@@ -13,10 +18,10 @@ export default function About(): JSX.Element {
         </h1>
         <Image
           src={"/assets/images/about_heading.png"}
-          alt={"picture of a productive group meeting"}
+          alt={"Image showing a positive team working enviorment"}
           width={1920}
           height={959}
-          className="w-full rounded-3xl"
+          className="w-full rounded-3xl animation-bottom-slide"
         />
         <h1 className="about-slogan">
           Strategy <br /> Creativity <br /> Teamwork
@@ -50,7 +55,7 @@ export default function About(): JSX.Element {
         <div className="lg:w-2/5 flex-center">
           <Image
             src={"/assets/images/logo_company_icon.png"}
-            alt={""}
+            alt={"company icon"}
             width={200}
             height={200}
           />
@@ -61,7 +66,7 @@ export default function About(): JSX.Element {
         <div className="mb-14 lg:flex justify-between">
           <Image
             src={"/assets/images/about_content.png"}
-            alt={""}
+            alt={"Team photo"}
             width={700}
             height={700}
             className="lg:w-2/5 rounded-3xl"

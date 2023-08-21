@@ -18,7 +18,7 @@ export default function HomeServicesSlider() {
 
   return (
     <section className="py-8 px-4 sm:p-20 grid">
-    <h1 className="home-serviceslider-heading">
+    <h1 className="home-headings lg:w-1/2">
           We believe the right design will bring your business to life
         </h1>
     <div className="overflow-hidden">

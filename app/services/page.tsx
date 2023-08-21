@@ -1,10 +1,16 @@
 "use client";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { useSearchParams } from "next/navigation";
 import ServiceCard from "@/components/ServiceCard";
 import { services } from "@/data/data";
 import { RightArrow } from "@/utils/customIcons";
 import { useEffect } from "react";
+
+export const metadata: Metadata = {
+  title: "Code Amateur" + " | " + "Our Services",
+  description: "Leading Technology company",
+};
 
 export default function Services() {
   const sectionid: string | null = useSearchParams().get("section");

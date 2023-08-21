@@ -28,7 +28,7 @@ export default function Clients() {
               <div key={items.id} className="client-box">
                 <Image
                   src={items.client}
-                  alt={""}
+                  alt={"Image of our client "}
                   width={150}
                   height={150}
                 ></Image>

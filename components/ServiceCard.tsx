@@ -31,7 +31,7 @@ export default function ServiceCard(props: {
       >
         <Image
           src={props.img}
-          alt={""}
+          alt={"Image for " + props.service + " services we provide"}
           width={700}
           height={550}
           className="lg:w-1/2 mb-5 sm:mb-0 rounded-3xl"

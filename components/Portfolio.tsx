@@ -9,6 +9,7 @@ export default function Portfolio() {
           <div className="w-full md:w-1/2 h-fit flex-center" key={items.id}>
             <img
               src={items.img}
+              alt="Portfolio Image"
               className="w-auto h-auto p-10"
             />
           </div>

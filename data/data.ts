@@ -9,6 +9,7 @@ import {
   faGoogle,
   faJira,
   faNodeJs,
+  faPython,
   faReact,
   faUnity,
   faVuejs,
@@ -131,9 +132,10 @@ export const services: Service[] = [
       { tech: "Looker", techIcon: "", techsvg: "/assets/icons/looker.svg" },
       { tech: "Quicksight", techIcon: "", techsvg: "/assets/icons/aws_quicksight.svg" },
       { tech: "Alteryx", techIcon: "", techsvg: "/assets/icons/alteryx.svg" },
-      { tech: "dataiku", techIcon: "", techsvg: "" },
-      { tech: "Easymorph", techIcon: "", techsvg: "" },
+      { tech: "Dataiku", techIcon: "", techsvg: "/assets/icons/dataiku.svg" },
+      { tech: "Easymorph", techIcon: "", techsvg: "/assets/icons/easy.png" },
       { tech: "Qlikview", techIcon: "", techsvg: "/assets/icons/qlikview.svg" },
+      { tech: "Phython", techIcon: faPython, techsvg: "" },
     ],
   },
   {
@@ -159,12 +161,12 @@ export interface Client {
 
 export const clientList: Client[] = [
   { id: 1, client: "/assets/clients/logo_love_local.png" },
-  { id: 2, client: "/assets/clients/logo_fnp.png" },
+  { id: 2, client: "/assets/clients/logo_hot_box_cookies.png" },
   { id: 3, client: "/assets/clients/logo_orderex.png" },
   { id: 4, client: "/assets/clients/logo_hungry_media.png" },
   { id: 5, client: "/assets/clients/logo_ygoin.png" },
   { id: 6, client: "/assets/clients/logo_SBTS_group.png" },
-  { id: 7, client: "/assets/clients/logo_hot_box_cookies.png" },
+  { id: 7, client: "/assets/clients/logo_fnp.png" },
 ];
 
 export interface portfolio {
@@ -194,28 +196,34 @@ export const portfolioList: portfolio[] = [
 
 export interface customerOpinion {
   id: number;
+  name: string;
   text: string;
 }
 
 export const customerOpinions: customerOpinion[] = [
   {
     id: 1,
-    text: "Code Amateur Team was very professional, punctual, super responsive and did the job exactly as requested. Thank you so much for a job well done.",
+    name: "Mohammed Kamil",
+    text: "Code Amateur Team is very professional, punctual, super responsive and did the job exactly as requested. Thank you so much for a job well done.",
   },
   {
     id: 2,
-    text: "Its been a delight working with Code Amateur Team. They understood the requirements precisely and went on lengths to make sure the work was taken care of to satisfaction. They very responsive and put in long hours to make sure the deadline was reached. They even went the extra mile to fix a bug which was completely out of scope. Would be a great addition to any team and definitely hire them for future work.",
+    name: "LoveLocal",
+    text: "Its been a delight working with Code Amateur Team. They understood the requirements precisely and went on lengths to make sure the work was taken care of to satisfaction.",
   },
   {
     id: 3,
+    name: "RadioLogex",
     text: "Code Amateur Team is Intelligent and has an understanding of the project needs. Adapts to sudden changes in requirements, works cooperatively to troubleshoot and adjust, and delivers results until expectations are met.",
   },
   {
     id: 4,
-    text: "Code Amateur Team worked tirelessly to ensure that our app was released with vast improvements from where we were previously.They worked 48 hours straight a few times to ensure that we could stay on schedule and maintain a level of quality. I would recommend them to others but we would love to work with them again so good luck stealing them.Their backend developers decreased the number of errors from our api by 80%. Her level of details ensured that we could complete our app with quality.Their Testers found bugs that we didn't even know existed which showcases their level of quality control attention to detail.They build a lot of our code around reducers and greatly improved the performance of our app.What a great team..",
+    name: "Jonathan M",
+    text: "Code Amateur Team worked tirelessly to ensure that our app was released with vast improvements from where we were previously. They worked 48 hours straight a few times to ensure that we could stay on schedule and maintain a level of quality.",
   },
   {
     id: 5,
+    name: "Anonymous",
     text: "Extremely professional and cooperative with extensive knowledge. Code Amateur Team should be your go-to option without hesitation. Thanks for a job well done.",
   },
 ];

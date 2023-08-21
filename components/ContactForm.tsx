@@ -2,13 +2,15 @@
 
 export default function ContactForm() {
   return (
-    <div>
+    <div className="contact-form">
+      <h1 className="form-heading">Contact Us</h1>
       <form
         name="contact"
         action="/success"
         method="POST"
+        data-netlify-recaptcha="true"
         data-netlify="true"
-        className="flex flex-col"
+        className="flex flex-col gap-8"
       >
         <input type="hidden" name="form-name" value="contact" />
         <input
@@ -45,11 +47,13 @@ export default function ContactForm() {
           placeholder="Message *"
         ></textarea>
 
+        <div data-netlify-recaptcha="true"></div>
+
         <button
-          className="mt-6 dark-button lg:self-start hover:border-transparent disabled:opacity-75 disabled:pointer-events-none"
+          className="dark-button lg:self-start hover:border-transparent disabled:opacity-75 disabled:pointer-events-none"
           type="submit"
         >
-          send a message
+          send message
         </button>
       </form>
     </div>

@@ -28,8 +28,8 @@ export default function OperationsSlides() {
       <h1 className="mb-4 sm:mb-10 text-base sm:text-xl">
         Check out how we operate
       </h1>
-      <p className="mb-4 text-base sm:text-xl">0{data[index].id}</p>
-      <p className="text-xl sm:text-4xl font-medium tracling-tight">
+      <p className="text-base sm:text-xl">0{data[index].id}</p>
+      <p className="my-4 text-xl sm:text-4xl font-medium tracling-tight">
         {data[index].stepName}
       </p>
       <div className="flex">
