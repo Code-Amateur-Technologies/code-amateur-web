@@ -88,14 +88,11 @@
 }
 
 /* Services Component */
-.services-thirdsection {
-  @apply py-8 px-4 sm:p-20 flex flex-between flex-col-reverse lg:flex-row bg-celestialblue text-white
+.services-operations {
+  @apply my-10 sm:my-20 flex-between flex-col md:flex-row text-2xl md:text-4xl font-medium
 }
 .services-button {
   @apply w-fit p-6 rounded-full bg-white flex self-center text-gunmetal;
-}
-.services-check {
-  @apply h-fit mr-4 p-2 bg-gray-200 rounded-xl text-celestialblue
 }
 
 /* Blog Component */

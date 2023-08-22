@@ -2,11 +2,11 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Clients from "@/components/Clients";
 import AboutCountBox from "@/components/AboutCountBox";
-import CustomerOpinion from "@/components/CustomerOpinions";
+import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title: "Code Amateur" + " | " + "About Us",
-  description: "Leading Technology company",
+  description: "Know more about us",
 };
 
 export default function About(): JSX.Element {
@@ -21,7 +21,7 @@ export default function About(): JSX.Element {
           alt={"Image showing a positive team working enviorment"}
           width={1920}
           height={959}
-          className="w-full rounded-3xl animation-bottom-slide"
+          className="w-full rounded-3xl"
         />
         <h1 className="about-slogan">
           Strategy <br /> Creativity <br /> Teamwork
@@ -61,7 +61,6 @@ export default function About(): JSX.Element {
           />
         </div>
       </section>
-      <Clients />
       <section className="py-8 px-4 sm:p-20 bg-slate-100">
         <div className="mb-14 lg:flex justify-between">
           <Image
@@ -85,7 +84,8 @@ export default function About(): JSX.Element {
         </div>
         <AboutCountBox />
       </section>
-      <CustomerOpinion />
+      <Clients />
+      <Testimonials />
     </div>
   );
 }

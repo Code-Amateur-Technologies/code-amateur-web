@@ -3,7 +3,7 @@ import BlogsPage from "@/components/BlogsPage";
 
 export const metadata: Metadata = {
   title: "Code Amateur" + " | " + "Blogs",
-  description: "Leading Technology company",
+  description: "Read latest blogs published by our team here",
 };
 
 export default function Blogs() {

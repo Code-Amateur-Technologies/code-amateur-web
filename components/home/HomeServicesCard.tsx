@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RightArrow } from "../utils/customIcons";
+import { RightArrow } from "../../utils/customIcons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function HomeServicesCard(props: {

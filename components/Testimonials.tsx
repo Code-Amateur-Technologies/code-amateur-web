@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import commentIcon from "@/public/assets/icons/customer_comment.svg";
 
-export default function CustomerOpinion() {
+export default function Testimonials() {
   const opinionRef = useRef<any>();
   const [leftDisabled, setLeftDisabled] = useState<boolean>(true);
   const [rightDisabled, setRighttDisabled] = useState<boolean>();
@@ -25,7 +25,7 @@ export default function CustomerOpinion() {
 
   return (
     <div className="p-8 sm:p-20 bg-raisinblack">
-      <p className="customeropinion-heading">Opinions of our customers</p>
+      <p className="customeropinion-heading">Testimonials</p>
       <div
         className="customeropinion-slider"
         ref={opinionRef}

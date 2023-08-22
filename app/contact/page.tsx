@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Code Amateur" + " | " + "Contact",
-  description: "Leading Technology company",
+  description: "Contact us through here",
 };
 
 export default function Contact(): JSX.Element {
