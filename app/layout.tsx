@@ -1,7 +1,5 @@
-"use client"
 import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { usePathname } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 

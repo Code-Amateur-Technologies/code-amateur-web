@@ -1,11 +1,7 @@
-"use client";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { useSearchParams } from "next/navigation";
-import ServiceCard from "@/components/ServiceCard";
-import { services } from "@/data/data";
+import ServicesList from "@/components/ServicesList";
 import { RightArrow } from "@/utils/customIcons";
-import { useEffect } from "react";
 
 export const metadata: Metadata = {
   title: "Code Amateur" + " | " + "Our Services",
@@ -13,18 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function Services() {
-  const sectionid: string | null = useSearchParams().get("section");
-  const scroll = (value: string) => {
-    const element: any = document.getElementById(value);
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-  };
-  useEffect(() => {
-    sectionid != null ? scroll(sectionid) : "";
-  }, [sectionid]);
 
   return (
     <div className="text-gunmetal">
@@ -59,11 +43,7 @@ export default function Services() {
           <RightArrow />
         </Link>
       </section>
-      {services.map((service) => (
-        <section key={service.id} id={service.hash}>
-          <ServiceCard {...service} />
-        </section>
-      ))}
+      <ServicesList />
     </div>
   );
 }
