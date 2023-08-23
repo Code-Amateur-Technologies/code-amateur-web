@@ -21,19 +21,19 @@ export default function ServicesOperations() {
         <h1 className="mb-5 text-xl">
           01<span className="text-gray-300"> - 03</span>
         </h1>
-        <p>Examination of Problem</p>
+        <p>Analyzing the Problem</p>
       </div>
       <div className="md:w-1/4 self-start">
         <h1 className="mb-5 text-xl">
           02<span className="text-gray-300"> - 03</span>
         </h1>
-        <p>Plan and complete the solutions</p>
+        <p>Drafting the Solution</p>
       </div>
       <div className="md:w-1/4 self-start">
         <h1 className="mb-5 text-xl">
           03<span className="text-gray-300"> - 03</span>
         </h1>
-        <p>Implementing proven solutions</p>
+        <p>Implementing a scalable Solution</p>
       </div>
     </motion.div>
   );

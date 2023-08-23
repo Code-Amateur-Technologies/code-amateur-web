@@ -1,9 +1,7 @@
 "use client";
-import { motion, useCycle } from "framer-motion";
-import { RightArrow } from "@/utils/customIcons";
-import Link from "next/link";
+import { motion } from "framer-motion";
 
-export default function RightButton() {
+export default function SlideLeft({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
       initial="hidden"
@@ -17,12 +15,9 @@ export default function RightButton() {
         hidden: { opacity: 0, x: 50 },
         visible: { opacity: 1, x: 0 },
       }}
-      className="mt-6 lg:self-end "
+      
     >
-      <Link className="dark-button gap-2" href={"/services"}>
-        <p>see our services</p>
-        <RightArrow />
-      </Link>
+      {children}
     </motion.div>
   );
 }

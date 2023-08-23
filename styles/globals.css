@@ -55,7 +55,7 @@
 
 /* Header Component */
 .header {
-  @apply h-24 p-3 sm:py-5 sm:px-20 border-b border-slate-100 shadow-xl flex-between sticky top-0 bg-white
+  @apply h-24 p-3 sm:py-5 sm:px-20 border-b border-slate-100 shadow-xl bg-white flex-between sticky top-0 z-10
 }
 .header-link {
   @apply py-2 px-5 font-medium text-xl hover:text-celestialblue;
@@ -72,7 +72,7 @@
   @apply text-2xl sm:text-7xl font-medium text-gunmetal text-center md:text-left
 }
 .home-operationslides {
-  @apply w-full sm:w-2/3 md:w-full lg:w-1/3 h-full p-8 sm:py-14 border-8 rounded-3xl border-celestialblue
+  @apply h-full w-full sm:w-2/3 md:w-full lg:w-1/3 p-8 sm:py-14 border-8 rounded-3xl border-celestialblue
 }
 .home-operationdot {
   @apply cursor-pointer h-4 w-4 mx-1 rounded-full transition duration-700 ease-in-out hover:bg-celestialblue
@@ -101,6 +101,9 @@
 }
 .blog-card {
   @apply md:w-[45%] lg:w-[30%] my-10 shadow-xl rounded-3xl
+}
+.blog-heading {
+  @apply text-6xl font-medium text-gunmetal
 }
 
 /* About Component */

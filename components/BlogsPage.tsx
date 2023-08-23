@@ -11,19 +11,22 @@ export default function BlogsPage() {
   }, []);
 
   const fetchBlogs = async () => {
-    const Link = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@codeamateur`;
+    const Link = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@alekrumkamp`;
     const { data } = await axios.get(Link);
     const { items } = data;
-    // console.log(items);
+    console.log(items);
     setBlogs(items);
   };
+
+  const blogData = { blogs };
+  localStorage.setItem('blogData', JSON.stringify(blogData));
 
   return (
     <div>
       <h1 className="text-5xl text-center">Blogs</h1>
       <div className="blog-list">
-        {blogs.map((list, index) => (
-          <BlogCard list={list} key={index}/>
+        {blogs.map((blog: any, index) => (
+          <BlogCard {...blog} key={index} index={index}/>
         ))}
       </div>
     </div>

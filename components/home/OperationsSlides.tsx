@@ -1,5 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
+import SlideLeft from "@/components/animate/SlideLeft";
+import { motion } from "framer-motion";
 
 interface Data {
   id: number;
@@ -24,7 +26,17 @@ export default function OperationsSlides() {
   }, [index]);
 
   return (
-    <div className="home-operationslides flex flex-col justify-between">
+    <motion.div initial="hidden"
+    whileInView="visible"
+    transition={{
+      duration: 0.5,
+      ease: [0.61, 1, 0.88, 1],
+    }}
+    viewport={{ once: true }}
+    variants={{
+      hidden: { opacity: 0, x: 50 },
+      visible: { opacity: 1, x: 0 },
+    }} className="home-operationslides flex flex-col justify-between">
       <h1 className="mb-4 sm:mb-10 text-base sm:text-xl">
         Check out how we operate
       </h1>
@@ -34,9 +46,15 @@ export default function OperationsSlides() {
       </p>
       <div className="flex">
         {data.map((items) => (
-          <div className={`home-operationdot ${ items.id -1 === index ? "bg-celestialblue" : "bg-gray-100"}`} key={items.id} onClick={() => setIndex(items.id-1)}></div>
+          <div
+            className={`home-operationdot ${
+              items.id - 1 === index ? "bg-celestialblue" : "bg-gray-100"
+            }`}
+            key={items.id}
+            onClick={() => setIndex(items.id - 1)}
+          ></div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
