@@ -3,7 +3,6 @@ import { faUser, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function BlogCard(props: {
-  index: number;
   description: string;
   author: string;
   link: URL;
@@ -23,7 +22,7 @@ export default function BlogCard(props: {
 
   return (
     <Link
-      href={{ pathname: `blogs/${props.title}`, query: { index: props.index } }}
+      href={{ pathname: `blogs/blog`, query: { title: props.title } }}
       className="blog-card"
     >
       <img src={props.thumbnail} className="w-full h-[200px] rounded-t-3xl" />

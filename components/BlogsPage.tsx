@@ -18,15 +18,12 @@ export default function BlogsPage() {
     setBlogs(items);
   };
 
-  const blogData = { blogs };
-  localStorage.setItem('blogData', JSON.stringify(blogData));
-
   return (
     <div>
       <h1 className="text-5xl text-center">Blogs</h1>
       <div className="blog-list">
         {blogs.map((blog: any, index) => (
-          <BlogCard {...blog} key={index} index={index}/>
+          <BlogCard {...blog} key={index}/>
         ))}
       </div>
     </div>
