@@ -1,40 +1,39 @@
 "use client";
-import { motion } from "framer-motion";
+import SlideRight from "../animate/SlideRight";
+import { RightArrow } from "@/utils/customIcons";
+import Link from "next/link";
 
 export default function ServicesOperations() {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      transition={{
-        duration: 0.5,
-        ease: [0.61, 1, 0.88, 1],
-      }}
-      viewport={{ once: true }}
-      variants={{
-        hidden: { opacity: 0, x: -50 },
-        visible: { opacity: 1, x: 0 },
-      }}
-      className="services-operations"
-    >
-      <div className="md:w-1/4 self-start">
-        <h1 className="mb-5 text-xl">
-          01<span className="text-gray-300"> - 03</span>
-        </h1>
-        <p>Analyzing the Problem</p>
-      </div>
-      <div className="md:w-1/4 self-start">
-        <h1 className="mb-5 text-xl">
-          02<span className="text-gray-300"> - 03</span>
-        </h1>
-        <p>Drafting the Solution</p>
-      </div>
-      <div className="md:w-1/4 self-start">
-        <h1 className="mb-5 text-xl">
-          03<span className="text-gray-300"> - 03</span>
-        </h1>
-        <p>Implementing a scalable Solution</p>
-      </div>
-    </motion.div>
+    <section>
+      <SlideRight>
+        <div className="services-operations">
+          <div className="md:w-1/4 self-start">
+            <h1 className="mb-5 text-xl">
+              01<span className="text-gray-300"> - 03</span>
+            </h1>
+            <p>Analyzing the Problem</p>
+          </div>
+          <div className="md:w-1/4 self-start">
+            <h1 className="mb-5 text-xl">
+              02<span className="text-gray-300"> - 03</span>
+            </h1>
+            <p>Drafting the Solution</p>
+          </div>
+          <div className="md:w-1/4 self-start">
+            <h1 className="mb-5 text-xl">
+              03<span className="text-gray-300"> - 03</span>
+            </h1>
+            <p>Implementing a scalable Solution</p>
+          </div>
+        </div>
+      </SlideRight>
+      <SlideRight>
+        <Link href={"/contact"} className="dark-button">
+          <p className="mx-2">contact us</p>
+          <RightArrow />
+        </Link>
+      </SlideRight>
+    </section>
   );
 }

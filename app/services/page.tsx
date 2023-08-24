@@ -1,10 +1,7 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import FirstHeading from "@/components/FirstHeading";
 import ServicesOperations from "@/components/services/ServicesOperations";
-import Button from "@/components/services/Buttton";
 import ServicesList from "@/components/services/ServicesList";
-import { RightArrow } from "@/utils/customIcons";
 
 export const metadata: Metadata = {
   title: "Code Amateur" + " | " + "Our Services",
@@ -18,7 +15,6 @@ export default function Services() {
       <section className="py-8 px-4 sm:p-20 bg-[url('/assets/images/background.svg')] bg-auto bg-no-repeat">
         <FirstHeading />
         <ServicesOperations />
-        <Button />
       </section>
       <ServicesList />
     </div>

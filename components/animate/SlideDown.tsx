@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function SlideUp({ children }: { children: React.ReactNode }) {
+export default function SlideDown({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
       initial="hidden"
