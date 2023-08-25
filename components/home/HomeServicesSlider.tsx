@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 import HomeServicesCard from "./HomeServicesCard";
 import { slideLeft, slideRight } from "@/utils/slider";
-import { services } from "@/data/data";
+import { servicesList } from "@/data/data";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -23,7 +23,7 @@ export default function HomeServicesSlider() {
         </h1>
     <div className="overflow-hidden">
       <div className="mt-12 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth" ref={serviceRef} onScroll={scrollServices}>
-        {services.map((service) => (
+        {servicesList.map((service) => (
           <div key={service.id} className="flex-[0_0_90%] md:flex-[0_0_50%] lg:flex-[0_0_28%]">
             <HomeServicesCard {...service} />
           </div>

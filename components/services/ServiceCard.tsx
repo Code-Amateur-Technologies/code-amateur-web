@@ -2,14 +2,14 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import { motion, useCycle } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function ServiceCard(props: {
   id: number;
-  img: string;
-  serviceIcon: any;
-  service: string;
-  description: string;
+  service_image: string;
+  service_icon: any;
+  service_name: string;
+  service_description: string;
   technologies: any[];
 }) {
   const [cardStyle, setCardStyle] = useState<boolean>(true);
@@ -46,8 +46,8 @@ export default function ServiceCard(props: {
           className="lg:w-1/2 mb-5 sm:mb-0 "
         >
           <Image
-            src={props.img}
-            alt={"Image for " + props.service + " services we provide"}
+            src={props.service_image}
+            alt={"Image representing " + props.service_name + " services we provide"}
             width={700}
             height={550}
             className="rounded-3xl"
@@ -76,22 +76,22 @@ export default function ServiceCard(props: {
             }`}
           >
             <div className="flex-start">
-              <FontAwesomeIcon icon={props.serviceIcon} size="2xl" />
-              <p className="ml-5 text-3xl sm:text-5xl">{props.service}</p>
+              <FontAwesomeIcon icon={props.service_icon} size="2xl" />
+              <p className="ml-5 text-3xl sm:text-5xl">{props.service_name}</p>
             </div>
-            <p className="my-5 text-xl sm:text-2xl">{props.description}</p>
+            <p className="my-5 text-xl sm:text-2xl">{props.service_description}</p>
             <div className="lg:px-10 grid grid-rows-5 grid-flow-col gap-3">
               {props.technologies.map((items, index) => (
                 <div key={index} className="mb-4 flex">
-                  {items.techsvg !== "" ? (
+                  {items.tech_svg !== "" ? (
                     <Image
-                      src={items.techsvg}
+                      src={items.tech_svg}
                       alt={""}
                       width={25}
                       height={25}
                     />
                   ) : (
-                    <FontAwesomeIcon icon={items.techIcon} size="xl" />
+                    <FontAwesomeIcon icon={items.tech_icon} size="xl" />
                   )}
                   <p className="ml-4 text-sm sm:text-xl">{items.tech}</p>
                 </div>

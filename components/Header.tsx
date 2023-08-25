@@ -22,7 +22,6 @@ export default function Header(): JSX.Element {
           height={90}
           className="object-contain"
         />
-        <div className="headerlogo-text"></div>
       </Link>
       <div className="hidden md:flex gap-3">
         <Link href={"/"} className={`header-link ${path == "/" ? "text-celestialblue" : ""}`}>

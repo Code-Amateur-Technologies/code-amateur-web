@@ -28,179 +28,181 @@ import {
   faDatabase,
 } from "@fortawesome/free-solid-svg-icons";
 
-export interface Service {
+interface IService {
   id: number;
-  hash: string;
-  img: string;
-  serviceIcon: any;
-  service: string;
-  description: string;
-  technologies: technology[];
+  service_hash: string;
+  service_image: string;
+  service_icon: any;
+  service_name: string;
+  service_description: string;
+  technologies: ITechnology[];
 }
-interface technology {
+interface ITechnology {
   tech: string;
-  techIcon: any;
-  techsvg: any;
+  tech_icon: any;
+  tech_svg: any;
 }
 
-export const services: Service[] = [
+export const servicesList: IService[] = [
   {
     id: 1,
-    hash: "product-strategy",
-    img: "/assets/services/img1.png",
-    serviceIcon: faBriefcase,
-    service: "Product Strategy",
-    description:
+    service_hash: "product-strategy",
+    service_image: "/assets/services/service_image_1.png",
+    service_icon: faBriefcase,
+    service_name: "Product Strategy",
+    service_description:
       "We understand our target customers needs, preferences, and pain points. We continuously iterate and improve your product based on customer feedback, market trends, and emerging technologies.",
     technologies: [
-      {tech: "Jira", techIcon: faJira, techsvg: ""},
-      {tech: "Trello", techIcon: faTrello, techsvg: ""},
-      {tech: "Github", techIcon: faGithub, techsvg: ""},
-      {tech: "Gitlab", techIcon: faGitlab, techsvg: ""},
+      {tech: "Jira", tech_icon: faJira, tech_svg: ""},
+      {tech: "Trello", tech_icon: faTrello, tech_svg: ""},
+      {tech: "Github", tech_icon: faGithub, tech_svg: ""},
+      {tech: "Gitlab", tech_icon: faGitlab, tech_svg: ""},
     ],
   },
   {
     id: 2,
-    hash: "ux-and-ui-design",
-    img: "/assets/services/img2.png",
-    serviceIcon: faBrush,
-    service: "UX and UI Design",
-    description:
+    service_hash: "ux-and-ui-design",
+    service_image: "/assets/services/service_image_2.png",
+    service_icon: faBrush,
+    service_name: "UX and UI Design",
+    service_description:
       "We follow a series of steps that aim to create a user-friendly and visually appealing product",
     technologies: [
-      { tech: "Bootstrap", techIcon: faBootstrap, techsvg: "" },
-      { tech: "Css", techIcon: faCss3, techsvg: "" },
+      { tech: "Bootstrap", tech_icon: faBootstrap, tech_svg: "" },
+      { tech: "Css", tech_icon: faCss3, tech_svg: "" },
       {
         tech: "Tailwind",
-        techIcon: "",
-        techsvg: "/assets/icons/tailwind_css.svg",
+        tech_icon: "",
+        tech_svg: "/assets/icons/tailwind_css.svg",
       },
-      { tech: "Scss", techIcon: faSass, techsvg: "" },
-      { tech: "Figma", techIcon: faFigma, techsvg: "" },
+      { tech: "Scss", tech_icon: faSass, tech_svg: "" },
+      { tech: "Figma", tech_icon: faFigma, tech_svg: "" },
     ],
   },
   {
     id: 3,
-    hash: "front-end-development",
-    img: "/assets/services/img3.png",
-    serviceIcon: faCode,
-    service: "Front-end Development",
-    description:
+    service_hash: "front-end-development",
+    service_image: "/assets/services/service_image_3.png",
+    service_icon: faCode,
+    service_name: "Front-end Development",
+    service_description:
       "Our job is to take the vision and design concept from the client and implement it through code and make sure the website looks good on all devices.",
     technologies: [
-      { tech: "React", techIcon: faReact, techsvg: "" },
-      { tech: "React Native", techIcon: faReact, techsvg: "" },
-      { tech: "Angular", techIcon: faAngular, techsvg: "" },
-      { tech: "Vue", techIcon: faVuejs, techsvg: "" },
-      { tech: "Redux", techIcon: faVuejs, techsvg: "/assets/icons/redux.svg" },
+      { tech: "React", tech_icon: faReact, tech_svg: "" },
+      { tech: "React Native", tech_icon: faReact, tech_svg: "" },
+      { tech: "Angular", tech_icon: faAngular, tech_svg: "" },
+      { tech: "Vue", tech_icon: faVuejs, tech_svg: "" },
+      { tech: "Redux", tech_icon: faVuejs, tech_svg: "/assets/icons/redux.svg" },
     ],
   },
   {
     id: 4,
-    hash: "back-end-development",
-    img: "/assets/services/img4.png",
-    serviceIcon: faServer,
-    service: "Back-end Development",
-    description:
+    service_hash: "back-end-development",
+    service_image: "/assets/services/service_image_4.png",
+    service_icon: faServer,
+    service_name: "Back-end Development",
+    service_description:
       "We write back-end code that forms the backbone of any website or app",
     technologies: [
-      { tech: "Node", techIcon: faNodeJs, techsvg: "" },
-      { tech: "Nest", techIcon: "", techsvg: "/assets/icons/nestjs.svg" },
-      { tech: "Express", techIcon: "", techsvg: "/assets/icons/express_js.svg" },
-      { tech: "MongoDB", techIcon: "", techsvg: "/assets/icons/mongodb.svg" },
-      { tech: "MySQL", techIcon: faDatabase, techsvg: "" },
-      { tech: "Postgres", techIcon: "", techsvg: "/assets/icons/postgres_sql.svg" },
-      { tech: "AWS", techIcon: faAws, techsvg: "" },
-      { tech: "GCP", techIcon: faGoogle, techsvg: "" },
-      { tech: "kafka", techIcon: "", techsvg: "/assets/icons/kafka.svg" },
-      { tech: "Redis", techIcon: "", techsvg: "/assets/icons/redis.svg" },
-      { tech: "Web-Automation", techIcon: "", techsvg: "/assets/icons/automation.svg" },
-      { tech: "Web-Scraping", techIcon: "", techsvg: "/assets/icons/scraping.svg" },
+      { tech: "Node", tech_icon: faNodeJs, tech_svg: "" },
+      { tech: "Nest", tech_icon: "", tech_svg: "/assets/icons/nestjs.svg" },
+      { tech: "Express", tech_icon: "", tech_svg: "/assets/icons/express_js.svg" },
+      { tech: "MongoDB", tech_icon: "", tech_svg: "/assets/icons/mongodb.svg" },
+      { tech: "MySQL", tech_icon: faDatabase, tech_svg: "" },
+      { tech: "Postgres", tech_icon: "", tech_svg: "/assets/icons/postgres_sql.svg" },
+      { tech: "AWS", tech_icon: faAws, tech_svg: "" },
+      { tech: "GCP", tech_icon: faGoogle, tech_svg: "" },
+      { tech: "kafka", tech_icon: "", tech_svg: "/assets/icons/kafka.svg" },
+      { tech: "Redis", tech_icon: "", tech_svg: "/assets/icons/redis.svg" },
+      { tech: "Web-Automation", tech_icon: "", tech_svg: "/assets/icons/automation.svg" },
+      { tech: "Web-Scraping", tech_icon: "", tech_svg: "/assets/icons/scraping.svg" },
     ],
   },
   {
     id: 5,
-    hash: "data-analytics",
-    img: "/assets/services/img5.png",
-    serviceIcon: faChartSimple,
-    service: "Data Analytics",
-    description:
+    service_hash: "data-analytics",
+    service_image: "/assets/services/service_image_5.png",
+    service_icon: faChartSimple,
+    service_name: "Data Analytics",
+    service_description:
       "Turning data into analytics with the goal of discovering useful information, informing conclusions, and supporting decision-making.",
     technologies: [
-      { tech: "Tableau", techIcon: "", techsvg: "/assets/icons/tableau.svg" },
-      { tech: "Power BI", techIcon: "", techsvg: "/assets/icons/power_bi.svg" },
-      { tech: "Looker", techIcon: "", techsvg: "/assets/icons/looker.svg" },
-      { tech: "Quicksight", techIcon: "", techsvg: "/assets/icons/aws_quicksight.svg" },
-      { tech: "Alteryx", techIcon: "", techsvg: "/assets/icons/alteryx.svg" },
-      { tech: "Dataiku", techIcon: "", techsvg: "/assets/icons/dataiku.svg" },
-      { tech: "Easymorph", techIcon: "", techsvg: "/assets/icons/easy.png" },
-      { tech: "Qlikview", techIcon: "", techsvg: "/assets/icons/qlikview.svg" },
-      { tech: "Phython", techIcon: faPython, techsvg: "" },
+      { tech: "Tableau", tech_icon: "", tech_svg: "/assets/icons/tableau.svg" },
+      { tech: "Power BI", tech_icon: "", tech_svg: "/assets/icons/power_bi.svg" },
+      { tech: "Looker", tech_icon: "", tech_svg: "/assets/icons/looker.svg" },
+      { tech: "Quicksight", tech_icon: "", tech_svg: "/assets/icons/aws_quicksight.svg" },
+      { tech: "Alteryx", tech_icon: "", tech_svg: "/assets/icons/alteryx.svg" },
+      { tech: "Dataiku", tech_icon: "", tech_svg: "/assets/icons/dataiku.svg" },
+      { tech: "Easymorph", tech_icon: "", tech_svg: "/assets/icons/easy.png" },
+      { tech: "Qlikview", tech_icon: "", tech_svg: "/assets/icons/qlikview.svg" },
+      { tech: "Python", tech_icon: faPython, tech_svg: "" },
     ],
   },
   {
     id: 6,
-    hash: "game-development",
-    img: "/assets/services/img6.png",
-    serviceIcon: faGamepad,
-    service: "Game Development",
-    description: "Gaming Development and Virtual Reality.",
+    service_hash: "game-development",
+    service_image: "/assets/services/service_image_6.png",
+    service_icon: faGamepad,
+    service_name: "Game Development",
+    service_description: "Gaming Development and Virtual Reality.",
     technologies: [
-      { tech: "Game Development", techIcon: faSteamSymbol, techsvg: "" },
-      { tech: "Unreal", techIcon: "", techsvg: "/assets/icons/unreal_engine.svg" },
-      { tech: "Unity", techIcon: faUnity, techsvg: "" },
-      { tech: "AR, VR, MR Applications", techIcon: faVrCardboard, techsvg: "" },
+      { tech: "Game Development", tech_icon: faSteamSymbol, tech_svg: "" },
+      { tech: "Unreal Engine", tech_icon: "", tech_svg: "/assets/icons/unreal_engine.svg" },
+      { tech: "Unity Engine", tech_icon: faUnity, tech_svg: "" },
+      { tech: "AR, VR, MR Applications", tech_icon: faVrCardboard, tech_svg: "" },
     ],
   },
 ];
 
-export interface Client {
+interface IClient {
   id: number;
-  client: string;
+  client_name: string;
+  client_image: string;
 }
 
-export const clientList: Client[] = [
-  { id: 1, client: "/assets/clients/logo_love_local.png" },
-  { id: 2, client: "/assets/clients/logo_hot_box_cookies.png" },
-  { id: 3, client: "/assets/clients/logo_orderex.png" },
-  { id: 4, client: "/assets/clients/logo_hungry_media.png" },
-  { id: 5, client: "/assets/clients/logo_ygoin.png" },
-  { id: 6, client: "/assets/clients/logo_SBTS_group.png" },
-  { id: 7, client: "/assets/clients/logo_fnp.png" },
+export const clientList: IClient[] = [
+  { id: 1, client_name: "LoveLocal", client_image: "/assets/clients/logo_love_local.png" },
+  { id: 2, client_name: "Hot Box Cookies", client_image: "/assets/clients/logo_hot_box_cookies.png" },
+  { id: 3, client_name: "OrderEX", client_image: "/assets/clients/logo_orderex.png" },
+  { id: 4, client_name: "Hungry Media", client_image: "/assets/clients/logo_hungry_media.png" },
+  { id: 5, client_name: "YGOIN", client_image: "/assets/clients/logo_ygoin.png" },
+  { id: 6, client_name: "SBTS group", client_image: "/assets/clients/logo_SBTS_group.png" },
+  { id: 7, client_name: "Fernsnpetals", client_image: "/assets/clients/logo_fnp.png" },
 ];
 
-export interface portfolio {
+interface IPortfolio {
   id: number;
-  img: string;
+  client_name: string;
+  client_portfolio_image: string;
 }
 
-export const portfolioList: portfolio[] = [
-  // { id: 1, img: "/assets/portfolio/fnp_mobile.png" },
-  { id: 2, img: "/assets/portfolio/fnp_website.png" },
-  // { id: 3, img: "/assets/portfolio/fnp_app.png" },
-  // { id: 4, img: "/assets/portfolio/momos_1.png" },
-  { id: 5, img: "/assets/portfolio/momos_2.png" },
-  // { id: 6, img: "/assets/portfolio/momos_3.png" },
-  { id: 7, img: "/assets/portfolio/orderex_1.png" },
-  // { id: 8, img: "/assets/portfolio/orderex_2.png" },
-  // { id: 9, img: "/assets/portfolio/orderex_3.png" },
-  // { id: 10, img: "/assets/portfolio/prixa_1.png" },
-  // { id: 11, img: "/assets/portfolio/prixa_2.png" },
-  // { id: 12, img: "/assets/portfolio/prixa_3.png" },
-  { id: 13, img: "/assets/portfolio/raena_1.png" },
-  // { id: 14, img: "/assets/portfolio/raena_2.png" },
-  { id: 15, img: "/assets/portfolio/ygoin_1.png" },
-  // { id: 16, img: "/assets/portfolio/ygoin_2.png" },
-  { id: 17, img: "/assets/portfolio/tallhaven.png" },
+export const portfolioList: IPortfolio[] = [
+  // { id: 1, client_name: "", client_portfolio_image: "/assets/portfolio/fnp_mobile.png" },
+  { id: 2, client_name: "Fernsnpetals", client_portfolio_image: "/assets/portfolio/fnp_website.png" },
+  // { id: 3, client_name: "", client_portfolio_image: "/assets/portfolio/fnp_app.png" },
+  // { id: 4, client_name: "", client_portfolio_image: "/assets/portfolio/momos_1.png" },
+  { id: 5, client_name: "momos", client_portfolio_image: "/assets/portfolio/momos_2.png" },
+  // { id: 6, client_name: "", client_portfolio_image: "/assets/portfolio/momos_3.png" },
+  { id: 7, client_name: "OrderEx", client_portfolio_image: "/assets/portfolio/orderex_1.png" },
+  // { id: 8, client_name: "", client_portfolio_image: "/assets/portfolio/orderex_2.png" },
+  // { id: 9, client_name: "", client_portfolio_image: "/assets/portfolio/orderex_3.png" },
+  // { id: 10, client_name: "", client_portfolio_image: "/assets/portfolio/prixa_1.png" },
+  // { id: 11, client_name: "", client_portfolio_image: "/assets/portfolio/prixa_2.png" },
+  // { id: 12, client_name: "", client_portfolio_image: "/assets/portfolio/prixa_3.png" },
+  { id: 13, client_name: "Raena", client_portfolio_image: "/assets/portfolio/raena_1.png" },
+  // { id: 14, client_name: "", client_portfolio_image: "/assets/portfolio/raena_2.png" },
+  { id: 15, client_name: "YGOIN", client_portfolio_image: "/assets/portfolio/ygoin_1.png" },
+  // { id: 16, client_name: "", client_portfolio_image: "/assets/portfolio/ygoin_2.png" },
+  { id: 17, client_name: "Tallhaven", client_portfolio_image: "/assets/portfolio/tallhaven.png" },
 ];
 
-export interface customerOpinion {
+export interface ITestimonial {
   id: number;
   name: string;
   text: string;
 }
 
-export const customerOpinions: customerOpinion[] = [
+export const testimonials: ITestimonial[] = [
   {
     id: 1,
     name: "Mohammed Kamil",

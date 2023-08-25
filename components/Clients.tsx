@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { Client, clientList } from "@/data/data";
+import { clientList } from "@/data/data";
 import { slideLeft, slideRight } from "@/utils/slider";
 import {
   faChevronRight,
@@ -10,7 +10,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Clients() {
-  const data: Client[] = clientList;
   const clientRef = useRef<any>();
   const [leftDisabled, setLeftDisabled] = useState<boolean>(true);
   const [rightDisabled, setRighttDisabled] = useState<boolean>();
@@ -44,11 +43,11 @@ export default function Clients() {
             ref={clientRef}
             onScroll={scrollServices}
           >
-            {data.map((items) => (
+            {clientList.map((items) => (
               <div key={items.id} className="client-box">
                 <Image
-                  src={items.client}
-                  alt={"Image of our client "}
+                  src={items.client_image}
+                  alt={items.client_name + " are one of our happy customers"}
                   width={150}
                   height={150}
                 ></Image>

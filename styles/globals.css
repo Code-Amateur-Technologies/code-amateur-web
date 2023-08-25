@@ -55,10 +55,10 @@
 
 /* Header Component */
 .header {
-  @apply h-24 p-3 sm:py-5 sm:px-20 border-b border-slate-100 shadow-xl bg-white flex-between sticky top-0 z-10
+  @apply h-24 p-3 sm:py-5 sm:px-20 shadow-xl bg-white flex-between sticky top-0 z-10
 }
 .header-link {
-  @apply py-2 px-5 font-medium text-xl hover:text-celestialblue;
+  @apply py-2 px-5 font-medium text-xl text-gunmetal hover:text-celestialblue;
 }
 
 /* Home Component */
@@ -84,7 +84,7 @@
   @apply py-2 px-5 text-center text-xl;
 }
 .quote-heading {
-  @apply py-8 px-4 sm:py-40 sm:px-96 text-4xl sm:text-6xl font-medium text-center blue-gradient
+  @apply py-8 px-4 md:py-40 lg:px-96 text-4xl md:text-6xl font-medium text-center blue-gradient
 }
 
 /* Services Component */
@@ -142,20 +142,20 @@
 
 /* Portfolio */
 
-/* Customer Opinion Component */
-.customeropinion-heading {
+/* Testimonials Component */
+.testimonials-heading {
   @apply lg:w-1/2 text-[27px] sm:text-7xl tracking-tighter text-white text-center sm:text-left
 }
-.customeropinion-slider {
+.testimonials-slider {
   @apply my-12 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth text-xl sm:text-2xl font-medium text-white
 }
-.customeropinion-card {
+.testimonials-card {
   @apply p-6 sm:p-12 bg-spacecadet rounded-3xl flex justify-between flex-col flex-[0_0_90%] md:flex-[0_0_50%] lg:flex-[0_0_30%]
 }
-.customeropinion-card:last-child {
+.testimonials-card:last-child {
   @apply mr-0
 }
-.customeropinion-button {
+.testimonials-button {
   @apply w-fit py-4 sm:py-6 px-8 sm:px-10 rounded-full bg-spacecadet flex self-center text-white disabled:opacity-50;
 }
 

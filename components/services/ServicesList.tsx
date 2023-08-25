@@ -2,7 +2,7 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import ServiceCard from "./ServiceCard";
-import { services } from "@/data/data";
+import { servicesList } from "@/data/data";
 
 export default function ServicesList() {
   const sectionid: string | null = useSearchParams().get("section");
@@ -20,8 +20,8 @@ export default function ServicesList() {
 
   return (
     <div>
-      {services.map((service) => (
-        <section key={service.id} id={service.hash}>
+      {servicesList.map((service) => (
+        <section key={service.id} id={service.service_hash}>
           <ServiceCard {...service} />
         </section>
       ))}

@@ -24,12 +24,12 @@ export default function Portfolio() {
               hiddenRight: { opacity: 0, x: 50 },
               visible: { opacity: 1, x: 0 },
             }}
-            className="w-full md:w-1/2 h-fit flex-center"
+            className="w-full lg:w-1/2 h-fit flex-center"
             key={items.id}
           >
             <img
-              src={items.img}
-              alt="Portfolio Image"
+              src={items.client_portfolio_image}
+              alt={"Bringing " + items.client_name + " vision to life with passion and innovative solutions"}
               className="w-auto h-auto p-10"
             />
           </motion.div>

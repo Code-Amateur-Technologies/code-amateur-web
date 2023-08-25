@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <section className="home-firstsection">
         <FirstHeading />
-        <div className="mt-6 lg:self-end ">
+        <div className="mt-6 self-center lg:self-end ">
           <SlideLeft>
             <Link className="dark-button gap-2" href={"/services"}>
               <p>see our services</p>
@@ -25,13 +25,16 @@ export default function Home() {
         </div>
       </section>
       <section className="home-secondsection">
-        <div className="h-full lg:w-1/2 flex flex-col">
+        <div className="h-full lg:w-1/2">
           <SlideRight>
-            <h1 className="home-headings">
-              Our main goal is to deliver quality & scalable solutions
-            </h1>
-            <div className="mt-6 md:self-start ">
-              <Link href={"/about"} className="dark-button gap-2">
+            <div className="flex flex-col">
+              <h1 className="home-headings">
+                Our main goal is to deliver quality & scalable solutions
+              </h1>
+              <Link
+                href={"/about"}
+                className="my-6 lg:self-start dark-button gap-2"
+              >
                 <p>know about us</p>
                 <RightArrow />
               </Link>

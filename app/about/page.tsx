@@ -26,7 +26,7 @@ export default function About(): JSX.Element {
         <SlideUp>
           <Image
             src={"/assets/images/about_heading.png"}
-            alt={"Image showing a positive team working enviorment"}
+            alt={"Software Company"}
             width={1920}
             height={959}
             className="w-full rounded-3xl"
@@ -75,7 +75,7 @@ export default function About(): JSX.Element {
           <SlideLeft>
             <Image
               src={"/assets/images/logo_company_icon.png"}
-              alt={"company icon"}
+              alt={"code Amateur Logo"}
               width={200}
               height={200}
             />
@@ -88,7 +88,7 @@ export default function About(): JSX.Element {
             <SlideRight>
               <Image
                 src={"/assets/images/about_content.png"}
-                alt={"Team photo"}
+                alt={"Software Agency"}
                 width={700}
                 height={700}
                 className=" rounded-3xl"

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useRef } from "react";
-import { customerOpinion, customerOpinions } from "@/data/data";
+import { testimonials } from "@/data/data";
 import { slideLeft, slideRight } from "@/utils/slider";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,14 +25,14 @@ export default function Testimonials() {
 
   return (
     <div className="p-8 sm:p-20 bg-raisinblack">
-      <p className="customeropinion-heading">Testimonials</p>
+      <p className="testimonials-heading">Testimonials</p>
       <div
-        className="customeropinion-slider"
+        className="testimonials-slider"
         ref={opinionRef}
         onScroll={scrollOpinions}
       >
-        {customerOpinions.map((items) => (
-          <div className="customeropinion-card" key={items.id}>
+        {testimonials.map((items) => (
+          <div className="testimonials-card" key={items.id}>
             <div>
               <Image
                 src={commentIcon}
@@ -56,14 +56,14 @@ export default function Testimonials() {
       <div className="flex justify-around sm:justify-start">
         <button
           onClick={() => slideLeft(opinionRef)}
-          className="customeropinion-button mx-4"
+          className="testimonials-button mx-4"
           disabled={leftDisabled}
         >
           <FontAwesomeIcon icon={faArrowLeft} size="xl" />
         </button>
         <button
           onClick={() => slideRight(opinionRef)}
-          className="customeropinion-button mx-4"
+          className="testimonials-button mx-4"
           disabled={rightDisabled}
         >
           <FontAwesomeIcon icon={faArrowRight} size="xl" />
