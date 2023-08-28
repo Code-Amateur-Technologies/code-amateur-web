@@ -1,4 +1,17 @@
+"use client"
 export default function ContactForm() {
+  /*VALIDATE RECAPTCHA FIELD SUBMIT FORM */
+
+  function validate_form() {
+    const recaptcha_box_checked = grecaptcha.getResponse() ? true : false;
+
+    if (recaptcha_box_checked) {
+      return true;
+    } else {
+      alert("Failed reCAPTCHA");
+      return false;
+    }
+  }
   return (
     <div className="contact-form">
       <h1 className="form-heading">Contact Us</h1>
@@ -6,8 +19,9 @@ export default function ContactForm() {
         name="contact"
         action="/success"
         method="POST"
-        data-netlify-recaptcha="true"
         data-netlify="true"
+        data-netlify-recaptcha="true"
+        onSubmit={validate_form}
         className="flex flex-col gap-8"
       >
         <input type="hidden" name="form-name" value="contact" />
