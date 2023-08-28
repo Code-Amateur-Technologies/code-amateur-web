@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.codeamateur.com/'),
+  metadataBase: new URL('https://codeamateur.netlify.app/'),
   title: "Code Amateur" + " | Home : " + "Crafting Mobile and Web Excellence",
   description: "Leading technology company for all your services needs",
   openGraph: {
