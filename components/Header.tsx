@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Header(): JSX.Element {
   const path = usePathname();
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState<boolean>(false);
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
@@ -24,19 +24,19 @@ export default function Header(): JSX.Element {
         />
       </Link>
       <div className="hidden md:flex gap-3">
-        <Link href={"/"} className={`header-link ${path == "/" ? "text-celestialblue" : ""}`}>
+        <Link href={"/"} className={`header-link ${path == "/" ? "text-celestialblue" : "text-gunmetal"}`}>
           Home
         </Link>
-        <Link href={"/services"} className={`header-link ${path == "/services" ? "text-celestialblue" : ""}`} >
+        <Link href={"/services"} className={`header-link ${path == "/services" ? "text-celestialblue" : "text-gunmetal"}`} >
           Our Services
         </Link>
-        <Link href={"/blogs"} className={`header-link ${path == "/blogs" ? "text-celestialblue" : ""}`}>
+        <Link href={"/blogs"} className={`header-link ${path == "/blogs" ? "text-celestialblue" : "text-gunmetal"}`}>
           Blogs
         </Link>
-        <Link href={"/about"} className={`header-link ${path == "/about" ? "text-celestialblue" : ""}`}>
+        <Link href={"/about"} className={`header-link ${path == "/about" ? "text-celestialblue" : "text-gunmetal"}`}>
           About
         </Link>
-        <Link href={"/contact"} className={`header-link ${path == "/contact" ? "text-celestialblue" : ""}`}>
+        <Link href={"/contact"} className={`header-link ${path == "/contact" ? "text-celestialblue" : "text-gunmetal"}`}>
           Contact
         </Link>
       </div>
