@@ -1,27 +1,13 @@
-"use client"
 export default function ContactForm() {
-  /*VALIDATE RECAPTCHA FIELD SUBMIT FORM */
-
-  function validate_form() {
-    const recaptcha_box_checked = grecaptcha.getResponse() ? true : false;
-
-    if (recaptcha_box_checked) {
-      return true;
-    } else {
-      alert("Failed reCAPTCHA");
-      return false;
-    }
-  }
   return (
     <div className="contact-form">
       <h1 className="form-heading">Contact Us</h1>
       <form
         name="contact"
-        action="/success"
         method="POST"
         data-netlify="true"
-        data-netlify-recaptcha="true"
-        onSubmit={validate_form}
+        action="/success"
+        netlify-honeypot="bot-field"
         className="flex flex-col gap-8"
       >
         <input type="hidden" name="form-name" value="contact" />
@@ -59,7 +45,10 @@ export default function ContactForm() {
           placeholder="Message *"
         ></textarea>
 
-        <div data-netlify-recaptcha="true"></div>
+        <label className="hidden">
+          Don't fill this out if you're human:
+          <input name="bot-field" />
+        </label>
 
         <button
           className="dark-button lg:self-start hover:border-transparent disabled:opacity-75 disabled:pointer-events-none"
