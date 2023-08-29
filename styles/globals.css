@@ -26,6 +26,9 @@
 .blue-gradient {
   @apply bg-gradient-to-r from-celestialblue to-blue-600 to-cyan-600 bg-clip-text text-transparent;
 }
+.gradient {
+  @apply bg-gradient-to-r from-electricblue to-nonphotoblue to-moonstone bg-clip-text text-transparent
+}
 .glassmorphism {
   @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset-10px--50px-94px-0-rgb(199,199,199,0.2)] backdrop-blur p-5;
 }
@@ -84,7 +87,7 @@
   @apply py-2 px-5 text-center text-xl;
 }
 .quote-heading {
-  @apply py-8 px-4 md:py-40 lg:px-96 text-4xl md:text-6xl font-medium text-center blue-gradient
+  @apply w-1/2 text-4xl md:text-6xl font-medium text-center blue-gradient
 }
 
 /* Services Component */
@@ -95,15 +98,26 @@
   @apply w-fit p-6 rounded-full bg-white flex self-center text-gunmetal;
 }
 
-/* Blog Component */
-.blog-list {
+/* Blogs Component */
+.blogs-list {
   @apply flex flex-col md:flex-row md:justify-between flex-wrap
 }
 .blog-card {
   @apply md:w-[45%] lg:w-[30%] my-10 shadow-xl rounded-3xl
 }
-.blog-heading {
-  @apply text-6xl font-medium text-gunmetal
+
+/* Blogs Skeleton Loading */
+.skeleton-animation {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
 }
 
 /* About Component */
@@ -203,16 +217,4 @@
 }
 .animation-pop-in {
   animation: grow 0.50s ease-in;
-}
-
-@keyframes bottom-slide-in {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-.animation-bottom-slide {
-  animation: bottom-slide-in 1s ease-out;
 }

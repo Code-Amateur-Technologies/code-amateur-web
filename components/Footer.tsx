@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer(): JSX.Element {
   return (
-    <div className="px-4 md:px-20">
+    <footer className="px-4 md:px-20">
       <hr className="footer-divider"></hr>
       <section className="py-8 md:py-20 ">
         <div className="flex-center gap-5">
@@ -19,6 +19,6 @@ export default function Footer(): JSX.Element {
           ©2023 by Code Amateur Technologies Private Limited.
         </p>
       </section>
-    </div>
+    </footer>
   );
 }

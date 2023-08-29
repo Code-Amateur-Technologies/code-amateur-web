@@ -40,7 +40,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   return (
     <div>
       <section className="h-full py-8 px-4 sm:p-20 border-b flex-between">
-        <h1 className="blog-heading w-1/2">{blogData?.title}</h1>
+        <h1 className="w-1/2 text-6xl font-medium text-gunmetal">{blogData?.title}</h1>
       </section>
       <section className="px-20">
         <div className="py-10 flex gap-5 text-xl font-bold text-gunmetal">
