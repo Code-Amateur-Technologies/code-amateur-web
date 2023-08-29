@@ -27,7 +27,10 @@
   @apply bg-gradient-to-r from-celestialblue to-blue-600 to-cyan-600 bg-clip-text text-transparent;
 }
 .gradient {
-  @apply bg-gradient-to-r from-electricblue to-nonphotoblue to-moonstone bg-clip-text text-transparent
+  @apply bg-gradient-to-br from-electricblue to-nonphotoblue to-moonstone
+}
+.gradient-text {
+  @apply gradient bg-clip-text text-transparent
 }
 .glassmorphism {
   @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset-10px--50px-94px-0-rgb(199,199,199,0.2)] backdrop-blur p-5;
@@ -61,7 +64,7 @@
   @apply h-20 sm:h-24 p-3 sm:py-5 sm:px-20 shadow-xl bg-white sticky top-0 z-10
 }
 .header-link {
-  @apply py-2 px-5 font-medium text-xl hover:text-celestialblue;
+  @apply py-2 px-5 font-medium text-xl gradient bg-clip-text hover:text-transparent;
 }
 
 /* Home Component */
@@ -75,7 +78,7 @@
   @apply text-2xl sm:text-7xl font-medium text-gunmetal text-center md:text-left
 }
 .home-operationslides {
-  @apply h-full w-full sm:w-2/3 md:w-full lg:w-1/3 p-8 sm:py-14 border-8 rounded-3xl border-celestialblue
+  @apply h-full w-full sm:w-2/3 md:w-full lg:w-1/3 p-3 rounded-3xl gradient
 }
 .home-operationdot {
   @apply cursor-pointer h-4 w-4 mx-1 rounded-full transition duration-700 ease-in-out hover:bg-celestialblue
@@ -87,7 +90,7 @@
   @apply py-2 px-5 text-center text-xl;
 }
 .quote-heading {
-  @apply w-1/2 text-4xl md:text-6xl font-medium text-center blue-gradient
+  @apply md:w-1/2 text-4xl md:text-6xl font-medium text-center gradient-text
 }
 
 /* Services Component */
@@ -128,7 +131,7 @@
   @apply lg:w-3/5 mb-4 sm:mb-10 text-3xl sm:text-6xl font-medium
 }
 .about-slogan {
-  @apply text-6xl sm:text-7xl font-medium leading-tight blue-gradient
+  @apply text-6xl sm:text-7xl font-medium leading-tight gradient-text
 }
 .about-secondsection {
   @apply py-8 px-4 sm:p-20 border-y flex flex-col-reverse lg:flex-row
@@ -175,25 +178,25 @@
 
 /* Contact Component */
 .contact-heading {
-  @apply text-4xl md:text-8xl font-medium text-celestialblue;
+  @apply text-4xl md:text-8xl font-medium gradient-text;
 }
 .contact-button {
-  @apply w-fit py-3 md:py-8 px-6 md:px-16 rounded-full border border-gunmetal text-base md:text-4xl transition-all hover:text-celestialblue;
+  @apply w-fit py-3 md:py-8 px-6 md:px-16 rounded-full border border-gunmetal text-base md:text-4xl transition-all hover:text-nonphotoblue;
 }
 .contact-form {
-  @apply mb-4 sm:mb-0 p-8 sm:p-12 rounded-3xl bg-celestialblue flex flex-col gap-8;
+  @apply mb-4 sm:mb-0 p-8 sm:p-12 rounded-3xl gradient flex flex-col gap-8;
 }
 .form-heading {
   @apply text-3xl sm:text-8xl text-white font-medium;
 }
 .form-input {
-  @apply py-2 px-4 border-b-2 border-white bg-transparent outline-0 text-base text-white placeholder:text-gray-200 autofill:border-white autofill:text-white autofill:bg-transparent;
+  @apply py-2 px-4 border-b-2 border-white bg-transparent outline-0 text-base text-white placeholder:text-white;
 }
 .follow-heading {
   @apply text-4xl md:text-6xl font-medium tracking-tighter text-center
 }
 .follow-link {
-  @apply w-fit my-3 mr-5 py-2 px-4 rounded-full bg-gray-100 text-sm md:text-xl  underline-offset-2 hover:text-celestialblue hover:underline;
+  @apply w-fit my-3 mr-5 py-2 px-4 rounded-full bg-gray-100 text-sm md:text-xl  underline-offset-2 hover:text-moonstone hover:underline;
 }
 
 /* Footer Component */

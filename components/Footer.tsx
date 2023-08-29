@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { faLinkedin, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faFacebook, faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer(): JSX.Element {
@@ -13,6 +13,9 @@ export default function Footer(): JSX.Element {
           </Link>
           <Link href={"https://www.facebook.com/codeamateur"}>
             <FontAwesomeIcon icon={faFacebook} size="2xl" />
+          </Link>
+          <Link href={"https://www.instagram.com/codeamateur.tech"}>
+            <FontAwesomeIcon icon={faSquareInstagram} size="2xl" />
           </Link>
         </div>
         <p className="footer-description">

@@ -44,6 +44,12 @@ export default function Contact(): JSX.Element {
               >
                 Facebook
               </Link>
+              <Link
+                href={"https://www.instagram.com/codeamateur.tech"}
+                className="follow-link"
+              >
+                Instagram
+              </Link>
             </div>
           </SlideLeft>
         </div>

@@ -20,7 +20,7 @@ export default function ServiceCard(props: {
   return (
     <div
       className={`py-8 px-4 sm:p-20 ${
-        cardStyle ? "bg-white" : "bg-celestialblue"
+        cardStyle ? "bg-white" : "gradient drop-shadow-2xl"
       }`}
     >
       <div

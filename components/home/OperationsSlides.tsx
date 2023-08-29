@@ -26,34 +26,39 @@ export default function OperationsSlides() {
   }, [index]);
 
   return (
-    <motion.div initial="hidden"
-    whileInView="visible"
-    transition={{
-      duration: 0.5,
-      ease: [0.61, 1, 0.88, 1],
-    }}
-    viewport={{ once: true }}
-    variants={{
-      hidden: { opacity: 0, x: 50 },
-      visible: { opacity: 1, x: 0 },
-    }} className="home-operationslides flex flex-col justify-between">
-      <h1 className="mb-4 sm:mb-10 text-base sm:text-xl">
-        Check out how we operate
-      </h1>
-      <p className="text-base sm:text-xl">0{data[index].id}</p>
-      <p className="my-4 text-xl sm:text-4xl font-medium tracling-tight">
-        {data[index].stepName}
-      </p>
-      <div className="flex">
-        {data.map((items) => (
-          <div
-            className={`home-operationdot ${
-              items.id - 1 === index ? "bg-celestialblue" : "bg-gray-100"
-            }`}
-            key={items.id}
-            onClick={() => setIndex(items.id - 1)}
-          ></div>
-        ))}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      transition={{
+        duration: 0.5,
+        ease: [0.61, 1, 0.88, 1],
+      }}
+      viewport={{ once: true }}
+      variants={{
+        hidden: { opacity: 0, x: 50 },
+        visible: { opacity: 1, x: 0 },
+      }}
+      className="home-operationslides"
+    >
+      <div className="h-full px-4 py-7 lg:py-12 rounded-2xl bg-white flex flex-col justify-between">
+        <h1 className="mb-4 sm:mb-10 text-base sm:text-xl">
+          Check out how we operate
+        </h1>
+        <p className="text-base sm:text-xl">0{data[index].id}</p>
+        <p className="my-4 text-xl sm:text-4xl font-medium tracling-tight">
+          {data[index].stepName}
+        </p>
+        <div className="flex">
+          {data.map((items) => (
+            <div
+              className={`home-operationdot ${
+                items.id - 1 === index ? "gradient" : "bg-gray-100"
+              }`}
+              key={items.id}
+              onClick={() => setIndex(items.id - 1)}
+            ></div>
+          ))}
+        </div>
       </div>
     </motion.div>
   );

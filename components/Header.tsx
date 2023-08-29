@@ -28,7 +28,7 @@ export default function Header(): JSX.Element {
           <Link
             href={"/"}
             className={`header-link ${
-              path == "/" ? "text-celestialblue" : "text-gunmetal"
+              path == "/" ? "gradient-text" : "text-gunmetal"
             }`}
           >
             Home
@@ -36,7 +36,7 @@ export default function Header(): JSX.Element {
           <Link
             href={"/services"}
             className={`header-link ${
-              path == "/services" ? "text-celestialblue" : "text-gunmetal"
+              path == "/services" ? "gradient-text" : "text-gunmetal"
             }`}
           >
             Our Services
@@ -44,7 +44,7 @@ export default function Header(): JSX.Element {
           <Link
             href={"/blogs"}
             className={`header-link ${
-              path == "/blogs" ? "text-celestialblue" : "text-gunmetal"
+              path == "/blogs" ? "gradient-text" : "text-gunmetal"
             }`}
           >
             Blogs
@@ -52,7 +52,7 @@ export default function Header(): JSX.Element {
           <Link
             href={"/about"}
             className={`header-link ${
-              path == "/about" ? "text-celestialblue" : "text-gunmetal"
+              path == "/about" ? "gradient-text" : "text-gunmetal"
             }`}
           >
             About
@@ -60,7 +60,7 @@ export default function Header(): JSX.Element {
           <Link
             href={"/contact"}
             className={`header-link ${
-              path == "/contact" ? "text-celestialblue" : "text-gunmetal"
+              path == "/contact" ? "gradient-text" : "text-gunmetal"
             }`}
           >
             Contact

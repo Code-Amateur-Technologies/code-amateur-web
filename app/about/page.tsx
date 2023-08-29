@@ -64,7 +64,7 @@ export default function About(): JSX.Element {
               industry.
             </p>
             <p>
-              <span className="text-celestialblue">
+              <span className="gradient-text">
                 With our innovative and insightful technology
               </span>
               , we strive to enhance our users’ every day experiences.
