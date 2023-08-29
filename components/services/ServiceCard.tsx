@@ -28,31 +28,19 @@ export default function ServiceCard(props: {
           cardStyle ? "lg:flex-row" : "lg:flex-row-reverse"
         }`}
       >
-        <motion.div
-          initial={cardStyle ? "blue" : "white"}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-          }}
-          transition={{
-            duration: 0.5,
-            ease: [0.61, 1, 0.88, 1],
-          }}
-          variants={{
-            blue: { opacity: 0, x: -100 },
-            white: { opacity: 0, x: 100 },
-          }}
-          viewport={{ once: true, amount: 0.5 }}
-          className="lg:w-1/2 mb-5 sm:mb-0 "
-        >
+        <div className="lg:w-1/2 mb-5 sm:mb-0 ">
           <Image
             src={props.service_image}
-            alt={"Image representing " + props.service_name + " services we provide"}
+            alt={
+              "Image representing " +
+              props.service_name +
+              " services we provide"
+            }
             width={700}
             height={550}
             className="rounded-3xl"
           />
-        </motion.div>
+        </div>
         <motion.div
           initial={cardStyle ? "white" : "blue"}
           whileInView={{
@@ -79,7 +67,9 @@ export default function ServiceCard(props: {
               <FontAwesomeIcon icon={props.service_icon} size="2xl" />
               <p className="ml-5 text-3xl sm:text-5xl">{props.service_name}</p>
             </div>
-            <p className="my-5 text-xl sm:text-2xl">{props.service_description}</p>
+            <p className="my-5 text-xl sm:text-2xl">
+              {props.service_description}
+            </p>
             <div className="lg:px-10 grid grid-rows-5 grid-flow-col gap-3">
               {props.technologies.map((items, index) => (
                 <div key={index} className="mb-4 flex">
