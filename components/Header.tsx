@@ -13,8 +13,8 @@ export default function Header(): JSX.Element {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <header>
-      <nav className="header">
+    <header className="header">
+      <nav className="flex-between">
         <Link href="/" className="gap-4 flex-center">
           <Image
             src="/assets/images/logo_code_amateurs.png"
