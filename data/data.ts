@@ -47,7 +47,7 @@ export const servicesList: IService[] = [
   {
     id: 1,
     service_hash: "product-strategy",
-    service_image: "/assets/services/service_image_1.png",
+    service_image: "/assets/services/service_image_1.webp",
     service_icon: faBriefcase,
     service_name: "Product Strategy",
     service_description:
@@ -62,7 +62,7 @@ export const servicesList: IService[] = [
   {
     id: 2,
     service_hash: "ux-and-ui-design",
-    service_image: "/assets/services/service_image_2.png",
+    service_image: "/assets/services/service_image_2.webp",
     service_icon: faBrush,
     service_name: "UX and UI Design",
     service_description:
@@ -82,7 +82,7 @@ export const servicesList: IService[] = [
   {
     id: 3,
     service_hash: "front-end-development",
-    service_image: "/assets/services/service_image_3.png",
+    service_image: "/assets/services/service_image_3.webp",
     service_icon: faCode,
     service_name: "Front-end Development",
     service_description:
@@ -98,7 +98,7 @@ export const servicesList: IService[] = [
   {
     id: 4,
     service_hash: "back-end-development",
-    service_image: "/assets/services/service_image_4.png",
+    service_image: "/assets/services/service_image_4.webp",
     service_icon: faServer,
     service_name: "Back-end Development",
     service_description:
@@ -121,7 +121,7 @@ export const servicesList: IService[] = [
   {
     id: 5,
     service_hash: "data-analytics",
-    service_image: "/assets/services/service_image_5.png",
+    service_image: "/assets/services/service_image_5.webp",
     service_icon: faChartSimple,
     service_name: "Data Analytics",
     service_description:
@@ -141,7 +141,7 @@ export const servicesList: IService[] = [
   {
     id: 6,
     service_hash: "game-development",
-    service_image: "/assets/services/service_image_6.png",
+    service_image: "/assets/services/service_image_6.webp",
     service_icon: faGamepad,
     service_name: "Game Development",
     service_description: "Gaming Development and Virtual Reality.",
@@ -161,13 +161,13 @@ interface IClient {
 }
 
 export const clientList: IClient[] = [
-  { id: 1, client_name: "LoveLocal", client_image: "/assets/clients/logo_love_local.png" },
-  { id: 2, client_name: "Hot Box Cookies", client_image: "/assets/clients/logo_hot_box_cookies.png" },
-  { id: 3, client_name: "OrderEX", client_image: "/assets/clients/logo_orderex.png" },
-  { id: 4, client_name: "Hungry Media", client_image: "/assets/clients/logo_hungry_media.png" },
-  { id: 5, client_name: "YGOIN", client_image: "/assets/clients/logo_ygoin.png" },
-  { id: 6, client_name: "SBTS group", client_image: "/assets/clients/logo_SBTS_group.png" },
-  { id: 7, client_name: "Fernsnpetals", client_image: "/assets/clients/logo_fnp.png" },
+  { id: 1, client_name: "LoveLocal", client_image: "/assets/clients/logo_love_local.webp" },
+  { id: 2, client_name: "Hot Box Cookies", client_image: "/assets/clients/logo_hot_box_cookies.webp" },
+  { id: 3, client_name: "OrderEX", client_image: "/assets/clients/logo_orderex.webp" },
+  { id: 4, client_name: "Hungry Media", client_image: "/assets/clients/logo_hungry_media.webp" },
+  { id: 5, client_name: "YGOIN", client_image: "/assets/clients/logo_ygoin.webp" },
+  { id: 6, client_name: "SBTS group", client_image: "/assets/clients/logo_SBTS_group.webp" },
+  { id: 7, client_name: "Fernsnpetals", client_image: "/assets/clients/logo_fnp.webp" },
 ];
 
 interface IPortfolio {
@@ -177,23 +177,23 @@ interface IPortfolio {
 }
 
 export const portfolioList: IPortfolio[] = [
-  // { id: 1, client_name: "", client_portfolio_image: "/assets/portfolio/fnp_mobile.png" },
-  { id: 2, client_name: "Fernsnpetals", client_portfolio_image: "/assets/portfolio/fnp_website.png" },
-  // { id: 3, client_name: "", client_portfolio_image: "/assets/portfolio/fnp_app.png" },
-  // { id: 4, client_name: "", client_portfolio_image: "/assets/portfolio/momos_1.png" },
-  { id: 5, client_name: "momos", client_portfolio_image: "/assets/portfolio/momos_2.png" },
-  // { id: 6, client_name: "", client_portfolio_image: "/assets/portfolio/momos_3.png" },
-  { id: 7, client_name: "OrderEx", client_portfolio_image: "/assets/portfolio/orderex_1.png" },
-  // { id: 8, client_name: "", client_portfolio_image: "/assets/portfolio/orderex_2.png" },
-  // { id: 9, client_name: "", client_portfolio_image: "/assets/portfolio/orderex_3.png" },
-  // { id: 10, client_name: "", client_portfolio_image: "/assets/portfolio/prixa_1.png" },
-  // { id: 11, client_name: "", client_portfolio_image: "/assets/portfolio/prixa_2.png" },
-  // { id: 12, client_name: "", client_portfolio_image: "/assets/portfolio/prixa_3.png" },
-  { id: 13, client_name: "Raena", client_portfolio_image: "/assets/portfolio/raena_1.png" },
-  // { id: 14, client_name: "", client_portfolio_image: "/assets/portfolio/raena_2.png" },
-  { id: 15, client_name: "YGOIN", client_portfolio_image: "/assets/portfolio/ygoin_1.png" },
-  // { id: 16, client_name: "", client_portfolio_image: "/assets/portfolio/ygoin_2.png" },
-  { id: 17, client_name: "Tallhaven", client_portfolio_image: "/assets/portfolio/tallhaven.png" },
+  // { id: 1, client_name: "", client_portfolio_image: "/assets/portfolio/fnp_mobile.webp" },
+  { id: 2, client_name: "Fernsnpetals", client_portfolio_image: "/assets/portfolio/fnp_website.webp" },
+  // { id: 3, client_name: "", client_portfolio_image: "/assets/portfolio/fnp_app.webp" },
+  // { id: 4, client_name: "", client_portfolio_image: "/assets/portfolio/momos_1.webp" },
+  { id: 5, client_name: "momos", client_portfolio_image: "/assets/portfolio/momos_2.webp" },
+  // { id: 6, client_name: "", client_portfolio_image: "/assets/portfolio/momos_3.webp" },
+  { id: 7, client_name: "OrderEx", client_portfolio_image: "/assets/portfolio/orderex_1.webp" },
+  // { id: 8, client_name: "", client_portfolio_image: "/assets/portfolio/orderex_2.webp" },
+  // { id: 9, client_name: "", client_portfolio_image: "/assets/portfolio/orderex_3.webp" },
+  // { id: 10, client_name: "", client_portfolio_image: "/assets/portfolio/prixa_1.webp" },
+  // { id: 11, client_name: "", client_portfolio_image: "/assets/portfolio/prixa_2.webp" },
+  // { id: 12, client_name: "", client_portfolio_image: "/assets/portfolio/prixa_3.webp" },
+  { id: 13, client_name: "Raena", client_portfolio_image: "/assets/portfolio/raena_1.webp" },
+  // { id: 14, client_name: "", client_portfolio_image: "/assets/portfolio/raena_2.webp" },
+  { id: 15, client_name: "YGOIN", client_portfolio_image: "/assets/portfolio/ygoin_1.webp" },
+  // { id: 16, client_name: "", client_portfolio_image: "/assets/portfolio/ygoin_2.webp" },
+  { id: 17, client_name: "Tallhaven", client_portfolio_image: "/assets/portfolio/tallhaven.webp" },
 ];
 
 export interface ITestimonial {

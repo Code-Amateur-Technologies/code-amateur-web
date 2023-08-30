@@ -1,12 +1,13 @@
 "use client";
+import Link from "next/link";
+import FadeIn from "../animate/FadeIn";
 import SlideRight from "../animate/SlideRight";
 import { RightArrow } from "@/utils/customIcons";
-import Link from "next/link";
 
 export default function ServicesOperations() {
   return (
     <section>
-      <SlideRight>
+      <FadeIn>
         <div className="services-operations">
           <div className="md:w-1/4 self-start">
             <h1 className="mb-5 text-xl">
@@ -27,7 +28,7 @@ export default function ServicesOperations() {
             <p>Implementing a scalable Solution</p>
           </div>
         </div>
-      </SlideRight>
+      </FadeIn>
       <SlideRight>
         <Link href={"/contact"} className="dark-button">
           <p className="mx-2">contact us</p>

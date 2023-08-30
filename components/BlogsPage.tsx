@@ -14,7 +14,7 @@ export default function BlogsPage() {
     const Link = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@alekrumkamp`;
     const { data } = await axios.get(Link);
     const { items } = data;
-    console.log(items);
+    // console.log(items);
     setBlogs(items);
   };
 

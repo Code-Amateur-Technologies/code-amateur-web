@@ -23,7 +23,7 @@ export default function Success() {
           </Link>
         </div> */}
         <p className="text-xl sm:text-5xl font-medium text-gunmetal">
-        We will get back to you soon
+        We will get back to you soon.
         </p>
       </div>
     </div>

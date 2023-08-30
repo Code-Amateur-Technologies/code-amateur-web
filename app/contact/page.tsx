@@ -34,21 +34,31 @@ export default function Contact(): JSX.Element {
             <div className="flex lg:flex-col">
               <Link
                 href={"https://in.linkedin.com/company/code-amateur"}
+                target="_blank"
                 className="follow-link"
               >
                 LinkedIn
               </Link>
               <Link
                 href={"https://www.facebook.com/codeamateur"}
+                target="_blank"
                 className="follow-link"
               >
                 Facebook
               </Link>
               <Link
                 href={"https://www.instagram.com/codeamateur.tech"}
+                target="_blank"
                 className="follow-link"
               >
                 Instagram
+              </Link>
+              <Link
+                href={"https://codeamateur.medium.com/"}
+                target="_blank"
+                className="follow-link"
+              >
+                Medium
               </Link>
             </div>
           </SlideLeft>

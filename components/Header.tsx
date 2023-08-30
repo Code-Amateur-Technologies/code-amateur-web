@@ -14,17 +14,17 @@ export default function Header(): JSX.Element {
 
   return (
     <header className="header">
-      <nav className="flex-between">
-        <Link href="/" className="gap-4 flex-center">
+      <nav className="w-full flex-between">
+        <Link href="/" className="flex-center">
           <Image
             src="/assets/images/logo_code_amateurs.png"
             alt={"company logo"}
             width={90}
-            height={90}
+            height={50}
             className="object-contain"
           />
         </Link>
-        <div className="hidden md:flex gap-3">
+        <div className="hidden md:flex gap-10">
           <Link
             href={"/"}
             className={`header-link ${

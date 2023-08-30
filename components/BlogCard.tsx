@@ -19,10 +19,13 @@ export default function BlogCard(props: {
 
     return description;
   };
+  const date = props.pubDate.split(" ")
+  const URL = encodeURIComponent(props.title).replace(/%20/g, '-')
+  // console.log(date[0])
 
   return (
     <Link
-      href={{ pathname: `blogs/blog`, query: { title: props.title } }}
+      href={`blogs/${URL}` }
       className="blog-card"
     >
       <img src={props.thumbnail} alt={props.title} className="w-full h-[200px] rounded-t-3xl" />
@@ -35,7 +38,7 @@ export default function BlogCard(props: {
         </div>
         <div className="my-2 flex items-center">
           <FontAwesomeIcon icon={faCalendarDays} size="xs" />
-          <p className="ml-2 text-sm">{props.pubDate}</p>
+          <p className="ml-2 text-sm">{date[0]}</p>
         </div>
       </div>
     </Link>
