@@ -9,7 +9,7 @@ export default function Success() {
         Successfully submitted!
       </h1>
       <Image
-        src={"/assets/images/thank_you.png"}
+        src={"/assets/images/thank_you.webp"}
         alt={"Thank you Image after successfully submitting the form"}
         width={1920}
         height={1280}

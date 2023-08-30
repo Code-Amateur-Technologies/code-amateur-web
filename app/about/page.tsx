@@ -25,7 +25,7 @@ export default function About(): JSX.Element {
         </div>
         <SlideUp>
           <Image
-            src={"/assets/images/about_heading.png"}
+            src={"/assets/images/about_heading.webp"}
             alt={"Software Company"}
             width={1920}
             height={959}
@@ -87,7 +87,7 @@ export default function About(): JSX.Element {
           <div className="lg:w-2/5">
             <SlideRight>
               <Image
-                src={"/assets/images/about_content.png"}
+                src={"/assets/images/about_content.webp"}
                 alt={"Software Agency"}
                 width={700}
                 height={700}
