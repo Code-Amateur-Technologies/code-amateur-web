@@ -20,7 +20,6 @@ export default function BlogsPage() {
 
   return (
     <div>
-      <h1 className="text-5xl text-center">Blogs</h1>
       <section className="blogs-list">
         {blogs.map((blog: any, index) => (
           <BlogCard {...blog} key={index}/>

@@ -42,7 +42,7 @@ export default function ServiceCard(props: {
           />
         </div>
         <motion.div
-          initial={cardStyle ? "white" : "blue"}
+          initial={props.id % 2 == 0 ? { opacity: 0, x: 100 } : {opacity: 0, x: -100}}
           whileInView={{
             opacity: 1,
             x: 0,
@@ -51,10 +51,7 @@ export default function ServiceCard(props: {
             duration: 0.5,
             ease: [0.61, 1, 0.88, 1],
           }}
-          variants={{
-            blue: { opacity: 0, x: -100 },
-            white: { opacity: 0, x: 100 },
-          }}
+          
           viewport={{ once: true, amount: 0.5 }}
           className="lg:w-1/2 px-5 flex-center"
         >

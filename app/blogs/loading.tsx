@@ -1,7 +1,6 @@
 export default function Loading() {
   return (
     <div className="py-8 px-4 sm:px-20">
-      <h1 className="text-5xl text-center">Blogs</h1>
       <section className="blogs-list">
         {[...new Array(10)].map((p, index) => (
           <div key={index} className="blog-card">
