@@ -22,6 +22,10 @@
   }
 }
 
+:target {
+  @apply scroll-mt-24
+}
+
 /* common components */
 .blue-gradient {
   @apply bg-gradient-to-r from-celestialblue to-blue-600 to-cyan-600 bg-clip-text text-transparent;
