@@ -6,19 +6,22 @@ import { servicesList } from "@/data/data";
 
 export default function ServicesList() {
   const sectionid: string | null = useSearchParams().get("section");
-
   useEffect(() => {
     sectionid != null
-      ? document.getElementById(sectionid)?.scrollIntoView()
+      ? document.getElementById(sectionid)?.scrollIntoView({
+          behavior: "smooth",
+          block: "end",
+          inline: "nearest",
+        })
       : "";
   }, [sectionid]);
 
   return (
     <div>
       {servicesList.map((service) => (
-        <div key={service.id} id={service.service_hash}>
+        <section key={service.id} id={service.service_hash}>
           <ServiceCard {...service} />
-        </div>
+        </section>
       ))}
     </div>
   );
