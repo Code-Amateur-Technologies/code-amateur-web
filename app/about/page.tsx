@@ -15,14 +15,12 @@ export const metadata: Metadata = {
 export default function About(): JSX.Element {
   return (
     <div className="text-gunmetal">
-      <section className="py-8 px-4 sm:p-20">
-        <div>
+      <section className="py-8 px-4 sm:p-20 flex flex-col gap-10">
           <SlideRight>
             <h1 className="about-firstheading">
               The Leading Information Technology Company
             </h1>
           </SlideRight>
-        </div>
         <SlideUp>
           <Image
             src={"/assets/images/about_heading.webp"}
@@ -32,7 +30,7 @@ export default function About(): JSX.Element {
             className="w-full rounded-3xl"
           />
         </SlideUp>
-        <div className="pt-8 flex-between">
+        <div className="flex-between">
           <SlideRight>
             <h1 className="about-slogan">
               Strategy <br /> Creativity <br /> Teamwork

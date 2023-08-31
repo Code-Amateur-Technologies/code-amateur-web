@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
 import axios from "axios";
 
 interface IBlog {
@@ -21,9 +20,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     title: "",
   });
   
-
   useEffect(() => {
-    linkTitle !== null && fetchBlog();
+    fetchBlog();
   }, []);
 
   const fetchBlog = async () => {
@@ -35,19 +33,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       blog.title.replace(/ /g, '-') === linkTitle ? setBlogData(blog) : ""
     );
   };
-
-  const shortenDescription = (description: any) => {
-    description = description?.replace(
-      /<h3>.*<\/h3>|<figcaption>.*<\/figcaption>|<[^>]*>/gm,
-      ""
-    );
-
-    return description;
-  };
   const date: any = blogData.pubDate.split(" ");
   console.log("Params:", params?.slug)
-  const des = () => <div dangerouslySetInnerHTML={{ __html: blogData.description }} />;
-
 
   return (
     <div>
