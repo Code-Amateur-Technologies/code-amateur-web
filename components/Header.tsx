@@ -15,6 +15,7 @@ export default function Header(): JSX.Element {
   return (
     <header className="header">
       <nav className="w-full flex-between">
+        <Link href={"/"}>
           <Image
             src="/assets/images/logo.svg"
             alt={"company logo"}
@@ -22,6 +23,7 @@ export default function Header(): JSX.Element {
             height={100}
             className="object-contain"
           />
+          </Link>
         <div className="hidden md:flex gap-10">
           <Link
             href={"/"}

@@ -9,8 +9,6 @@ export const metadata: Metadata = {
 export default function Blogs() {
 
   return (
-    <div className="py-8 px-4 sm:px-20">
       <BlogsPage/>
-    </div>
   );
 }
