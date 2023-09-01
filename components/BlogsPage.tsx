@@ -9,7 +9,6 @@ export default async function BlogsPage() {
       return data.items;
     })
     .catch((error) => console.log(error));
-  // console.log("Tarun", blogs);
 
   return (
     <div>
