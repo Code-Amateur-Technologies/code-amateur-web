@@ -6,7 +6,7 @@ import { LeftArrow } from "@/utils/customIcons";
 
 export default function NotFound() {
   return (
-    <div className=" px-4 h-screen flex-center flex-col md:flex-row gap-5 text-gunmetal">
+    <div className=" px-4 h-screen flex-center flex-col md:flex-row gap-20 text-gunmetal">
       {/* <FontAwesomeIcon icon={faFaceFrown} size="2xs" className="h-1/4" style={{transform: "rotate(270deg)"}}/> */}
       <Image
             src={"/assets/images/logo.svg"}
