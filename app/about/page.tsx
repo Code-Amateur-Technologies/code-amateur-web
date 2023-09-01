@@ -72,7 +72,7 @@ export default function About(): JSX.Element {
         <div className="lg:w-2/5 flex-center">
           <SlideLeft>
             <Image
-              src={"/assets/images/logo_company_icon.png"}
+              src={"/assets/images/logo.svg"}
               alt={"code Amateur Logo"}
               width={200}
               height={200}

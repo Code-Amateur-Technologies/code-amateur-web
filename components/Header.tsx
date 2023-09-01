@@ -15,15 +15,13 @@ export default function Header(): JSX.Element {
   return (
     <header className="header">
       <nav className="w-full flex-between">
-        <Link href="/" className="flex-center">
           <Image
-            src="/assets/images/logo_code_amateurs.png"
+            src="/assets/images/logo.svg"
             alt={"company logo"}
-            width={90}
-            height={50}
+            width={100}
+            height={100}
             className="object-contain"
           />
-        </Link>
         <div className="hidden md:flex gap-10">
           <Link
             href={"/"}

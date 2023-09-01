@@ -9,7 +9,7 @@ export default function NotFound() {
     <div className=" px-4 h-screen flex-center flex-col md:flex-row gap-5 text-gunmetal">
       {/* <FontAwesomeIcon icon={faFaceFrown} size="2xs" className="h-1/4" style={{transform: "rotate(270deg)"}}/> */}
       <Image
-            src={"/assets/images/logo_company_icon.png"}
+            src={"/assets/images/logo.svg"}
             alt={"company icon"}
             width={200}
             height={200}

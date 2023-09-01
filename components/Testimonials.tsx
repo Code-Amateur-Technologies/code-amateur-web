@@ -6,7 +6,7 @@ import { slideLeft, slideRight } from "@/utils/slider";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import commentIcon from "@/public/assets/icons/customer_comment.svg";
+import commentIcon from "@/public/assets/images/customer_comment.svg";
 
 export default function Testimonials() {
   const opinionRef = useRef<any>();
@@ -24,7 +24,7 @@ export default function Testimonials() {
   };
 
   return (
-    <div className="p-8 sm:p-20 bg-raisinblack">
+    <div className="p-8 sm:p-20 gradient">
       <p className="testimonials-heading">Testimonials</p>
       <div
         className="testimonials-slider"
