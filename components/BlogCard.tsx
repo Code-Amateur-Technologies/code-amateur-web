@@ -7,6 +7,7 @@ export default function BlogCard(props: {
   title: string;
   pubDate: string;
   thumbnail: string;
+  link: string;
   description: string;
   author: string;
   categories: string[];
@@ -24,7 +25,7 @@ export default function BlogCard(props: {
   const date = props.pubDate.split(" ");
 
   return (
-    <Link href={`blogs/${URL}`} className="blog-card">
+    <Link href={props.link} target="_blank" className="blog-card">
       <img
         src={props.thumbnail}
         alt={props.title}
