@@ -1,29 +1,28 @@
-import slugify from "react-slugify";
-import { JSDOM } from "jsdom";
-import DOMPurify from "dompurify";
-import { GetArticle, GetBlogs } from "@/utils/GetBlogs";
-import { Metadata } from 'next'
+// import { JSDOM } from "jsdom";
+// import DOMPurify from "dompurify";
+// import { GetArticle } from "@/utils/GetBlogs";
+// import { Metadata } from 'next'
 
-export async function generateMetadata(
-  { params }: {
-    params: { slug: string };
-  },
-): Promise<Metadata> {
-  const article = await GetArticle(params?.slug);
+// export async function generateMetadata(
+//   { params }: {
+//     params: { slug: string };
+//   },
+// ): Promise<Metadata> {
+//   const article = await GetArticle(params?.slug);
  
-  return {
-    metadataBase: new URL('https://codeamateur.netlify.app/blogs/'),
-    title: "Code Amateur | Blog: " + article?.title,
-    description: article?.title,
-    openGraph: {
-      title: article?.title,
-      description: article?.title,
-      siteName: "CAT",
-      images: article?.thumbnail,
-      type: 'website',
-    },
-  }
-}
+//   return {
+//     metadataBase: new URL('https://codeamateur.netlify.app/blogs/'),
+//     title: "Code Amateur | Blog: " + article?.title,
+//     description: article?.title,
+//     openGraph: {
+//       title: article?.title,
+//       description: article?.title,
+//       siteName: "CAT",
+//       images: article?.thumbnail,
+//       type: 'website',
+//     },
+//   }
+// }
 
 interface IBlog {
   description: string;
@@ -38,20 +37,20 @@ export default async function BlogPost({
 }: {
   params: { slug: string };
 }) {
-  const article = await GetArticle(params?.slug);
-  const window = new JSDOM("").window;
-  const purify = DOMPurify(window);
-  const clean = purify.sanitize(article?.description);
-  const date: any = article?.pubDate.split(" ");
+  // const article = await GetArticle(params?.slug);
+  // const window = new JSDOM("").window;
+  // const purify = DOMPurify(window);
+  // const clean = purify.sanitize(article?.description);
+  // const date: any = article?.pubDate.split(" ");
 
   return (
     <div>
       <section className="h-full py-8 px-4 sm:p-20 border-b flex-between">
         <h1 className="w-1/2 text-6xl font-medium text-gunmetal">
-          {article?.title}
+          {params?.slug}
         </h1>
       </section>
-      <section className="px-20">
+      {/* <section className="px-20">
         <div className="py-10 flex gap-5 text-xl font-bold text-gunmetal">
           <p>Author: {article?.author}</p>
           <p>Date: {date[0]}</p>
@@ -66,7 +65,7 @@ export default async function BlogPost({
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
