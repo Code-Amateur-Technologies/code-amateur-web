@@ -1,6 +1,6 @@
 import BlogCard from "@/components/BlogCard";
 import { Key } from "react";
-import { GetBlogs } from "@/utils/getBlogs";
+import { GetBlogs } from "./GetBlogs";
 
 export default async function BlogsPage() {
   const blogs = await GetBlogs();
