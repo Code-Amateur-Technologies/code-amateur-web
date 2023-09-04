@@ -3,19 +3,17 @@ import type { Metadata } from "next";
 import AboutCountBox from "@/components/AboutCountBox";
 import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
-import SlideLeft from "@/components/animate/SlideLeft";
-import SlideRight from "@/components/animate/SlideRight";
-import SlideUp from "@/components/animate/SlideUp";
+import {SlideUp, SlideRight, SlideLeft} from "@/components/animations/SlideAnimation";
 
 export const metadata: Metadata = {
-  title: "Code Amateur" + " | " + "About Us",
+  title: "Code Amateur | About Us",
   description: "Know more about us",
 };
 
 export default function About(): JSX.Element {
   return (
     <div className="text-gunmetal">
-      <section className="py-8 px-4 sm:p-20 flex flex-col gap-10">
+      <section className="py-8 px-4 lg:p-20 flex flex-col gap-10">
           <SlideRight>
             <h1 className="about-firstheading">
               The Leading Information Technology Company
@@ -30,13 +28,13 @@ export default function About(): JSX.Element {
             className="w-full rounded-3xl"
           />
         </SlideUp>
-        <div className="flex-between">
+        <div className="flex-between flex-col lg:flex-row gap-5">
           <SlideRight>
-            <h1 className="about-slogan">
+            <p className="about-slogan">
               Strategy <br /> Creativity <br /> Teamwork
-            </h1>
+            </p>
           </SlideRight>
-          <div className="w-3/5">
+          <div className="w-full lg:w-3/5">
             <SlideLeft>
               <p className="about-text">
                 We’re a young and talented group of entrepreneurs and engineers
@@ -80,7 +78,7 @@ export default function About(): JSX.Element {
           </SlideLeft>
         </div>
       </section>
-      <section className="py-8 px-4 sm:p-20 bg-slate-100">
+      <section className="py-8 px-4 lg:p-20 bg-slate-100">
         <div className="mb-14 lg:flex justify-between">
           <div className="lg:w-2/5">
             <SlideRight>
@@ -89,16 +87,16 @@ export default function About(): JSX.Element {
                 alt={"Software Agency"}
                 width={700}
                 height={700}
-                className=" rounded-3xl"
+                className="w-full rounded-3xl"
               />
             </SlideRight>
           </div>
           <div className="lg:w-1/2 flex-center flex-col">
             <SlideLeft>
-              <h1 className="my-4 text-2xl md:text-5xl font-medium">
+              <p className="my-4 text-2xl md:text-5xl font-medium">
                 We provide excellent solutions according to market needs and our
                 users’ habits and motives.
-              </h1>
+              </p>
               <p className="text-xl md:text-2xl">
                 We have, and will continue to work tirelessly to become the
                 technological standard, providing big picture insights which

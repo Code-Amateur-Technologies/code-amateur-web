@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { clientList } from "@/data/data";
-import { slideLeft, slideRight } from "@/utils/slider";
+import { scrollLeft, scrollRight } from "@/utils/scroller";
 import {
   faChevronRight,
   faChevronLeft,
@@ -27,11 +27,11 @@ export default function Clients() {
   return (
     <div className="py-20">
       <section className="mb-12 px-20">
-        <h1 className="home-headings">Our Happy Customers</h1>
+        <h2 className="client-heading">Our Happy Customers</h2>
       </section>
       <section className="px-8 flex items-center">
         <button
-          onClick={() => slideLeft(clientRef)}
+          onClick={() => scrollLeft(clientRef)}
           disabled={leftDisabled}
           className="client-navigation"
         >
@@ -44,7 +44,7 @@ export default function Clients() {
             onScroll={scrollServices}
           >
             {clientList.map((items) => (
-              <div key={items.id} className="client-box">
+              <div key={items.id} className="client-card">
                 <Image
                   src={items.client_image}
                   alt={items.client_name + " are one of our happy customers"}
@@ -56,7 +56,7 @@ export default function Clients() {
           </div>
         </div>
         <button
-          onClick={() => slideRight(clientRef)}
+          onClick={() => scrollRight(clientRef)}
           disabled={rightDisabled}
           className="client-navigation"
         >

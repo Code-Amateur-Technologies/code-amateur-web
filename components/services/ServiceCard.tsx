@@ -19,16 +19,16 @@ export default function ServiceCard(props: {
 
   return (
     <div
-      className={`py-8 px-4 sm:p-20 scroll-mt-24 ${
+      className={`py-8 px-4 md:p-20 scroll-mt-24 ${
         cardStyle ? "bg-white" : "gradient drop-shadow-2xl"
       }`}
     >
       <div
-        className={`flex flex-col ${
-          cardStyle ? "lg:flex-row" : "lg:flex-row-reverse"
+        className={`flex-center flex-col gap-5 ${
+          cardStyle ? "xl:flex-row" : "xl:flex-row-reverse"
         }`}
       >
-        <div className="lg:w-1/2 mb-5 sm:mb-0 ">
+        <div className="xl:w-1/2">
           <Image
             src={props.service_image}
             alt={
@@ -54,7 +54,7 @@ export default function ServiceCard(props: {
             ease: [0.61, 1, 0.88, 1],
           }}
           viewport={{ once: true, amount: 0.5 }}
-          className="lg:w-1/2 px-5 flex-center"
+          className="xl:w-1/2 px-5 flex-center"
         >
           <div
             className={`font-medium ${

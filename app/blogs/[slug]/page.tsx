@@ -1,6 +1,6 @@
 import { JSDOM } from "jsdom";
 import DOMPurify from "dompurify";
-import { GetArticle } from "@/utils/GetBlogs";
+import { GetArticle } from "@/utils/getBlogs";
 import { Metadata } from 'next'
 
 export async function generateMetadata(
