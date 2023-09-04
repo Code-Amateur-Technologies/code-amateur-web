@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import AboutCountBox from "@/components/AboutCountBox";
 import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
-import {SlideUp, SlideRight, SlideLeft} from "@/components/animations/SlideAnimation";
+import {
+  SlideUp,
+  SlideRight,
+  SlideLeft,
+} from "@/components/animations/SlideAnimation";
 
 export const metadata: Metadata = {
   title: "Code Amateur | About Us",
@@ -14,11 +18,11 @@ export default function About(): JSX.Element {
   return (
     <div className="text-gunmetal">
       <section className="py-8 px-4 lg:p-20 flex flex-col gap-10">
-          <SlideRight>
-            <h1 className="about-firstheading">
-              The Leading Information Technology Company
-            </h1>
-          </SlideRight>
+        <SlideRight>
+          <h1 className="about-firstheading">
+            The Leading Information Technology Company
+          </h1>
+        </SlideRight>
         <SlideUp>
           <Image
             src={"/assets/images/about_heading.webp"}

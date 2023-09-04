@@ -4,15 +4,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://codeamateur.netlify.app/'),
+  metadataBase: new URL("https://codeamateur.netlify.app/"),
   title: "Code Amateur" + " | Home : " + "Crafting Mobile and Web Excellence",
   description: "Leading technology company for all your services needs",
   openGraph: {
     title: "Code Amateur" + " | " + "Crafting Mobile and Web Excellence",
-    description: "Unleashing Technological Excellence with Code Amateur Technologies",
+    description:
+      "Unleashing Technological Excellence with Code Amateur Technologies",
     siteName: "CAT",
-    images: '/opengraph-image.png',
-    type: 'website',
+    images: "/opengraph-image.png",
+    type: "website",
   },
 };
 

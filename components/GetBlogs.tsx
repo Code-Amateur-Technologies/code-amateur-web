@@ -7,7 +7,9 @@ export async function GetBlogs() {
     .then((data) => {
       return data.items;
     })
-    .catch((error) => {return error});
+    .catch((error) => {
+      return error;
+    });
 
   return mediumFeed;
 }

@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function Services() {
-
   return (
     <div className="text-gunmetal">
       <section className="py-8 px-4 md:p-20 bg-[url('/assets/images/background.svg')] bg-auto bg-no-repeat">

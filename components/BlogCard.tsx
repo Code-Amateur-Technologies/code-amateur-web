@@ -1,5 +1,5 @@
 import Link from "next/link";
-import slugify from 'react-slugify';
+import slugify from "react-slugify";
 import { faUser, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
