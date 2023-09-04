@@ -12,7 +12,7 @@ export default function Portfolio() {
       <div className="flex flex-wrap items-center">
         {data.map((items, index) => (
           <motion.div
-            initial={index%2 == 0 ? "hiddenLeft" : "hiddenRight"}
+            initial={index % 2 == 0 ? "hiddenLeft" : "hiddenRight"}
             whileInView="visible"
             transition={{
               duration: 0.5,
@@ -29,7 +29,11 @@ export default function Portfolio() {
           >
             <img
               src={items.client_portfolio_image}
-              alt={"Bringing " + items.client_name + " vision to life with passion and innovative solutions"}
+              alt={
+                "Bringing " +
+                items.client_name +
+                " vision to life with passion and innovative solutions"
+              }
               className="w-auto h-auto p-10"
             />
           </motion.div>

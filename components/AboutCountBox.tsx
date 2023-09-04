@@ -64,8 +64,8 @@ export default function AboutCountBox() {
   const [showCount, setShowCount] = useState<boolean>(false);
   const isInViewport = useIsInViewport(myElementRef);
   useEffect(() => {
-    isInViewport && setShowCount(true)
-  })
+    isInViewport && setShowCount(true);
+  });
 
   return (
     <div ref={myElementRef} className="about-gridcontainer">
