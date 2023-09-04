@@ -32,7 +32,7 @@ export default function BlogCard(props: {
         className="w-full h-[200px] rounded-t-3xl"
       />
       <div className="p-4 text-gunmetal">
-        <h1 className="text-xl font-medium">{props.title}</h1>
+        <h2 className="text-xl font-medium">{props.title}</h2>
         <p className="my-5">{shortenDescription(props.description)}</p>
         <div className="my-2 flex items-center">
           <FontAwesomeIcon icon={faUser} size="xs" />

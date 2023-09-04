@@ -26,9 +26,9 @@ export default function HomeServicesCard(props: {
     >
       <div>
         <FontAwesomeIcon icon={props.service_icon} size="2xl" />
-        <h1 className="my-10 text-2xl sm:text-5xl font-medium">
+        <p className="my-10 text-2xl sm:text-5xl font-medium">
           {props.service_name}
-        </h1>
+        </p>
       </div>
       <p className="text-sm sm:text-xl font-normal">
         {props.service_description}

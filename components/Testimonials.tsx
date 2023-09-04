@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState, useRef } from "react";
 import { testimonials } from "@/data/data";
-import { slideLeft, slideRight } from "@/utils/slider";
+import { scrollLeft, scrollRight } from "@/utils/scroller";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -24,8 +24,8 @@ export default function Testimonials() {
   };
 
   return (
-    <div className="p-8 sm:p-20 gradient">
-      <p className="testimonials-heading">Testimonials</p>
+    <div className="p-8 lg:p-20 gradient">
+      <h2 className="testimonials-heading">Testimonials</h2>
       <div
         className="testimonials-slider"
         ref={opinionRef}
@@ -55,14 +55,14 @@ export default function Testimonials() {
       </div>
       <div className="flex justify-around sm:justify-start">
         <button
-          onClick={() => slideLeft(opinionRef)}
+          onClick={() => scrollLeft(opinionRef)}
           className="testimonials-button mx-4"
           disabled={leftDisabled}
         >
           <FontAwesomeIcon icon={faArrowLeft} size="xl" />
         </button>
         <button
-          onClick={() => slideRight(opinionRef)}
+          onClick={() => scrollRight(opinionRef)}
           className="testimonials-button mx-4"
           disabled={rightDisabled}
         >

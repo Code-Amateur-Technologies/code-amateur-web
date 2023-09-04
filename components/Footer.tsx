@@ -8,16 +8,16 @@ export default function Footer(): JSX.Element {
       <hr className="footer-divider"></hr>
       <div className="py-8 md:py-20 ">
         <section className="flex-center gap-5">
-          <Link href={"https://in.linkedin.com/company/code-amateur"} target="_blank">
+          <Link href={"https://in.linkedin.com/company/code-amateur"} title="Software company" target="_blank">
             <FontAwesomeIcon icon={faLinkedin} size="2xl" />
           </Link>
-          <Link href={"https://www.facebook.com/codeamateur"} target="_blank">
+          <Link href={"https://www.facebook.com/codeamateur"} title="Software company" target="_blank">
             <FontAwesomeIcon icon={faFacebook} size="2xl" />
           </Link>
-          <Link href={"https://www.instagram.com/codeamateur.tech"} target="_blank">
+          <Link href={"https://www.instagram.com/codeamateur.tech"} title="Software company" target="_blank">
             <FontAwesomeIcon icon={faSquareInstagram} size="2xl" />
           </Link>
-          <Link href={"https://codeamateur.medium.com/"} target="_blank">
+          <Link href={"https://codeamateur.medium.com/"} title="Software company" target="_blank">
             <FontAwesomeIcon icon={faMedium} size="2xl" />
           </Link>
         </section>

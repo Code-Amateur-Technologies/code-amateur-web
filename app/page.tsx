@@ -1,7 +1,6 @@
 import Link from "next/link";
 import FirstHeading from "@/components/FirstHeading";
-import SlideRight from "@/components/animate/SlideRight";
-import SlideLeft from "@/components/animate/SlideLeft";
+import {SlideRight, SlideLeft} from "@/components/animations/SlideAnimation";
 import OperationsSlides from "@/components/home/OperationsSlides";
 import HomeServicesSlider from "@/components/home/HomeServicesSlider";
 import Quote from "@/components/Quote";
@@ -25,12 +24,12 @@ export default function Home() {
         </div>
       </section>
       <section className="home-secondsection">
-        <div className="h-full lg:w-1/2">
+        <div className="h-full xl:w-1/2">
           <SlideRight>
             <div className="flex flex-col">
-              <h1 className="home-headings">
+              <h2 className="home-headings">
                 Our main goal is to deliver quality & scalable solutions
-              </h1>
+              </h2>
               <Link
                 href={"/about"}
                 className="my-6 lg:self-start dark-button gap-2"
