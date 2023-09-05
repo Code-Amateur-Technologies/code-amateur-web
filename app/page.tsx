@@ -2,7 +2,7 @@ import Link from "next/link";
 import FirstHeading from "@/components/FirstHeading";
 import { SlideRight, SlideLeft } from "@/components/animations/SlideAnimation";
 import OperationsSlides from "@/components/home/OperationsSlides";
-import HomeServicesSlider from "@/components/home/HomeServicesSlider";
+import HomeServicesScroller from "@/components/home/HomeServicesScroller";
 import Quote from "@/components/Quote";
 import Portfolio from "@/components/Portfolio";
 import Clients from "@/components/Clients";
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
         <OperationsSlides />
       </section>
-      <HomeServicesSlider />
+      <HomeServicesScroller />
       <Quote />
       <Portfolio />
       <Clients />

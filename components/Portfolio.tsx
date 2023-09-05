@@ -1,6 +1,7 @@
 "use client";
 import { portfolioList } from "@/data/data";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Portfolio() {
   const data = portfolioList;
@@ -25,8 +26,11 @@ export default function Portfolio() {
             className="portfolio-box"
             key={items.id}
           >
-            <img
+            <Image
               src={items.client_portfolio_image}
+              width={1000}
+              height={500}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               alt={
                 "Bringing " +
                 items.client_name +

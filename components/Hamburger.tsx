@@ -5,7 +5,7 @@ export default function Hamburger(props: {
   sidebar: boolean;
 }) {
   return (
-    <button onClick={props.showSidebar} className="nav-toggle group lg:hidden">
+    <button onClick={props.showSidebar} className="nav-toggle group md:hidden">
       <div
         className={`genericHamburgerLine ${
           props.sidebar

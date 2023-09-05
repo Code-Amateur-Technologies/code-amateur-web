@@ -1,5 +1,5 @@
 "use client";
-
+import va from "@vercel/analytics";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -30,6 +30,9 @@ export default function ContactForm() {
       .then(() => router.push("/success"))
       .catch(() => {
         router.push("/error");
+      })
+      .finally(() => {
+        va.track("CAT-Lead", data);
       });
   };
   return (
@@ -73,13 +76,13 @@ export default function ContactForm() {
             autoComplete="false"
             className="form-input"
             {...register("name", {
-              required: "Full name is required",
+              required: true,
               maxLength: 80,
             })}
           ></input>
-          {errors?.name?.message && (
+          {errors?.name && (
             <div className="form-error">
-              <p>{errors?.name?.message?.toString()}</p>
+              <p>Full name is required</p>
             </div>
           )}
         </div>
@@ -120,13 +123,13 @@ export default function ContactForm() {
             placeholder="Your Message *"
             className="form-input"
             {...register("message", {
-              required: "Enter your Message",
+              required: true,
               minLength: 24,
             })}
           ></textarea>
-          {errors?.message?.message && (
+          {errors.message && (
             <div className="form-error">
-              <p>{errors?.message?.message?.toString()}</p>
+              <p>Enter your Message</p>
             </div>
           )}
         </div>
