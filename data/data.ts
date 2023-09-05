@@ -66,7 +66,7 @@ export const servicesList: IService[] = [
     service_icon: faBrush,
     service_name: "UX and UI Design",
     service_description:
-      "We follow a series of steps that aim to create a user-friendly and visually appealing product",
+      "We follow a series of steps that aim to create a user-friendly and visually appealing product.",
     technologies: [
       { tech: "Bootstrap", tech_icon: faBootstrap, tech_svg: "" },
       { tech: "Css", tech_icon: faCss3, tech_svg: "" },
@@ -102,7 +102,7 @@ export const servicesList: IService[] = [
     service_icon: faServer,
     service_name: "Back-end Development",
     service_description:
-      "We write back-end code that forms the backbone of any website or app",
+      "We write back-end code that forms the backbone of any website or app.",
     technologies: [
       { tech: "Node", tech_icon: faNodeJs, tech_svg: "" },
       { tech: "Nest", tech_icon: "", tech_svg: "/assets/icons/nestjs.svg" },

@@ -24,18 +24,20 @@ export default function HomeServicesCard(props: {
       }}
       className="home-servicecard"
     >
-      <div>
+      <div className="flex items-start flex-col gap-5">
         <FontAwesomeIcon icon={props.service_icon} size="2xl" />
-        <p className="my-10 text-2xl sm:text-5xl font-medium">
+        <h3 className="text-2xl sm:text-5xl font-medium">
           {props.service_name}
-        </p>
+        </h3>
       </div>
       <p className="text-sm sm:text-xl font-normal">
         {props.service_description}
       </p>
       <Link
+        rel="next"
         href={{ pathname: "/services", query: { section: props.service_hash } }}
-        className="light-button border-transparent"
+        title={`Explore more about ${props.service_name} services we provide at Code Amateur`}
+        className="home-servicecard-button"
       >
         <RightArrow />
       </Link>

@@ -37,20 +37,20 @@ export default function OperationsSlides() {
         hidden: { opacity: 0, x: 50 },
         visible: { opacity: 1, x: 0 },
       }}
-      className="home-operationslides"
+      className="operationslides"
     >
-      <div className="h-full px-4 py-7 lg:py-12 rounded-2xl bg-white flex flex-col justify-between">
-        <h2 className="mb-4 sm:mb-10 text-base sm:text-xl">
+      <div className="operationslides-container">
+        <h3 className="operation-heading">
           Check out how we operate
-        </h2>
+        </h3>
         <p className="text-base sm:text-xl">0{operations[index].id}</p>
-        <p className="my-4 text-xl sm:text-4xl font-medium tracling-tight">
+        <p className="operation">
           {operations[index].stepName}
         </p>
         <div className="flex">
           {operations.map((items) => (
             <div
-              className={`home-operationdot ${
+              className={`operationdot ${
                 items.id - 1 === index ? "gradient" : "bg-gray-100"
               }`}
               key={items.id}

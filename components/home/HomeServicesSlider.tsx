@@ -22,9 +22,9 @@ export default function HomeServicesSlider() {
           We believe the right design will bring your business to life
         </h2>
     <div className="overflow-hidden">
-      <div className="mt-12 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth" ref={serviceRef} onScroll={scrollServices}>
+      <div className="home-serviceslider" ref={serviceRef} onScroll={scrollServices}>
         {servicesList.map((service) => (
-          <div key={service.id} className="flex-[0_0_90%] md:flex-[0_0_47%] xl:flex-[0_0_28%]">
+          <div key={service.id} className="home-serviceslider-box">
             <HomeServicesCard {...service} />
           </div>
         ))}

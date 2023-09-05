@@ -5,19 +5,18 @@ import {SlideRight, SlideLeft} from "@/components/animations/SlideAnimation";
 
 export const metadata: Metadata = {
   title: "Code Amateur | Contact",
-  description: "Contact us through here",
 };
 
 export default function Contact(): JSX.Element {
   return (
     <div className="py-8 px-4 md:p-20 text-gunmetal">
       <SlideRight>
-        <section className="xl:w-2/3 mb-6 sm:mb-8 flex-center lg:items-start flex-col">
+        <section className="contact-firstsection">
           <h1 className="contact-heading">GET IN TOUCH</h1>
-          <p className="my-8 text-xl">
+          <h2 className="my-8 text-xl">
             Plot No D199, 7th Floor, 8B, Industrial Area, Sector 74, Sahibzada
             Ajit Singh Nagar, Punjab 160071
-          </p>
+          </h2>
           <button className="contact-button"><a href="mailto:sales@codeamateur.com">sales@codeamateur.com</a></button>
         </section>
       </SlideRight>

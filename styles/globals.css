@@ -40,7 +40,7 @@
   @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset-10px--50px-94px-0-rgb(199,199,199,0.2)] backdrop-blur p-5;
 }
 .firstheading {
-  @apply text-4xl sm:text-8xl font-medium text-center md:text-left;
+  @apply text-4xl sm:text-8xl font-medium text-center md:text-left text-gunmetal;
 }
 .dark-button {
   @apply w-fit py-4 sm:py-6 px-8 sm:px-10 border-2 border-transparent rounded-full bg-gunmetal flex self-center text-lg sm:text-xl font-medium text-center text-white transition-all hover:bg-white hover:text-gunmetal hover:border-gunmetal;
@@ -89,14 +89,17 @@
 .home-headings {
   @apply text-3xl md:text-6xl font-medium text-gunmetal text-center md:text-left;
 }
-.home-operationslides {
-  @apply h-full w-full xl:w-1/3 p-3 rounded-3xl gradient;
+.home-serviceslider {
+  @apply mt-12 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth
 }
-.home-operationdot {
-  @apply cursor-pointer h-4 w-4 mx-1 rounded-full transition duration-700 ease-in-out hover:bg-celestialblue;
+.home-serviceslider-box {
+  @apply flex-[0_0_90%] md:flex-[0_0_47%] xl:flex-[0_0_28%]
 }
 .home-servicecard {
-  @apply h-full p-8 rounded-3xl bg-gray-200 flex justify-between flex-col text-gunmetal;
+  @apply h-full p-8 rounded-3xl bg-gray-200 flex justify-between flex-col gap-5 text-gunmetal;
+}
+.home-servicecard-button {
+  @apply w-fit py-4 px-8 border-2 rounded-full border-transparent bg-white flex text-lg sm:text-xl font-medium text-center text-moonstone transition-all hover:border-electricblue disabled:pointer-events-none;
 }
 .home-description {
   @apply py-2 px-5 text-center text-xl;
@@ -105,7 +108,27 @@
   @apply lg:w-1/2 text-4xl md:text-6xl font-medium text-center gradient-text;
 }
 
+/* Home Operation Slides*/
+.operationslides {
+  @apply h-full w-full xl:w-1/3 p-3 rounded-3xl gradient;
+}
+.operation-heading {
+  @apply mb-4 sm:mb-10 text-base sm:text-xl;
+}
+.operation {
+  @apply my-4 text-xl sm:text-4xl font-medium tracling-tight;
+}
+.operationslides-container {
+  @apply h-full px-4 py-7 lg:py-12 rounded-2xl bg-white flex flex-col justify-between;
+}
+.operationdot {
+  @apply cursor-pointer h-4 w-4 mx-1 rounded-full transition duration-700 ease-in-out hover:bg-celestialblue;
+}
+
 /* Services Component */
+.services-firstsection {
+  @apply py-8 px-4 md:p-20 bg-[url('/assets/images/background.svg')] bg-auto bg-no-repeat;
+}
 .services-operations {
   @apply my-10 md:my-20 flex-between flex-col md:flex-row text-2xl md:text-4xl font-medium text-gunmetal;
 }
@@ -176,6 +199,15 @@
 }
 
 /* Portfolio */
+.portfolio-heading {
+  @apply text-2xl sm:text-7xl font-medium text-gunmetal text-center
+}
+.portfolio-grid {
+  @apply flex flex-wrap items-center
+}
+.portfolio-box {
+  @apply w-full lg:w-1/2 h-fit flex-center
+}
 
 /* Testimonials Component */
 .testimonials-heading {
@@ -195,6 +227,9 @@
 }
 
 /* Contact Component */
+.contact-firstsection {
+  @apply xl:w-2/3 mb-6 sm:mb-8 flex-center lg:items-start flex-col;
+}
 .contact-heading {
   @apply text-4xl md:text-8xl font-medium gradient-text;
 }
