@@ -1,20 +1,24 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { faAtom } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ContactForm() {
+  const [captcha, setCaptcha] = useState(false);
   const {
     register,
     handleSubmit,
-    setValue,
+    // setValue,
     formState: { errors, isSubmitting },
   } = useForm({ mode: "onTouched" });
   const router = useRouter();
 
-  const onHCaptchaChange = (token: string) => {
-    setValue("h-captcha-response", token);
+  const verify = (value: string) => {
+    value ? setCaptcha(true) : "";
   };
 
   const onSubmit = async (data: any) => {
@@ -129,15 +133,22 @@ export default function ContactForm() {
 
         <HCaptcha
           sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-          onVerify={onHCaptchaChange}
+          onVerify={(token) => verify(token)}
         />
 
         <button
           className="dark-button lg:self-start hover:border-transparent disabled:opacity-75 disabled:pointer-events-none"
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting || !captcha}
         >
-          send message
+          {!isSubmitting ? (
+            "send message"
+          ) : (
+            <div className="flex-center gap-2">
+              <p>sending...</p>
+              <FontAwesomeIcon icon={faAtom} spin />
+            </div>
+          )}
         </button>
       </form>
     </div>
