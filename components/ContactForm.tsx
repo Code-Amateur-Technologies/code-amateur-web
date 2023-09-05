@@ -1,11 +1,11 @@
 "use client";
+import { faAtom } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import va from "@vercel/analytics";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
-import { faAtom } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ContactForm() {
   const [captcha, setCaptcha] = useState(false);
