@@ -6,7 +6,7 @@ export default function Loading() {
           <div key={index} className="blog-card">
             <div className="skeleton-animation w-full h-[200px] rounded-t-3xl"></div>
             <div className="p-3">
-              <h1 className="skeleton-animation w-4/5 h-4 m-2 rounded-xl"></h1>
+              <p className="skeleton-animation w-4/5 h-4 m-2 rounded-xl"></p>
               <p className="skeleton-animation w-11/12 h-3 m-2 rounded-xl"></p>
               <div>
                 <p className="skeleton-animation w-1/2 h-3 m-2 rounded-xl"></p>

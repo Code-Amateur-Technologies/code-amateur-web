@@ -11,7 +11,6 @@ import {
 
 export const metadata: Metadata = {
   title: "Code Amateur | About Us",
-  description: "Know more about us",
 };
 
 export default function About(): JSX.Element {
@@ -34,9 +33,9 @@ export default function About(): JSX.Element {
         </SlideUp>
         <div className="flex-between flex-col lg:flex-row gap-5">
           <SlideRight>
-            <p className="about-slogan">
+            <h2 className="about-slogan">
               Strategy <br /> Creativity <br /> Teamwork
-            </p>
+            </h2>
           </SlideRight>
           <div className="w-full lg:w-3/5">
             <SlideLeft>
@@ -57,17 +56,17 @@ export default function About(): JSX.Element {
       <section className="about-secondsection">
         <div className="lg:w-3/5 about-text">
           <SlideRight>
-            <p className="w-full mb-10">
+            <h3 className="w-full mb-10">
               Founded in 2020, our incredible team of engineers, programmers,
               designers and marketing experts have worked tirelessly to bring
               Code Amateur Technologies Private Limited to the forefront of the
               industry.
-            </p>
+            </h3>
             <p>
               <span className="gradient-text">
                 With our innovative and insightful technology
               </span>
-              , we strive to enhance our users’ every day experiences.
+              , we strive to enhance our users every day experiences.
             </p>
           </SlideRight>
         </div>
@@ -97,10 +96,10 @@ export default function About(): JSX.Element {
           </div>
           <div className="lg:w-1/2 flex-center flex-col">
             <SlideLeft>
-              <p className="my-4 text-2xl md:text-5xl font-medium">
+              <h3 className="my-4 text-2xl md:text-5xl font-medium">
                 We provide excellent solutions according to market needs and our
-                users’ habits and motives.
-              </p>
+                users habits and motives.
+              </h3>
               <p className="text-xl md:text-2xl">
                 We have, and will continue to work tirelessly to become the
                 technological standard, providing big picture insights which

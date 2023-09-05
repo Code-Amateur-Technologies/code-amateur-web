@@ -24,7 +24,7 @@ export default function Header(): JSX.Element {
               className="object-contain"
             />
           </Link>
-          <div className="hidden lg:flex gap-10">
+          <div className="hidden md:flex gap-10">
             <Link
               href={"/"}
               className={`header-link ${

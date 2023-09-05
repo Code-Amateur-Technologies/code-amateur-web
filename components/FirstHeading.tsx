@@ -4,7 +4,7 @@ export default function FirstHeading() {
   return (
     <SlideUp>
       <div className="firstheading">
-        <h1 className="text-gunmetal">
+        <h1>
           <span className="gradient-text">Quality.</span> <br />
           Excellence. <br />
           Innovation.

@@ -1,60 +1,157 @@
+"use client";
+import va from "@vercel/analytics";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { faAtom } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function ContactForm() {
+  const [captcha, setCaptcha] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    // setValue,
+    formState: { errors, isSubmitting },
+  } = useForm({ mode: "onTouched" });
+  const router = useRouter();
+
+  const verify = (value: string) => {
+    value ? setCaptcha(true) : "";
+  };
+
+  const onSubmit = async (data: any) => {
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then(() => router.push("/success"))
+      .catch(() => {
+        router.push("/error");
+      })
+      .finally(() => {
+        va.track("CAT-Lead", data);
+      });
+  };
   return (
     <div className="contact-form">
       <h2 className="form-heading">Contact Us</h2>
       <form
         name="contact"
-        method="POST"
-        data-netlify="true"
-        action="/success"
-        netlify-honeypot="bot-field"
+        onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-8"
       >
-        <input type="hidden" name="form-name" value="contact" />
         <input
-          type="text"
-          id="name"
-          name="name"
-          autoComplete={"" + Math.random()}
-          className="form-input"
-          placeholder="Name *"
-        ></input>
+          type="hidden"
+          value="e75fd085-f41d-449e-8f77-2de1ee9289a7"
+          {...register("access_key")}
+        />
 
         <input
-          type="email"
-          id="email"
-          name="email"
-          autoComplete={"" + Math.random()}
-          className="form-input"
-          placeholder="E-mail Address *"
+          type="hidden"
+          value="CAT - Contact Us"
+          {...register("from_name")}
+        />
+
+        <input
+          type="hidden"
+          value="Lead from CAT Contact Us Page"
+          {...register("subject")}
+        />
+
+        <input
+          type="checkbox"
+          id=""
+          className="hidden"
+          style={{ display: "none" }}
+          {...register("botcheck")}
         ></input>
+        <div>
+          <input
+            type="text"
+            id="name"
+            placeholder="Name *"
+            autoComplete="false"
+            className="form-input"
+            {...register("name", {
+              required: true,
+              maxLength: 80,
+            })}
+          ></input>
+          {errors?.name && (
+            <div className="form-error">
+              <p>Full name is required</p>
+            </div>
+          )}
+        </div>
+        <div>
+          <input
+            type="email"
+            id="email"
+            placeholder="E-mail *"
+            autoComplete="false"
+            className="form-input"
+            {...register("email", {
+              required: "Enter your email",
+              pattern: {
+                value: /^\S+@\S+$/i,
+                message: "Please enter a valid email",
+              },
+            })}
+          ></input>
+          {errors?.email?.message && (
+            <div className="form-error">
+              <p>{errors?.email?.message?.toString()}</p>
+            </div>
+          )}
+        </div>
 
         <input
           type="text"
           id="phone"
-          name="phone"
-          autoComplete={"" + Math.random()}
-          className="form-input"
           placeholder="Phone"
+          autoComplete="false"
+          className="form-input"
+          {...register("phone")}
         ></input>
 
-        <textarea
-          id="message"
-          name="message"
-          className="form-input"
-          placeholder="Message *"
-        ></textarea>
+        <div>
+          <textarea
+            id="message"
+            placeholder="Your Message *"
+            className="form-input"
+            {...register("message", {
+              required: true,
+              minLength: 24,
+            })}
+          ></textarea>
+          {errors.message && (
+            <div className="form-error">
+              <p>Enter your Message</p>
+            </div>
+          )}
+        </div>
 
-        <label className="hidden">
-          Don't fill this out if you're human:
-          <input name="bot-field" />
-        </label>
+        <HCaptcha
+          sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+          onVerify={(token) => verify(token)}
+        />
 
         <button
           className="dark-button lg:self-start hover:border-transparent disabled:opacity-75 disabled:pointer-events-none"
           type="submit"
+          disabled={isSubmitting || !captcha}
         >
-          send message
+          {!isSubmitting ? (
+            "send message"
+          ) : (
+            <div className="flex-center gap-2">
+              <p>sending...</p>
+              <FontAwesomeIcon icon={faAtom} spin />
+            </div>
+          )}
         </button>
       </form>
     </div>

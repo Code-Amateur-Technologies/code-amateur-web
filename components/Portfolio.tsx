@@ -1,15 +1,14 @@
 "use client";
 import { portfolioList } from "@/data/data";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Portfolio() {
   const data = portfolioList;
   return (
     <div className="py-8 px-4 md:p-20">
-      <h2 className="text-2xl sm:text-7xl font-medium text-gunmetal text-center">
-        Portfolio
-      </h2>
-      <div className="flex flex-wrap items-center">
+      <h2 className="portfolio-heading">Portfolio</h2>
+      <div className="portfolio-grid">
         {data.map((items, index) => (
           <motion.div
             initial={index % 2 == 0 ? "hiddenLeft" : "hiddenRight"}
@@ -24,11 +23,14 @@ export default function Portfolio() {
               hiddenRight: { opacity: 0, x: 50 },
               visible: { opacity: 1, x: 0 },
             }}
-            className="w-full lg:w-1/2 h-fit flex-center"
+            className="portfolio-box"
             key={items.id}
           >
-            <img
+            <Image
               src={items.client_portfolio_image}
+              width={1000}
+              height={500}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               alt={
                 "Bringing " +
                 items.client_name +
