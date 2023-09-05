@@ -5,9 +5,7 @@ import Link from "next/link";
 export default function Success() {
   return (
     <div className="success">
-      <h1 className="success-heading">
-        Successfully submitted!
-      </h1>
+      <h1 className="success-heading">Successfully submitted!</h1>
       <Image
         src={"/assets/images/thank_you.webp"}
         alt={"Thank you Image after successfully submitting the form"}
@@ -22,9 +20,7 @@ export default function Success() {
             return home
           </Link>
         </div> */}
-        <p className="success-message">
-          We will get back to you soon.
-        </p>
+        <p className="success-message">We will get back to you soon.</p>
       </div>
     </div>
   );

@@ -243,7 +243,10 @@
   @apply text-3xl sm:text-8xl text-white font-medium;
 }
 .form-input {
-  @apply py-2 px-4 border-b-2 border-white bg-transparent outline-0 text-base text-white placeholder:text-white;
+  @apply w-full py-2 px-4 border-b-2 border-white bg-transparent outline-0 text-base text-white placeholder:text-white;
+}
+.form-error {
+  @apply py-2 px-4 text-xs font-bold text-red-600
 }
 .follow-heading {
   @apply text-4xl md:text-6xl font-medium tracking-tighter text-center;
@@ -254,16 +257,16 @@
 
 /* Success Component */
 .success {
-  @apply px-4 py-8 sm:p-16 flex-center flex-col gap-10 text-center
+  @apply px-4 py-8 sm:p-16 flex-center flex-col gap-10 text-center;
 }
 .success-heading {
-  @apply text-2xl sm:text-6xl font-medium gradient-text
+  @apply text-2xl sm:text-6xl font-medium gradient-text;
 }
 .success-image {
-  @apply sm:w-4/5 sm:h-96 rounded-3xl animation-pop-in
+  @apply sm:w-4/5 sm:h-96 rounded-3xl animation-pop-in;
 }
 .success-message {
-  @apply text-xl sm:text-5xl font-medium text-gunmetal
+  @apply text-xl sm:text-5xl font-medium text-gunmetal;
 }
 
 /* Footer Component */
