@@ -1,17 +1,17 @@
-import { JSDOM } from "jsdom";
-import DOMPurify from "dompurify";
 import { GetArticle } from "@/components/GetBlogs";
-import { Metadata } from 'next'
+import DOMPurify from "dompurify";
+import { JSDOM } from "jsdom";
+import { Metadata } from "next";
 
-export async function generateMetadata(
-  { params }: {
-    params: { slug: string };
-  },
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
   const article = await GetArticle(params?.slug);
- 
+
   return {
-    metadataBase: new URL('https://codeamateur.netlify.app/blogs/'),
+    metadataBase: new URL("https://codeamateur.netlify.app/blogs/"),
     title: "Code Amateur | Blog: " + article?.title,
     description: article?.title,
     openGraph: {
@@ -19,9 +19,9 @@ export async function generateMetadata(
       description: article?.title,
       siteName: "CAT",
       images: article?.thumbnail,
-      type: 'website',
+      type: "website",
     },
-  }
+  };
 }
 
 interface IBlog {
@@ -56,7 +56,10 @@ export default async function BlogPost({
           <p>Date: {date[0]}</p>
         </div>
         <div>
-          <div className="text-xl" dangerouslySetInnerHTML={{ __html: clean }} />
+          <div
+            className="text-xl"
+            dangerouslySetInnerHTML={{ __html: clean }}
+          />
         </div>
         <div className="py-10 flex gap-2">
           {article?.categories.map((items: any) => (

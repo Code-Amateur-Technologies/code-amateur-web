@@ -6,13 +6,11 @@ export default function Portfolio() {
   const data = portfolioList;
   return (
     <div className="py-8 px-4 md:p-20">
-      <h2 className="portfolio-heading">
-        Portfolio
-      </h2>
+      <h2 className="portfolio-heading">Portfolio</h2>
       <div className="portfolio-grid">
         {data.map((items, index) => (
           <motion.div
-            initial={index%2 == 0 ? "hiddenLeft" : "hiddenRight"}
+            initial={index % 2 == 0 ? "hiddenLeft" : "hiddenRight"}
             whileInView="visible"
             transition={{
               duration: 0.5,
@@ -29,7 +27,11 @@ export default function Portfolio() {
           >
             <img
               src={items.client_portfolio_image}
-              alt={"Bringing " + items.client_name + " vision to life with passion and innovative solutions"}
+              alt={
+                "Bringing " +
+                items.client_name +
+                " vision to life with passion and innovative solutions"
+              }
               className="w-auto h-auto p-10"
             />
           </motion.div>

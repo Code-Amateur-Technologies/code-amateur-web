@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 
 export default function ScaleUp({ children }: { children: React.ReactNode }) {
-    return (
-      <motion.div
+  return (
+    <motion.div
       initial="hidden"
       whileInView="visible"
       transition={{
@@ -15,8 +15,8 @@ export default function ScaleUp({ children }: { children: React.ReactNode }) {
         hidden: { opacity: 0, scale: 0 },
         visible: { opacity: 1, scale: 1 },
       }}
-      >
-        {children}
-      </motion.div>
-    );
-  }
+    >
+      {children}
+    </motion.div>
+  );
+}

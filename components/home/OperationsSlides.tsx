@@ -40,13 +40,9 @@ export default function OperationsSlides() {
       className="operationslides"
     >
       <div className="operationslides-container">
-        <h3 className="operation-heading">
-          Check out how we operate
-        </h3>
+        <h3 className="operation-heading">Check out how we operate</h3>
         <p className="text-base sm:text-xl">0{operations[index].id}</p>
-        <p className="operation">
-          {operations[index].stepName}
-        </p>
+        <p className="operation">{operations[index].stepName}</p>
         <div className="flex">
           {operations.map((items) => (
             <div

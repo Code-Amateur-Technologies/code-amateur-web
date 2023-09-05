@@ -90,10 +90,10 @@
   @apply text-3xl md:text-6xl font-medium text-gunmetal text-center md:text-left;
 }
 .home-serviceslider {
-  @apply mt-12 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth
+  @apply mt-12 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth;
 }
 .home-serviceslider-box {
-  @apply flex-[0_0_90%] md:flex-[0_0_47%] xl:flex-[0_0_28%]
+  @apply flex-[0_0_90%] md:flex-[0_0_47%] xl:flex-[0_0_28%];
 }
 .home-servicecard {
   @apply h-full p-8 rounded-3xl bg-gray-200 flex justify-between flex-col gap-5 text-gunmetal;
@@ -200,13 +200,13 @@
 
 /* Portfolio */
 .portfolio-heading {
-  @apply text-2xl sm:text-7xl font-medium text-gunmetal text-center
+  @apply text-2xl sm:text-7xl font-medium text-gunmetal text-center;
 }
 .portfolio-grid {
-  @apply flex flex-wrap items-center
+  @apply flex flex-wrap items-center;
 }
 .portfolio-box {
-  @apply w-full lg:w-1/2 h-fit flex-center
+  @apply w-full lg:w-1/2 h-fit flex-center;
 }
 
 /* Testimonials Component */

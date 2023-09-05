@@ -9,11 +9,11 @@ export default function NotFound() {
     <div className=" px-4 h-screen flex-center flex-col md:flex-row gap-20 text-gunmetal">
       {/* <FontAwesomeIcon icon={faFaceFrown} size="2xs" className="h-1/4" style={{transform: "rotate(270deg)"}}/> */}
       <Image
-            src={"/assets/images/logo.svg"}
-            alt={"company icon"}
-            width={200}
-            height={200}
-          />
+        src={"/assets/images/logo.svg"}
+        alt={"company icon"}
+        width={200}
+        height={200}
+      />
       <div className="flex flex-col gap-5">
         <h1 className="self-start text-4xl md:text-6xl font-medium">
           404 - PAGE NOT FOUND

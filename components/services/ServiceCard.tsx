@@ -63,7 +63,9 @@ export default function ServiceCard(props: {
           >
             <div className="flex-start">
               <FontAwesomeIcon icon={props.service_icon} size="2xl" />
-              <h2 className="ml-5 text-3xl sm:text-5xl">{props.service_name}</h2>
+              <h2 className="ml-5 text-3xl sm:text-5xl">
+                {props.service_name}
+              </h2>
             </div>
             <p className="my-5 text-xl sm:text-2xl">
               {props.service_description}

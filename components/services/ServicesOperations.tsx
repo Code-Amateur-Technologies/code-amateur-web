@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import FadeIn from "../animations/FadeIn";
-import {SlideRight} from "../animations/SlideAnimation";
+import { SlideRight } from "../animations/SlideAnimation";
 import { RightArrow } from "@/utils/customIcons";
 
 export default function ServicesOperations() {

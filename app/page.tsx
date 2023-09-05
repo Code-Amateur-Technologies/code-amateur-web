@@ -1,6 +1,6 @@
 import Link from "next/link";
 import FirstHeading from "@/components/FirstHeading";
-import {SlideRight, SlideLeft} from "@/components/animations/SlideAnimation";
+import { SlideRight, SlideLeft } from "@/components/animations/SlideAnimation";
 import OperationsSlides from "@/components/home/OperationsSlides";
 import HomeServicesSlider from "@/components/home/HomeServicesSlider";
 import Quote from "@/components/Quote";
