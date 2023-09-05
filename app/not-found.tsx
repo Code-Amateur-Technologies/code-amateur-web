@@ -15,9 +15,9 @@ export default function NotFound() {
         height={200}
       />
       <div className="flex flex-col gap-5">
-        <h2 className="self-start text-4xl md:text-6xl font-medium">
+        <h1 className="self-start text-4xl md:text-6xl font-medium">
           404 - PAGE NOT FOUND
-        </h2>
+        </h1>
         <p>
           The page you are looking for might have been removed or had its name
           changed or is temporarily unavailable

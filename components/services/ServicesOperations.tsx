@@ -10,22 +10,22 @@ export default function ServicesOperations() {
       <FadeIn>
         <div className="services-operations">
           <div className="md:w-1/4 self-start">
-            <p className="mb-5 text-xl">
+            <h2 className="mb-5 text-xl">
               01<span className="text-gray-300"> - 03</span>
-            </p>
-            <p>Analyzing the Problem</p>
+            </h2>
+            <h3>Analyzing the Problem</h3>
           </div>
           <div className="md:w-1/4 self-start">
-            <p className="mb-5 text-xl">
+            <h2 className="mb-5 text-xl">
               02<span className="text-gray-300"> - 03</span>
-            </p>
-            <p>Drafting the Solution</p>
+            </h2>
+            <h3>Drafting the Solution</h3>
           </div>
           <div className="md:w-1/4 self-start">
-            <p className="mb-5 text-xl">
+            <h2 className="mb-5 text-xl">
               03<span className="text-gray-300"> - 03</span>
-            </p>
-            <p>Implementing a scalable Solution</p>
+            </h2>
+            <h3>Implementing a scalable Solution</h3>
           </div>
         </div>
       </FadeIn>
