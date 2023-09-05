@@ -2,7 +2,12 @@
 import { useForm } from "react-hook-form";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 export default function ContactForm() {
-  const { register, handleSubmit, setValue } = useForm();
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors, isSubmitSuccessful, isSubmitting },
+  } = useForm({ mode: "onTouched" });
 
   const onHCaptchaChange = (token: any) => {
     setValue("h-captcha-response", token);
@@ -12,7 +17,7 @@ export default function ContactForm() {
 
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: data,
+      body: JSON.stringify(data, null, 2),
     }).then((res) => res.json());
   };
   return (
@@ -30,6 +35,12 @@ export default function ContactForm() {
         />
 
         <input
+          type="hidden"
+          value="Code Amateur Contact Form"
+          {...register("from_name")}
+        />
+
+        <input
           type="checkbox"
           id=""
           className="hidden"
@@ -40,39 +51,44 @@ export default function ContactForm() {
         <input
           type="text"
           id="name"
-          name="name"
-          autoComplete={"" + Math.random()}
-          className="form-input"
           placeholder="Name *"
-          required
+          autoComplete="false"
+          className="form-input"
+          {...register("name", {
+            required: "Full name is required",
+            maxLength: 80,
+          })}
         ></input>
 
         <input
           type="email"
           id="email"
-          name="email"
-          autoComplete={"" + Math.random()}
-          className="form-input"
           placeholder="E-mail *"
-          required
+          autoComplete="false"
+          className="form-input"
+          {...register("email", {
+            required: "Enter your email",
+            pattern: {
+              value: /^\S+@\S+$/i,
+              message: "Please enter a valid email",
+            },
+          })}
         ></input>
 
         <input
           type="text"
           id="phone"
           name="phone"
-          autoComplete={"" + Math.random()}
-          className="form-input"
           placeholder="Phone"
-          required
+          autoComplete="false"
+          className="form-input"
         ></input>
 
         <textarea
           id="message"
-          name="message"
+          placeholder="Your Message *"
           className="form-input"
-          placeholder="Message *"
-          required
+          {...register("message", { required: "Enter your Message" })}
         ></textarea>
 
         <HCaptcha
@@ -83,8 +99,8 @@ export default function ContactForm() {
         <input
           type="hidden"
           name="redirect"
-          value="https://www.codeamateur.com/success"
-        ></input>
+          value="https://web3forms.com/success"
+        />
 
         <button
           className="dark-button lg:self-start hover:border-transparent disabled:opacity-75 disabled:pointer-events-none"
