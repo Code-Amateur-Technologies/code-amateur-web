@@ -8,21 +8,21 @@ interface Operation {
 }
 
 export default function OperationsSlides() {
-  const [index, setIndex] = useState<number>(0);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
   const operations: Operation[] = [
-    { id: 1, stepName: "Analyzing the Problem" },
-    { id: 2, stepName: "Drafting the Solution" },
-    { id: 3, stepName: "Implementing a scalable Solution" },
+    { id: 1, stepName: "Analyzing the problem" },
+    { id: 2, stepName: "Drafting the solution" },
+    { id: 3, stepName: "Implementing a scalable solution" }, // in future include text in a staticText file
   ];
 
   useEffect(() => {
     const loop = setInterval(() => {
-      index === operations.length - 1 ? setIndex(0) : setIndex(index + 1);
+      currentSlide === 2 ? setCurrentSlide(0) : setCurrentSlide(currentSlide + 1);
     }, 2000);
     return () => {
       clearInterval(loop);
     };
-  }, [index]);
+  }, [currentSlide]);
 
   return (
     <motion.div
@@ -41,16 +41,16 @@ export default function OperationsSlides() {
     >
       <div className="operationslides-container">
         <h3 className="operation-heading">Check out how we operate</h3>
-        <p className="text-base sm:text-xl">0{operations[index].id}</p>
-        <p className="operation">{operations[index].stepName}</p>
+        <p className="text-base sm:text-xl">0{operations[currentSlide].id}</p>
+        <p className="operation">{operations[currentSlide].stepName}</p>
         <div className="flex">
-          {operations.map((items) => (
+          {operations.map((items,index) => (
             <div
               className={`operationdot ${
-                items.id - 1 === index ? "gradient" : "bg-gray-100"
+                index === currentSlide ? "gradient" : "bg-gray-100"
               }`}
               key={items.id}
-              onClick={() => setIndex(items.id - 1)}
+              onClick={() => setCurrentSlide(index)}
             ></div>
           ))}
         </div>

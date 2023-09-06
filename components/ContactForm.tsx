@@ -1,4 +1,5 @@
 "use client";
+
 import { faAtom } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
@@ -12,7 +13,6 @@ export default function ContactForm() {
   const {
     register,
     handleSubmit,
-    // setValue,
     formState: { errors, isSubmitting },
   } = useForm({ mode: "onTouched" });
   const router = useRouter();
@@ -33,6 +33,18 @@ export default function ContactForm() {
       })
       .finally(() => {
         va.track("CAT-Lead", data);
+
+        const window_: any = window;
+
+        if(window_['gtag']){
+          window_['gtag']("event", 'CAT-Lead', {
+            event_category: 'Lead',
+            event_label: 'CAT',
+            value : JSON.stringify(data),
+          })
+        }
+        
+        
       });
   };
   return (
