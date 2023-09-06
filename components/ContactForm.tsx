@@ -32,19 +32,19 @@ export default function ContactForm() {
         router.push("/error");
       })
       .finally(() => {
-        va.track("CAT-Lead", data);
+        if (window.location.hostname.includes("codeamateur.com")) {
+          va.track("CAT-Lead", data);
 
-        const window_: any = window;
+          const window_: any = window;
 
-        if(window_['gtag']){
-          window_['gtag']("event", 'CAT-Lead', {
-            event_category: 'Lead',
-            event_label: 'CAT',
-            value : JSON.stringify(data),
-          })
+          if (window_["gtag"]) {
+            window_["gtag"]("event", "CAT-Lead", {
+              event_category: "Lead",
+              event_label: "CAT",
+              value: JSON.stringify(data),
+            });
+          }
         }
-        
-        
       });
   };
   return (

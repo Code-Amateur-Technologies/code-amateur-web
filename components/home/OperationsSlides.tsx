@@ -17,7 +17,9 @@ export default function OperationsSlides() {
 
   useEffect(() => {
     const loop = setInterval(() => {
-      currentSlide === 2 ? setCurrentSlide(0) : setCurrentSlide(currentSlide + 1);
+      currentSlide === 2
+        ? setCurrentSlide(0)
+        : setCurrentSlide(currentSlide + 1);
     }, 2000);
     return () => {
       clearInterval(loop);
@@ -44,7 +46,7 @@ export default function OperationsSlides() {
         <p className="text-base sm:text-xl">0{operations[currentSlide].id}</p>
         <p className="operation">{operations[currentSlide].stepName}</p>
         <div className="flex">
-          {operations.map((items,index) => (
+          {operations.map((items, index) => (
             <div
               className={`operationdot ${
                 index === currentSlide ? "gradient" : "bg-gray-100"
