@@ -1,4 +1,4 @@
-import { GetArticle } from "@/components/GetBlogs";
+import { GetArticle } from "@/components/blogs/GetBlogs";
 import DOMPurify from "dompurify";
 import { JSDOM } from "jsdom";
 import { Metadata } from "next";

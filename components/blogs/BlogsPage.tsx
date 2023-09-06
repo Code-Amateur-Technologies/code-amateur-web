@@ -1,4 +1,4 @@
-import BlogCard from "@/components/BlogCard";
+import BlogCard from "@/components/blogs/BlogCard";
 import { Key } from "react";
 import { GetBlogs } from "./GetBlogs";
 
