@@ -29,17 +29,21 @@ export default function BlogCard(props: {
       <img
         src={props.thumbnail}
         alt={props.title}
-        className="w-full h-[200px] rounded-t-3xl"
+        className="w-full h-[250px] rounded-t-3xl"
       />
-      <div className="p-4 text-gunmetal">
+      <div className="pt-4 px-4 text-gunmetal">
         <h2 className="text-xl font-medium">{props.title}</h2>
         <p className="my-5">{shortenDescription(props.description)}</p>
         <div className="my-2 flex items-center">
-          <FontAwesomeIcon icon={faUser} size="xs" />
+          <div className="w-[4%]">
+            <FontAwesomeIcon icon={faUser} />
+          </div>
           <p className="ml-2 text-sm font-medium">{props.author}</p>
         </div>
         <div className="my-2 flex items-center">
-          <FontAwesomeIcon icon={faCalendarDays} size="xs" />
+          <div className="w-[4%]">
+            <FontAwesomeIcon icon={faCalendarDays} />
+          </div>
           <p className="ml-2 text-sm">{date[0]}</p>
         </div>
         <div className="flex flex-wrap gap-2">
