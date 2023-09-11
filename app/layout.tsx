@@ -1,9 +1,9 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import WebAnalytics from "./WebAnalytics";
-import FreshChat from "./chatbot";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FreshChat from "./FreshChatBot";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://codeamateur.com/"),
