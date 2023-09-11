@@ -55,6 +55,7 @@ export default function Testimonials() {
       </div>
       <div className="flex justify-around sm:justify-start">
         <button
+          name="scroll testimonials previous"
           onClick={() => scrollLeft(opinionRef)}
           className="testimonials-button mx-4"
           disabled={leftDisabled}
@@ -62,6 +63,7 @@ export default function Testimonials() {
           <FontAwesomeIcon icon={faArrowLeft} size="xl" />
         </button>
         <button
+          name="scroll testimonials forward"
           onClick={() => scrollRight(opinionRef)}
           className="testimonials-button mx-4"
           disabled={rightDisabled}

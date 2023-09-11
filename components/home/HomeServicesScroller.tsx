@@ -41,6 +41,7 @@ export default function HomeServicesScroller() {
       </div>
       <div className="home-services-scroll">
         <button
+          name="scroll services previous"
           className="home-services-scroll-button"
           onClick={() => scrollLeft(serviceRef)}
           disabled={leftDisabled}
@@ -48,6 +49,7 @@ export default function HomeServicesScroller() {
           <FontAwesomeIcon icon={faArrowLeft} size="xl" />
         </button>
         <button
+          name="scroll services forward"
           className="home-services-scroll-button"
           onClick={() => scrollRight(serviceRef)}
           disabled={rightDisabled}
