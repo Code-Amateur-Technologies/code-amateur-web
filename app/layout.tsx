@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import WebAnalytics from "./WebAnalytics";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FreshChat from "./FreshChatBot";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://codeamateur.com/"),
@@ -29,6 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <FreshChat />
       <body className="w-full">
         <Header />
         <main className="overflow-x-hidden">{children}</main>
