@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import WebAnalytics from "./WebAnalytics";
+import FreshChat from "./chatbot";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <FreshChat />
       <body className="w-full">
         <Header />
         <main className="overflow-x-hidden">{children}</main>
