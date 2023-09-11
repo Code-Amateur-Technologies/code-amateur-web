@@ -22,10 +22,6 @@
   }
 }
 
-:target {
-  @apply scroll-mt-24;
-}
-
 /* common components */
 .blue-gradient {
   @apply bg-gradient-to-r from-celestialblue to-blue-600 to-cyan-600 bg-clip-text text-transparent;
@@ -222,7 +218,7 @@
   @apply lg:w-1/2 text-3xl md:text-6xl text-white text-center md:text-left;
 }
 .testimonials-slider {
-  @apply my-12 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth text-xl md:text-2xl font-medium text-white;
+  @apply my-12 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth text-xl md:text-2xl font-medium text-gunmetal;
 }
 .testimonials-card {
   @apply p-6 sm:p-12 bg-moonstone rounded-3xl flex justify-between flex-col flex-[0_0_90%] md:flex-[0_0_47%] xl:flex-[0_0_30%];

@@ -21,7 +21,6 @@ export default function Header(): JSX.Element {
               alt={"company logo"}
               width={100}
               height={100}
-              className="object-contain"
             />
           </Link>
           <div className="hidden md:flex gap-10">

@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://codeamateur.com/"),
   title: "Code Amateur | Home : Crafting Mobile and Web Excellence",
   description:
-    "Smart solutions are at the core of all that we do at Code Amateur Technologies. Our main goal is to find smart ways of using technology that will help build a better tomorrow for everyone, everywhere. We work with the latest technologies for building mobile and web app development",
+    "Our goal is to find smart ways of using technology to help build a better tomorrow. We work with the latest technologies for building mobile and web apps.",
   openGraph: {
     title: "Code Amateur | Crafting Mobile and Web Excellence",
     description:
-      "Smart solutions are at the core of all that we do at Code Amateur Technologies. Our main goal is to find smart ways of using technology that will help build a better tomorrow for everyone, everywhere. We work with the latest technologies for building mobile and web app development",
+      "Our goal is to find smart ways of using technology to help build a better tomorrow. We work with the latest technologies for building mobile and web apps.",
     siteName: "CAT",
     images: "/opengraph-image.png",
     type: "website",

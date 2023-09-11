@@ -31,6 +31,7 @@ export default function Clients() {
       </section>
       <section className="px-8 flex items-center">
         <button
+          name="scroll clients previous"
           onClick={() => scrollLeft(clientRef)}
           disabled={leftDisabled}
           className="client-navigation"
@@ -56,6 +57,7 @@ export default function Clients() {
           </div>
         </div>
         <button
+          name="scroll clients forward"
           onClick={() => scrollRight(clientRef)}
           disabled={rightDisabled}
           className="client-navigation"
