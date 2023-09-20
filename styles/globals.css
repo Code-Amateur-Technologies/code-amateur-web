@@ -69,9 +69,9 @@
 
 /* Sidebar */
 .nav-toggle {
-  @apply h-12 w-12 flex flex-col justify-center items-center;
+  @apply flex-center flex-col;
 }
-.genericHamburgerLine {
+.hamburger-line {
   @apply h-1 w-6 my-1 rounded-full bg-black transition ease-in-out transform duration-300;
 }
 
@@ -142,7 +142,7 @@
 
 /* Blogs Component */
 .blogs-list {
-  @apply grid md:grid-cols-2 xl:grid-cols-3 gap-10;
+  @apply py-8 px-4 sm:px-20  grid md:grid-cols-2 xl:grid-cols-3 gap-10;
 }
 .blog-card {
   @apply pb-4 shadow-xl rounded-3xl;

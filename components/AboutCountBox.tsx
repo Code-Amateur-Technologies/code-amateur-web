@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import useIsInViewport from "@/utils/viewport";
 interface AboutBox {
   id: number;
   value: number;
@@ -60,22 +59,38 @@ const CountUpAnimation = ({
 };
 
 export default function AboutCountBox() {
-  const myElementRef = useRef(null);
-  const [showCount, setShowCount] = useState<boolean>(false);
-  const isInViewport = useIsInViewport(myElementRef);
+  const targetRef = useRef(null);
+  const [isInViewport, setIsInViewport] = useState(false);
+
   useEffect(() => {
-    isInViewport && setShowCount(true);
-  });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsInViewport(true);
+        }
+      });
+    });
+    
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => {
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <div ref={myElementRef} className="about-gridcontainer">
+    <div ref={targetRef} className="about-gridcontainer">
       {aboutBox.map((items) => (
         <div key={items.id} className="about-box">
           <div className="about-pill">
-            {showCount && (
+            {isInViewport && (
               <CountUpAnimation duration={1000}>{items.value}</CountUpAnimation>
             )}
-
             <p>{items.valueString}</p>
           </div>
           <p className="text-sm lg:text-2xl">{items.aboutText}</p>

@@ -1,7 +1,7 @@
+import { Metadata } from "next";
 import { GetArticle } from "@/components/blogs/GetBlogs";
 import DOMPurify from "dompurify";
 import { JSDOM } from "jsdom";
-import { Metadata } from "next";
 
 export async function generateMetadata({
   params,
@@ -11,7 +11,7 @@ export async function generateMetadata({
   const article = await GetArticle(params?.slug);
 
   return {
-    metadataBase: new URL("https://codeamateur.netlify.app/blogs/"),
+    metadataBase: new URL("https://codeamateur.com"),
     title: "Code Amateur | Blog: " + article?.title,
     description: article?.title,
     openGraph: {

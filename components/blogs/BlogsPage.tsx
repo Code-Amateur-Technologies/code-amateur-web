@@ -1,3 +1,4 @@
+"use client"
 import BlogCard from "@/components/blogs/BlogCard";
 import { Key } from "react";
 import { GetBlogs } from "./GetBlogs";
@@ -7,7 +8,7 @@ export default async function BlogsPage() {
 
   return (
     <div>
-      {blogs.length === 0 ? (
+      {!blogs ? (
         <div className="h-96 flex-center text-4xl sm:text-8xl font-medium text-center text-gunmetal">
           coming soon...
         </div>
