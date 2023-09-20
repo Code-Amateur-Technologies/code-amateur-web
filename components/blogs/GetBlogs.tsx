@@ -1,3 +1,4 @@
+"use client"
 import slugify from "react-slugify";
 
 const Link = `https://api.rss2json.com/v1/api.json?rss_url=https://codeamateur.medium.com/feed&api_key=esqmehbyut9mfcvjyz1vflvypn9siuvharniofwz&order_by=pubDate&count=25`;

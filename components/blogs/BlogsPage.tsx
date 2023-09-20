@@ -1,3 +1,4 @@
+"use client"
 import BlogCard from "@/components/blogs/BlogCard";
 import { Key } from "react";
 import { GetBlogs } from "./GetBlogs";
