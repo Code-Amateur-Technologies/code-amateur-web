@@ -62,15 +62,16 @@ export default function AboutCountBox() {
   const targetRef = useRef(null);
   const [isInViewport, setIsInViewport] = useState(false);
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setIsInViewport(true);
-      }
-    });
-  });
-
   useEffect(() => {
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsInViewport(true);
+        }
+      });
+    });
+    
     if (targetRef.current) {
       observer.observe(targetRef.current);
     }
