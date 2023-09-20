@@ -5,21 +5,21 @@ export default function Hamburger(props: {
   sidebar: boolean;
 }) {
   return (
-    <button onClick={props.showSidebar} className="nav-toggle group md:hidden">
+    <button title="show sidebar" onClick={props.showSidebar} className="nav-toggle group md:hidden">
       <div
-        className={`genericHamburgerLine ${
+        className={`hamburger-line ${
           props.sidebar
             ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100"
             : "opacity-50 group-hover:opacity-100"
         }`}
       />
       <div
-        className={`genericHamburgerLine ${
+        className={`hamburger-line ${
           props.sidebar ? "opacity-0" : "opacity-50 group-hover:opacity-100"
         }`}
       />
       <div
-        className={`genericHamburgerLine ${
+        className={`hamburger-line ${
           props.sidebar
             ? "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
             : "opacity-50 group-hover:opacity-100"
