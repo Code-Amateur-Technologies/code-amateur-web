@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import WebAnalytics from "./WebAnalytics";
-import Header from "@/components/navigation/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import FreshChat from "./FreshChatBot";
 
 export const metadata: Metadata = {

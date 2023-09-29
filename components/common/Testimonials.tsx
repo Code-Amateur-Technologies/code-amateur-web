@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useRef } from "react";
-import { testimonials } from "@/data/data";
+import { testimonials } from "@/constants/data";
 import { scrollLeft, scrollRight } from "@/utils/scroller";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

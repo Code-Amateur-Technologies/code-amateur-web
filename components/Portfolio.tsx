@@ -1,5 +1,5 @@
 "use client";
-import { portfolioList } from "@/data/data";
+import { portfolioList } from "@/constants/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

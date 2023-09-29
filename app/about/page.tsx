@@ -1,8 +1,9 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import AboutCountBox from "@/components/AboutCountBox";
-import Clients from "@/components/Clients";
-import Testimonials from "@/components/Testimonials";
+import Clients from "@/components/common/Clients";
+import Testimonials from "@/components/common/Testimonials";
+import { aboutPage } from "@/constants/text";
 import {
   SlideUp,
   SlideRight,
@@ -19,7 +20,7 @@ export default function About(): JSX.Element {
       <section className="py-8 px-4 lg:p-20 flex flex-col gap-10">
         <SlideRight>
           <h1 className="about-firstheading">
-            The Leading Information Technology Company
+            {aboutPage.aboutHeading}
           </h1>
         </SlideRight>
         <SlideUp>
@@ -40,14 +41,7 @@ export default function About(): JSX.Element {
           <div className="w-full lg:w-3/5">
             <SlideLeft>
               <p className="about-text">
-                We’re a young and talented group of entrepreneurs and engineers
-                with a groundbreaking idea designed to contribute towards a
-                better tomorrow. We provide smart solutions for companies of all
-                sizes and pride ourselves on our unparalleled, dedicated
-                service. At Code Amateur Technologies Private Limited, we
-                believe that the right understanding and technological edge can
-                lead companies towards a successful future. Contact us today to
-                set up a meeting with one of our sales representatives.
+                {aboutPage.aboutUs}
               </p>
             </SlideLeft>
           </div>
@@ -56,12 +50,9 @@ export default function About(): JSX.Element {
       <section className="about-secondsection">
         <div className="lg:w-3/5 about-text">
           <SlideRight>
-            <h3 className="w-full mb-10">
-              Founded in 2020, our incredible team of engineers, programmers,
-              designers and marketing experts have worked tirelessly to bring
-              Code Amateur Technologies Private Limited to the forefront of the
-              industry.
-            </h3>
+            <p className="w-full mb-10">
+              {aboutPage.aboutFounded}
+            </p>
             <p>
               <span className="gradient-text">
                 With our innovative and insightful technology
@@ -96,14 +87,11 @@ export default function About(): JSX.Element {
           </div>
           <div className="lg:w-1/2 flex-center flex-col">
             <SlideLeft>
-              <h3 className="my-4 text-2xl md:text-5xl font-medium">
-                We provide excellent solutions according to market needs and our
-                users habits and motives.
-              </h3>
+              <p className="my-4 text-2xl md:text-5xl font-medium">
+                {aboutPage.aboutPitch}
+              </p>
               <p className="text-xl md:text-2xl">
-                We have, and will continue to work tirelessly to become the
-                technological standard, providing big picture insights which
-                industry leaders not only approve of, but also depend on.
+                {aboutPage.aboutGoal}
               </p>
             </SlideLeft>
           </div>

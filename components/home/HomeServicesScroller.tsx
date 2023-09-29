@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 import HomeServicesCard from "./HomeServicesCard";
 import { scrollLeft, scrollRight } from "@/utils/scroller";
-import { servicesList } from "@/data/data";
+import { servicesList } from "@/constants/data";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

@@ -2,7 +2,7 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import ServiceCard from "./ServiceCard";
-import { servicesList } from "@/data/data";
+import { servicesList } from "@/constants/data";
 
 export default function ServicesList() {
   const sectionid: string | null = useSearchParams().get("section");

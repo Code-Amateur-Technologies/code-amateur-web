@@ -19,6 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: "https://codeamateur.com/careers",
+      lastModified: new Date(),
+    },
+    {
       url: "https://codeamateur.com/contact",
       lastModified: new Date(),
     },

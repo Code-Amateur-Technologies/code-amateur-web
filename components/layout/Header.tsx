@@ -6,16 +6,16 @@ import { usePathname } from "next/navigation";
 import Hamburger from "./Hamburger";
 import Sidebar from "./Sidebar";
 
-const pages = [
+const routes = [
   { name: "Home", path: "/" },
   { name: "Our Services", path: "/services" },
   { name: "Blogs", path: "/blogs" },
   { name: "About", path: "/about" },
-  // { name: "Carrers", path: "/carrers" },
+  { name: "Careers", path: "/careers" },
   { name: "Contact Us", path: "/contact" },
 ];
 
-export default function Header(): JSX.Element {
+export default function Header() {
   const currentPath = usePathname();
   const [sidebar, setSidebar] = useState<boolean>(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -32,8 +32,8 @@ export default function Header(): JSX.Element {
               height={100}
             />
           </Link>
-          <div className="hidden md:flex gap-10">
-            {pages.map((page) => (
+          <div className="hidden lg:flex gap-10">
+            {routes.map((page) => (
               <Link
                 key={page.name}
                 href={page.path}
@@ -48,7 +48,7 @@ export default function Header(): JSX.Element {
           <Hamburger showSidebar={showSidebar} sidebar={sidebar} />
         </nav>
       </header>
-      {sidebar && <Sidebar showSidebar={showSidebar} />}
+      {sidebar && <Sidebar showSidebar={showSidebar} routes={routes}/>}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import { contactPage } from "@/constants/text";
 import { SlideRight, SlideLeft } from "@/components/animations/SlideAnimation";
 
 export const metadata: Metadata = {
@@ -13,12 +14,11 @@ export default function Contact(): JSX.Element {
       <SlideRight>
         <section className="contact-firstsection">
           <h1 className="contact-heading">GET IN TOUCH</h1>
-          <h2 className="my-8 text-xl">
-            Plot No D199, 7th Floor, 8B, Industrial Area, Sector 74, Sahibzada
-            Ajit Singh Nagar, Punjab 160071
-          </h2>
+          <p className="my-8 text-xl">
+            {contactPage.contactAddress}
+          </p>
           <button className="contact-button">
-            <a href="mailto:sales@codeamateur.com">sales@codeamateur.com</a>
+            <a href="mailto:sales@codeamateur.com">{contactPage.contactmail}</a>
           </button>
         </section>
       </SlideRight>

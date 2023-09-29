@@ -5,8 +5,8 @@ import OperationsSlides from "@/components/home/OperationsSlides";
 import HomeServicesScroller from "@/components/home/HomeServicesScroller";
 import Quote from "@/components/Quote";
 import Portfolio from "@/components/Portfolio";
-import Clients from "@/components/Clients";
-import Testimonials from "@/components/Testimonials";
+import Clients from "@/components/common/Clients";
+import Testimonials from "@/components/common/Testimonials";
 import { RightArrow } from "@/utils/customIcons";
 
 export default function Home() {
@@ -17,12 +17,16 @@ export default function Home() {
         <div className="mt-6 self-center lg:self-end ">
           <SlideLeft>
             <Link className="dark-button gap-2" href={"/services"}>
-              <p>see our services</p>
+              <p className="z-10">see our services</p>
               <RightArrow />
             </Link>
           </SlideLeft>
         </div>
       </section>
+      {/* <Link href={"/services"} className="dark-slide-button">
+        <p>see our services</p>
+        <RightArrow />
+      </Link> */}
       <section className="home-secondsection">
         <div className="h-full xl:w-1/2">
           <SlideRight>

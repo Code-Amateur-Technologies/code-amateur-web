@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { clientList } from "@/data/data";
+import { clientList } from "@/constants/data";
 import { scrollLeft, scrollRight } from "@/utils/scroller";
 import {
   faChevronRight,

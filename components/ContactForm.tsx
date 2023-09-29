@@ -48,7 +48,7 @@ export default function ContactForm() {
       });
   };
   return (
-    <div className="contact-form">
+    <div className="form">
       <h2 className="form-heading">Contact Us</h2>
       <form
         name="contact"
