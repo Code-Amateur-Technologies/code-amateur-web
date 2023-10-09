@@ -14,9 +14,7 @@ export default function Contact(): JSX.Element {
       <SlideRight>
         <section className="contact-firstsection">
           <h1 className="contact-heading">GET IN TOUCH</h1>
-          <p className="my-8 text-xl">
-            {contactPage.contactAddress}
-          </p>
+          <p className="my-8 text-xl">{contactPage.contactAddress}</p>
           <button className="contact-button">
             <a href="mailto:sales@codeamateur.com">{contactPage.contactmail}</a>
           </button>

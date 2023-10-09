@@ -1,7 +1,7 @@
-"use client"
-import BlogCard from "@/components/blogs/BlogCard";
+"use client";
 import { Key } from "react";
 import { GetBlogs } from "./GetBlogs";
+import BlogCard from "./BlogCard";
 
 export default async function BlogsPage() {
   const blogs = await GetBlogs();

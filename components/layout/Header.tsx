@@ -48,7 +48,7 @@ export default function Header() {
           <Hamburger showSidebar={showSidebar} sidebar={sidebar} />
         </nav>
       </header>
-      {sidebar && <Sidebar showSidebar={showSidebar} routes={routes}/>}
+      {sidebar && <Sidebar showSidebar={showSidebar} routes={routes} />}
     </div>
   );
 }

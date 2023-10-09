@@ -19,9 +19,7 @@ export default function About(): JSX.Element {
     <div className="text-gunmetal">
       <section className="py-8 px-4 lg:p-20 flex flex-col gap-10">
         <SlideRight>
-          <h1 className="about-firstheading">
-            {aboutPage.aboutHeading}
-          </h1>
+          <h1 className="about-firstheading">{aboutPage.aboutHeading}</h1>
         </SlideRight>
         <SlideUp>
           <Image
@@ -40,9 +38,7 @@ export default function About(): JSX.Element {
           </SlideRight>
           <div className="w-full lg:w-3/5">
             <SlideLeft>
-              <p className="about-text">
-                {aboutPage.aboutUs}
-              </p>
+              <p className="about-text">{aboutPage.aboutUs}</p>
             </SlideLeft>
           </div>
         </div>
@@ -50,9 +46,7 @@ export default function About(): JSX.Element {
       <section className="about-secondsection">
         <div className="lg:w-3/5 about-text">
           <SlideRight>
-            <p className="w-full mb-10">
-              {aboutPage.aboutFounded}
-            </p>
+            <p className="w-full mb-10">{aboutPage.aboutFounded}</p>
             <p>
               <span className="gradient-text">
                 With our innovative and insightful technology
@@ -90,9 +84,7 @@ export default function About(): JSX.Element {
               <p className="my-4 text-2xl md:text-5xl font-medium">
                 {aboutPage.aboutPitch}
               </p>
-              <p className="text-xl md:text-2xl">
-                {aboutPage.aboutGoal}
-              </p>
+              <p className="text-xl md:text-2xl">{aboutPage.aboutGoal}</p>
             </SlideLeft>
           </div>
         </div>

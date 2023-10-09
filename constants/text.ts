@@ -17,10 +17,12 @@ export const aboutPage = {
 
 export const careersPage = {
   careersHeading: "Join Us",
-  careersText: "At Code Amateur Technologies Private Limited, we believe in building consumer driven products and platforms. We work towards bringing human to technology. We are looking for highly capable, motivated and passionate people with diverse backgrounds and perspectives to make this journey possible. We are proud of what we make and who we are.",
-}
+  careersText:
+    "At Code Amateur Technologies Private Limited, we believe in building consumer driven products and platforms. We work towards bringing human to technology. We are looking for highly capable, motivated and passionate people with diverse backgrounds and perspectives to make this journey possible. We are proud of what we make and who we are.",
+};
 
 export const contactPage = {
-  contactAddress: "Plot No D199, 7th Floor, 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 160071",
+  contactAddress:
+    "Plot No D199, 7th Floor, 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 160071",
   contactmail: "sales@codeamateur.com",
-}
+};

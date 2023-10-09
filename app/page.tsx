@@ -23,7 +23,7 @@ export default function Home() {
           </SlideLeft>
         </div>
       </section>
-      {/* <Link href={"/services"} className="dark-slide-button">
+      {/* <Link href={"/services"} className="animated-button">
         <p>see our services</p>
         <RightArrow />
       </Link> */}

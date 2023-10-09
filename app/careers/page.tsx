@@ -1,42 +1,44 @@
-"use client";
-import type { Metadata } from "next";
-import Image from "next/image";
-import { useState } from "react";
-import JobForm from "@/components/carrers/JobForm";
-import { careersPage } from "@/constants/text";
-import { jobs } from "@/constants/jobs";
-import hiring from "@/public/assets/images/hiring.webp";
-
-import ListingsAccordian from "@/components/carrers/ListingsAccordian";
-
-export const metadata: Metadata = {
-  title: "Code Amateur | Careers",
-};
+'use client';
+import Image from 'next/image';
+import { useState } from 'react';
+import AccordionItem from '@/components/carrers/AccordianItem';
+import JobForm from '@/components/carrers/JobForm';
+import { careersPage } from '@/constants/text';
+import { jobs } from '@/constants/jobs';
+import hiring from '@/public/assets/images/hiring.webp';
 
 const quotes = [
   {
     id: 1,
     quote:
-      "Acquiring the right talent is the most important key to growth. Hiring was and still is the most important thing we do.",
-    author: "Marc Benioff",
+      'Acquiring the right talent is the most important key to growth. Hiring was and still is the most important thing we do.',
+    author: 'Marc Benioff',
   },
   {
     id: 2,
     quote:
-      "The secret of my success is that we have gone to exceptional lengths to hire the best people in the world.",
-    author: "Steve Jobs",
+      'The secret of my success is that we have gone to exceptional lengths to hire the best people in the world.',
+    author: 'Steve Jobs',
   },
   {
     id: 3,
     quote:
-      "You can dream, create, design and build the most wonderful place in the world…but it requires people to make the dream a reality.",
-    author: "Walt Disney",
+      'You can dream, create, design and build the most wonderful place in the world…but it requires people to make the dream a reality.',
+    author: 'Walt Disney',
   },
 ];
 
 export default function Careers() {
-  const [jobSelected, setJobSelected] = useState("");
+  const [jobSelected, setJobSelected] = useState('');
   const [showForm, setShowForm] = useState(false);
+  const [clicked, setClicked] = useState<number>();
+
+  const handleToggle = (index: any) => {
+    if (clicked === index) {
+      return setClicked(0);
+    }
+    setClicked(index);
+  };
 
   return (
     <div className="py-8 px-4 lg:p-20 flex flex-col gap-10 text-gunmetal">
@@ -49,18 +51,22 @@ export default function Careers() {
           </div>
         ))}
       </section>
-      <section className="">
-        {jobs.map((item) => (
-          <ListingsAccordian key={item.id}
-            position={item.position}
-            description={item.description}
-            setJobSelected={setJobSelected}
-            setShowForm={setShowForm}
-          />
-        ))}
+      <section className="careers-listings-section">
+        <ul className="careers-accordion">
+          {jobs.map((job, index) => (
+            <AccordionItem
+              key={index}
+              job={job}
+              active={clicked === job.id}
+              onToggle={() => handleToggle(job.id)}
+              setJobSelected={setJobSelected}
+              setShowForm={setShowForm}
+            />
+          ))}
+        </ul>
       </section>
       {showForm && (
-        <section className={`job-form-modal ${showForm ? "flex" : "hidden"}`}>
+        <section className={`job-form-modal ${showForm ? 'flex' : 'hidden'}`}>
           <JobForm
             showForm={showForm}
             setShowForm={setShowForm}

@@ -1,76 +1,77 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { faXmark, faUpload } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { useForm, Controller } from 'react-hook-form';
+import { faXmark, faUpload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function JobForm(props: {
+interface IJobForm {
   showForm: boolean;
   setShowForm: (arg0: boolean) => void;
   jobSelected: string;
-}) {
-  console.log("Props:---", props);
-  const [resumeFile, setResumeFile] = useState("");
+}
+
+export default function JobForm(props: IJobForm) {
+  console.log('Props:---', props);
+  const [resumeFile, setResumeFile] = useState('');
   const {
     register,
     handleSubmit,
     formState: { errors },
-    setValue,
     getValues,
+    control,
   } = useForm({
     defaultValues: {
-      name: "",
-      phone: "",
-      email: "",
+      name: '',
+      phone: '',
+      email: '',
       position: props.jobSelected,
       resume: null,
-      message: "",
+      message: '',
     },
   });
 
-  console.log("position Value:---", getValues("position"));
+  console.log('position Value:---', getValues('position'));
 
   const handleFile = (e: any) => {
-    console.log("Previous File Value: ", getValues("resume"));
+    console.log('Previous File Value: ', getValues('resume'));
     setResumeFile(e.target.files[0].name);
-    setValue("resume", e.target.files[0]);
-    console.log("Next File Value: ", getValues("resume"));
+    console.log('Next File Value: ', getValues('resume'));
   };
 
   const onSubmit = (data: any) => {
-    console.log("Success:----", data);
+    console.log('Success:----', data);
     props.setShowForm(false);
   };
-  console.log("Errors:------", errors);
+  console.log('Errors:------', errors);
 
   return (
     <div className="md:w-1/2">
-      <form onSubmit={handleSubmit(onSubmit)} className="form">
+      <form onSubmit={handleSubmit(onSubmit)} className="gap-4 form">
         <div className="flex-between">
           <p className="text-base text-white">Fill out your information</p>
           <button onClick={() => props.setShowForm(false)} className="self-end">
-            <FontAwesomeIcon icon={faXmark} size="xl" />
+            <FontAwesomeIcon icon={faXmark} size="xl" style={{color: "#fff"}} />
           </button>
         </div>
 
         <div>
           <input
-            {...register("name", { required: true })}
+            {...register('name', { required: true })}
             type="text"
             placeholder="Enter your full name *"
             className="form-input"
           />
           {errors?.name && (
             <div className="form-error">
-              <p>Full name is required</p>
+              <p>please provide your full name</p>
             </div>
           )}
         </div>
 
         <input
-          {...register("phone")}
+          {...register('phone')}
           type="tel"
           placeholder="Enter your phone number"
           className="form-input"
@@ -78,7 +79,7 @@ export default function JobForm(props: {
 
         <div>
           <input
-            {...register("email", { required: true })}
+            {...register('email', { required: true })}
             type="email"
             placeholder="Enter your email address *"
             className="form-input"
@@ -92,7 +93,7 @@ export default function JobForm(props: {
 
         <input
           readOnly
-          {...register("position")}
+          {...register('position')}
           type="text"
           placeholder="Position"
           defaultValue={props.jobSelected}
@@ -106,7 +107,7 @@ export default function JobForm(props: {
               <FontAwesomeIcon icon={faUpload} />
             </label>
             <p className="text-white">
-              {resumeFile ? resumeFile : "No file chosen"}
+              {resumeFile ? resumeFile : 'No file chosen'}
             </p>
           </div>
           {errors?.resume && (
@@ -116,17 +117,29 @@ export default function JobForm(props: {
           )}
         </div>
 
-        <input
-          hidden
-          {...register("resume")}
-          type="file"
-          accept="application/pdf, .doc"
-          id="resume"
-          onChange={(e) => handleFile(e)}
+        <Controller
+          control={control}
+          name={'resume'}
+          rules={{ required: 'Resume is required' }}
+          render={({ field: { value, onChange, ...field } }) => {
+            return (
+              <input
+                hidden
+                {...register('resume', { required: true })}
+                type="file"
+                accept="application/pdf, .doc"
+                id="resume"
+                onChange={(event) => {
+                  onChange(event.target.files[0]);
+                  handleFile(event);
+                }}
+              />
+            );
+          }}
         />
 
         <textarea
-          {...register("message")}
+          {...register('message')}
           placeholder="Type your message"
           className="form-input"
         ></textarea>

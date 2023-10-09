@@ -39,8 +39,8 @@ interface IService {
 }
 interface ITechnology {
   tech: string;
-  tech_icon: any;
-  tech_svg: any;
+  tech_icon?: any;
+  tech_svg?: any;
 }
 
 export const servicesList: IService[] = [
@@ -53,10 +53,10 @@ export const servicesList: IService[] = [
     service_description:
       "We understand our target customers needs, preferences, and pain points. We continuously iterate and improve your product based on customer feedback, market trends, and emerging technologies.",
     technologies: [
-      { tech: "Jira", tech_icon: faJira, tech_svg: "" },
-      { tech: "Trello", tech_icon: faTrello, tech_svg: "" },
-      { tech: "Github", tech_icon: faGithub, tech_svg: "" },
-      { tech: "Gitlab", tech_icon: faGitlab, tech_svg: "" },
+      { tech: "Jira", tech_icon: faJira },
+      { tech: "Trello", tech_icon: faTrello },
+      { tech: "Github", tech_icon: faGithub },
+      { tech: "Gitlab", tech_icon: faGitlab },
     ],
   },
   {
@@ -68,15 +68,14 @@ export const servicesList: IService[] = [
     service_description:
       "We follow a series of steps that aim to create a user-friendly and visually appealing product.",
     technologies: [
-      { tech: "Bootstrap", tech_icon: faBootstrap, tech_svg: "" },
-      { tech: "Css", tech_icon: faCss3, tech_svg: "" },
+      { tech: "Bootstrap", tech_icon: faBootstrap },
+      { tech: "Css", tech_icon: faCss3 },
       {
         tech: "Tailwind",
-        tech_icon: "",
         tech_svg: "/assets/icons/tailwind_css.svg",
       },
-      { tech: "Scss", tech_icon: faSass, tech_svg: "" },
-      { tech: "Figma", tech_icon: faFigma, tech_svg: "" },
+      { tech: "Scss", tech_icon: faSass },
+      { tech: "Figma", tech_icon: faFigma },
     ],
   },
   {
@@ -88,13 +87,12 @@ export const servicesList: IService[] = [
     service_description:
       "Our job is to take the vision and design concept from the client and implement it through code and make sure the website looks good on all devices.",
     technologies: [
-      { tech: "React", tech_icon: faReact, tech_svg: "" },
-      { tech: "React Native", tech_icon: faReact, tech_svg: "" },
-      { tech: "Angular", tech_icon: faAngular, tech_svg: "" },
-      { tech: "Vue", tech_icon: faVuejs, tech_svg: "" },
+      { tech: "React", tech_icon: faReact },
+      { tech: "React Native", tech_icon: faReact },
+      { tech: "Angular", tech_icon: faAngular },
+      { tech: "Vue", tech_icon: faVuejs },
       {
         tech: "Redux",
-        tech_icon: faVuejs,
         tech_svg: "/assets/icons/redux.svg",
       },
     ],
@@ -108,32 +106,28 @@ export const servicesList: IService[] = [
     service_description:
       "We write back-end code that forms the backbone of any website or app.",
     technologies: [
-      { tech: "Node", tech_icon: faNodeJs, tech_svg: "" },
-      { tech: "Nest", tech_icon: "", tech_svg: "/assets/icons/nestjs.svg" },
+      { tech: "Node", tech_icon: faNodeJs },
+      { tech: "Nest", tech_svg: "/assets/icons/nestjs.svg" },
       {
         tech: "Express",
-        tech_icon: "",
         tech_svg: "/assets/icons/express_js.svg",
       },
-      { tech: "MongoDB", tech_icon: "", tech_svg: "/assets/icons/mongodb.svg" },
-      { tech: "MySQL", tech_icon: faDatabase, tech_svg: "" },
+      { tech: "MongoDB", tech_svg: "/assets/icons/mongodb.svg" },
+      { tech: "MySQL", tech_icon: faDatabase },
       {
         tech: "Postgres",
-        tech_icon: "",
         tech_svg: "/assets/icons/postgres_sql.svg",
       },
-      { tech: "AWS", tech_icon: faAws, tech_svg: "" },
-      { tech: "GCP", tech_icon: faGoogle, tech_svg: "" },
-      { tech: "kafka", tech_icon: "", tech_svg: "/assets/icons/kafka.svg" },
-      { tech: "Redis", tech_icon: "", tech_svg: "/assets/icons/redis.svg" },
+      { tech: "AWS", tech_icon: faAws },
+      { tech: "GCP", tech_icon: faGoogle },
+      { tech: "kafka", tech_svg: "/assets/icons/kafka.svg" },
+      { tech: "Redis", tech_svg: "/assets/icons/redis.svg" },
       {
         tech: "Web-Automation",
-        tech_icon: "",
         tech_svg: "/assets/icons/automation.svg",
       },
       {
         tech: "Web-Scraping",
-        tech_icon: "",
         tech_svg: "/assets/icons/scraping.svg",
       },
     ],
@@ -147,27 +141,24 @@ export const servicesList: IService[] = [
     service_description:
       "Turning data into analytics with the goal of discovering useful information, informing conclusions, and supporting decision-making.",
     technologies: [
-      { tech: "Tableau", tech_icon: "", tech_svg: "/assets/icons/tableau.svg" },
+      { tech: "Tableau", tech_svg: "/assets/icons/tableau.svg" },
       {
         tech: "Power BI",
-        tech_icon: "",
         tech_svg: "/assets/icons/power_bi.svg",
       },
-      { tech: "Looker", tech_icon: "", tech_svg: "/assets/icons/looker.svg" },
+      { tech: "Looker", tech_svg: "/assets/icons/looker.svg" },
       {
         tech: "Quicksight",
-        tech_icon: "",
         tech_svg: "/assets/icons/aws_quicksight.svg",
       },
-      { tech: "Alteryx", tech_icon: "", tech_svg: "/assets/icons/alteryx.svg" },
-      { tech: "Dataiku", tech_icon: "", tech_svg: "/assets/icons/dataiku.svg" },
-      { tech: "Easymorph", tech_icon: "", tech_svg: "/assets/icons/easy.png" },
+      { tech: "Alteryx", tech_svg: "/assets/icons/alteryx.svg" },
+      { tech: "Dataiku", tech_svg: "/assets/icons/dataiku.svg" },
+      { tech: "Easymorph", tech_svg: "/assets/icons/easy.png" },
       {
         tech: "Qlikview",
-        tech_icon: "",
         tech_svg: "/assets/icons/qlikview.svg",
       },
-      { tech: "Python", tech_icon: faPython, tech_svg: "" },
+      { tech: "Python", tech_icon: faPython },
     ],
   },
   {
@@ -178,17 +169,15 @@ export const servicesList: IService[] = [
     service_name: "Game Development",
     service_description: "Gaming Development and Virtual Reality.",
     technologies: [
-      { tech: "Game Development", tech_icon: faSteamSymbol, tech_svg: "" },
+      { tech: "Game Development", tech_icon: faSteamSymbol },
       {
         tech: "Unreal Engine",
-        tech_icon: "",
         tech_svg: "/assets/icons/unreal_engine.svg",
       },
-      { tech: "Unity Engine", tech_icon: faUnity, tech_svg: "" },
+      { tech: "Unity Engine", tech_icon: faUnity },
       {
         tech: "AR, VR, MR Applications",
         tech_icon: faVrCardboard,
-        tech_svg: "",
       },
     ],
   },

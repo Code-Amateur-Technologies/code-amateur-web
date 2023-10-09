@@ -18,7 +18,7 @@ function Sidebar(props: {
             >
               <p>{page.name}</p>
             </Link>
-          )
+          ),
         )}
       </div>
     </div>

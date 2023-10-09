@@ -63,7 +63,6 @@ export default function AboutCountBox() {
   const [isInViewport, setIsInViewport] = useState(false);
 
   useEffect(() => {
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -71,7 +70,7 @@ export default function AboutCountBox() {
         }
       });
     });
-    
+
     if (targetRef.current) {
       observer.observe(targetRef.current);
     }
