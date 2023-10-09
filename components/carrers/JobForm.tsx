@@ -47,7 +47,7 @@ export default function JobForm(props: IJobForm) {
   console.log('Errors:------', errors);
 
   return (
-    <div className="md:w-1/2">
+    <div className="w-full lg:w-1/2">
       <form onSubmit={handleSubmit(onSubmit)} className="gap-4 form">
         <div className="flex-between">
           <p className="text-base text-white">Fill out your information</p>
@@ -121,15 +121,14 @@ export default function JobForm(props: IJobForm) {
           control={control}
           name={'resume'}
           rules={{ required: 'Resume is required' }}
-          render={({ field: { value, onChange, ...field } }) => {
+          render={({ field: { onChange } }) => {
             return (
               <input
                 hidden
-                {...register('resume', { required: true })}
                 type="file"
                 accept="application/pdf, .doc"
                 id="resume"
-                onChange={(event) => {
+                onChange={(event:any) => {
                   onChange(event.target.files[0]);
                   handleFile(event);
                 }}

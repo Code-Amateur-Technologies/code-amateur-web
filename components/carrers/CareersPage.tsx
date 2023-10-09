@@ -3,11 +3,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import AccordionItem from './AccordianItem';
 import JobForm from './JobForm';
-
 import { jobs } from '@/constants/jobs';
 import hiring from '@/public/assets/images/hiring.webp';
-
-
 
 export default function CareersPage() {
   const [jobSelected, setJobSelected] = useState('');

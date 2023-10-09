@@ -21,7 +21,7 @@ export default function Header() {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <div className="sticky top-0 z-10">
+    <div className="sticky top-0 z-20">
       <header className="header">
         <nav className="w-full flex-between">
           <Link href={"/"}>
