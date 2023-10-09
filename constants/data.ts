@@ -310,3 +310,30 @@ export const testimonials: ITestimonial[] = [
     text: "Extremely professional and cooperative with extensive knowledge. Code Amateur Team should be your go-to option without hesitation. Thanks for a job well done.",
   },
 ];
+
+interface IHiringQuotes {
+  id: number,
+  quote: string,
+  author: string
+}
+
+export const hiringQuotes: IHiringQuotes[] = [
+  {
+    id: 1,
+    quote:
+      'Acquiring the right talent is the most important key to growth. Hiring was and still is the most important thing we do.',
+    author: 'Marc Benioff',
+  },
+  {
+    id: 2,
+    quote:
+      'The secret of my success is that we have gone to exceptional lengths to hire the best people in the world.',
+    author: 'Steve Jobs',
+  },
+  {
+    id: 3,
+    quote:
+      'You can dream, create, design and build the most wonderful place in the world…but it requires people to make the dream a reality.',
+    author: 'Walt Disney',
+  },
+];

@@ -13,7 +13,7 @@ interface IAccordianProps {
 }
 
 const AccordionItem = (props: IAccordianProps) => {
-  const contentEl = useRef(null);
+  const contentEl = useRef<any>(null);
   const { position, description } = props.job;
 
   const handleSelect = () => {
@@ -48,7 +48,7 @@ const AccordionItem = (props: IAccordianProps) => {
         <div className="p-5 bg-gray-100">
           <p className="py-5 text-xl">{description}</p>
           <button onClick={() => handleSelect()} className="dark-button gap-2">
-            <p>Apply</p>
+            <p>apply</p>
             <RightArrow />
           </button>
         </div>

@@ -103,7 +103,7 @@ export default function JobForm(props: IJobForm) {
         <div>
           <div className="flex items-center gap-5">
             <label htmlFor="resume" className="file-upload-label">
-              <p>Upload your Resume</p>
+              <p>Upload your resume</p>
               <FontAwesomeIcon icon={faUpload} />
             </label>
             <p className="text-white">
@@ -145,7 +145,7 @@ export default function JobForm(props: IJobForm) {
         ></textarea>
 
         <button type="submit" className="dark-button">
-          send Application
+          send application
         </button>
       </form>
     </div>
