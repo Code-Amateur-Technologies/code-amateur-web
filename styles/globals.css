@@ -293,8 +293,6 @@
 .carrer-heading {
   @apply text-3xl md:text-6xl font-medium text-center md:text-left gradient-text;
 }
-.career-listings-section {
-}
 .careers-accordion {
   list-style: none;
 }
@@ -382,9 +380,6 @@
 .success-heading {
   @apply text-2xl sm:text-6xl font-medium gradient-text;
 }
-.success-image {
-  @apply sm:w-4/5 sm:h-96 rounded-3xl animation-pop-in;
-}
 .success-message {
   @apply text-xl sm:text-5xl font-medium text-gunmetal;
 }
@@ -395,19 +390,4 @@
 }
 .footer-description {
   @apply mt-5 text-center text-sm sm:text-xl text-gunmetal;
-}
-
-/* Animations */
-
-@keyframes grow {
-  from {
-    transform: scale(0);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-.animation-pop-in {
-  animation: grow 0.5s ease-in;
 }

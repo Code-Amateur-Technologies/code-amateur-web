@@ -27,7 +27,6 @@
     "framer-motion": "^10.16.1",
     "jsdom": "^22.1.0",
     "next": "13.4.10",
-    "postcss": "8.4.26",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.2",
@@ -41,6 +40,7 @@
     "@types/jsdom": "^21.1.2",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
+    "postcss": "^8.4.31",
     "prettier": "3.0.3"
   },
   "lint-staged": {

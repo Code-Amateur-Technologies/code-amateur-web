@@ -13,7 +13,7 @@ interface IAccordianProps {
 }
 
 const AccordionItem = (props: IAccordianProps) => {
-  const contentEl = useRef<any>(null);
+  const accordianRef = useRef<HTMLDivElement>(null);
   const { position, description } = props.job;
 
   const handleSelect = () => {
@@ -37,11 +37,11 @@ const AccordionItem = (props: IAccordianProps) => {
         )}
       </button>
       <div
-        ref={contentEl}
+        ref={accordianRef}
         className="careers-accordian-content-wrapper"
         style={
           props.active
-            ? { height: contentEl.current?.scrollHeight }
+            ? { height: accordianRef.current?.scrollHeight }
             : { height: '0px' }
         }
       >
