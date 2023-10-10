@@ -14,6 +14,7 @@ interface IJobForm {
 
 export default function JobForm(props: IJobForm) {
   console.log('Props:---', props);
+  const router = useRouter();
   const [resumeFile, setResumeFile] = useState('');
   const {
     register,
@@ -40,15 +41,43 @@ export default function JobForm(props: IJobForm) {
     console.log('Next File Value: ', getValues('resume'));
   };
 
-  const onSubmit = (data: any) => {
-    console.log('Success:----', data);
-    props.setShowForm(false);
+  const onSubmit = async (data: any) => {
+    console.log('Submit Success:----', data);
+    const formData = new FormData();
+
+    formData.append('access_key', 'e75fd085-f41d-449e-8f77-2de1ee9289a7');
+    formData.append('from_name', 'CAT - Application for Job');
+    formData.append('subject', 'Lead from CAT Careers Page');
+
+    for (const key in data) {
+      if (key === "resume") {
+        formData.append(key, data[key][0]);
+      } else {
+        formData.append(key, data[key]);
+      }
+    }
+
+    await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData,
+    })
+      .then(() => router.push('/success'))
+      .catch(() => {
+        router.push('/error');
+      })
+      .finally(() => {
+        props.setShowForm(false);
+      });
   };
   console.log('Errors:------', errors);
 
   return (
     <div className='w-full lg:w-1/2'>
-      <form onSubmit={handleSubmit(onSubmit)} className='gap-4 form'>
+      <form
+        name='job_apply_form'
+        onSubmit={handleSubmit(onSubmit)}
+        className='gap-4 form'
+      >
         <div className='flex-between'>
           <p className='text-base text-white'>Fill out your information</p>
           <button onClick={() => props.setShowForm(false)} className='self-end'>
@@ -60,10 +89,19 @@ export default function JobForm(props: IJobForm) {
           </button>
         </div>
 
+        <input
+          type='checkbox'
+          id='botcheck'
+          name='botcheck'
+          className='hidden'
+          style={{ display: 'none' }}
+        ></input>
+
         <div>
           <input
             {...register('name', { required: true })}
             type='text'
+            id='name'
             placeholder='Enter your full name *'
             className='form-input'
           />
@@ -77,6 +115,7 @@ export default function JobForm(props: IJobForm) {
         <input
           {...register('phone')}
           type='tel'
+          id='phone'
           placeholder='Enter your phone number'
           className='form-input'
         />
@@ -85,6 +124,7 @@ export default function JobForm(props: IJobForm) {
           <input
             {...register('email', { required: true })}
             type='email'
+            id='email'
             placeholder='Enter your email address *'
             className='form-input'
           />
@@ -99,6 +139,7 @@ export default function JobForm(props: IJobForm) {
           readOnly
           {...register('position')}
           type='text'
+          id='position'
           placeholder='Position'
           defaultValue={props.jobSelected}
           className='form-input pointer-events-none'
@@ -143,6 +184,7 @@ export default function JobForm(props: IJobForm) {
 
         <textarea
           {...register('message')}
+          id='message'
           placeholder='Type your message'
           className='form-input'
         ></textarea>
