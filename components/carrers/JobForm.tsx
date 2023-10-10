@@ -47,24 +47,28 @@ export default function JobForm(props: IJobForm) {
   console.log('Errors:------', errors);
 
   return (
-    <div className="w-full lg:w-1/2">
-      <form onSubmit={handleSubmit(onSubmit)} className="gap-4 form">
-        <div className="flex-between">
-          <p className="text-base text-white">Fill out your information</p>
-          <button onClick={() => props.setShowForm(false)} className="self-end">
-            <FontAwesomeIcon icon={faXmark} size="xl" style={{color: "#fff"}} />
+    <div className='w-full lg:w-1/2'>
+      <form onSubmit={handleSubmit(onSubmit)} className='gap-4 form'>
+        <div className='flex-between'>
+          <p className='text-base text-white'>Fill out your information</p>
+          <button onClick={() => props.setShowForm(false)} className='self-end'>
+            <FontAwesomeIcon
+              icon={faXmark}
+              size='xl'
+              style={{ color: '#fff' }}
+            />
           </button>
         </div>
 
         <div>
           <input
             {...register('name', { required: true })}
-            type="text"
-            placeholder="Enter your full name *"
-            className="form-input"
+            type='text'
+            placeholder='Enter your full name *'
+            className='form-input'
           />
           {errors?.name && (
-            <div className="form-error">
+            <div className='form-error'>
               <p>please provide your full name</p>
             </div>
           )}
@@ -72,20 +76,20 @@ export default function JobForm(props: IJobForm) {
 
         <input
           {...register('phone')}
-          type="tel"
-          placeholder="Enter your phone number"
-          className="form-input"
+          type='tel'
+          placeholder='Enter your phone number'
+          className='form-input'
         />
 
         <div>
           <input
             {...register('email', { required: true })}
-            type="email"
-            placeholder="Enter your email address *"
-            className="form-input"
+            type='email'
+            placeholder='Enter your email address *'
+            className='form-input'
           />
           {errors?.email && (
-            <div className="form-error">
+            <div className='form-error'>
               <p>please provide your email</p>
             </div>
           )}
@@ -94,24 +98,24 @@ export default function JobForm(props: IJobForm) {
         <input
           readOnly
           {...register('position')}
-          type="text"
-          placeholder="Position"
+          type='text'
+          placeholder='Position'
           defaultValue={props.jobSelected}
-          className="form-input pointer-events-none"
+          className='form-input pointer-events-none'
         />
 
         <div>
-          <div className="flex items-center gap-5">
-            <label htmlFor="resume" className="file-upload-label">
+          <div className='flex items-center gap-5'>
+            <label htmlFor='resume' className='file-upload-label'>
               <p>Upload your resume</p>
               <FontAwesomeIcon icon={faUpload} />
             </label>
-            <p className="text-white">
+            <p className='text-white'>
               {resumeFile ? resumeFile : 'No file chosen'}
             </p>
           </div>
           {errors?.resume && (
-            <div className="form-error">
+            <div className='form-error'>
               <p>your resume is required</p>
             </div>
           )}
@@ -125,10 +129,10 @@ export default function JobForm(props: IJobForm) {
             return (
               <input
                 hidden
-                type="file"
-                accept="application/pdf, .doc"
-                id="resume"
-                onChange={(event:any) => {
+                type='file'
+                accept='application/pdf, .doc'
+                id='resume'
+                onChange={(event: any) => {
                   onChange(event.target.files[0]);
                   handleFile(event);
                 }}
@@ -139,11 +143,11 @@ export default function JobForm(props: IJobForm) {
 
         <textarea
           {...register('message')}
-          placeholder="Type your message"
-          className="form-input"
+          placeholder='Type your message'
+          className='form-input'
         ></textarea>
 
-        <button type="submit" className="dark-button">
+        <button type='submit' className='dark-button'>
           send application
         </button>
       </form>

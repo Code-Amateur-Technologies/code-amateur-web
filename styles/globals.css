@@ -258,9 +258,6 @@
 .carrer-heading {
   @apply text-3xl md:text-6xl font-medium text-center md:text-left gradient-text;
 }
-.careers-accordion {
-  list-style: none;
-}
 .careers-acccordian-toggle {
   @apply w-full p-5 flex-between cursor-pointer text-xl md:text-3xl font-medium text-gunmetal;
 }

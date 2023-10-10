@@ -20,8 +20,8 @@ export default function CareersPage() {
 
   return (
     <div>
-      <section className="careers-listings-section">
-        <ul className="careers-accordion">
+      <section className='careers-listings-section'>
+        <ul className='list-none'>
           {jobs.map((job, index) => (
             <AccordionItem
               key={index}

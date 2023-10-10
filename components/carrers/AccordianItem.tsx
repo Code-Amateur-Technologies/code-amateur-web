@@ -22,12 +22,12 @@ const AccordionItem = (props: IAccordianProps) => {
   };
 
   return (
-    <li className="border-b-2">
-      <button className="careers-acccordian-toggle" onClick={props.onToggle}>
+    <li className='border-b-2'>
+      <button className='careers-acccordian-toggle' onClick={props.onToggle}>
         {position}
         <FontAwesomeIcon
           icon={faChevronDown}
-          size="sm"
+          size='sm'
           className={`text-xl transition-all duration-200 ease-linear ${
             props.active ? 'rotate-180' : ''
           }`}
@@ -35,16 +35,14 @@ const AccordionItem = (props: IAccordianProps) => {
       </button>
       <div
         ref={accordianRef}
-        className="careers-accordian-content-wrapper"
+        className='careers-accordian-content-wrapper'
         style={
-          props.active
-            ? { height: accordianRef.current?.scrollHeight }
-            : { height: '0px' }
+          props.active ? { height: accordianRef.current?.scrollHeight } : {}
         }
       >
-        <div className="p-5 bg-gray-100">
-          <p className="py-5 text-xl">{description}</p>
-          <button onClick={() => handleSelect()} className="dark-button gap-2">
+        <div className='p-5 bg-gray-100'>
+          <p className='py-5 text-xl'>{description}</p>
+          <button onClick={() => handleSelect()} className='dark-button gap-2'>
             <p>apply</p>
             <RightArrow />
           </button>
