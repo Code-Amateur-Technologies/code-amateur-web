@@ -25,16 +25,13 @@ const AccordionItem = (props: IAccordianProps) => {
     <li className="border-b-2">
       <button className="careers-acccordian-toggle" onClick={props.onToggle}>
         {position}
-        {props.active ? (
-          <FontAwesomeIcon
-            icon={faChevronDown}
-            rotation={180}
-            size="sm"
-            className="text-xl"
-          />
-        ) : (
-          <FontAwesomeIcon icon={faChevronDown} size="sm" className="text-xl" />
-        )}
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          size="sm"
+          className={`text-xl transition-all duration-200 ease-linear ${
+            props.active ? 'rotate-180' : ''
+          }`}
+        />
       </button>
       <div
         ref={accordianRef}
