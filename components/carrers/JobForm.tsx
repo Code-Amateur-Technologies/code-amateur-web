@@ -36,7 +36,6 @@ export default function JobForm(props: IJobForm) {
   console.log('position Value:---', getValues('position'));
 
   const handleFile = (e: any) => {
-    console.log('Previous File Value: ', getValues('resume'));
     setResumeFile(e.target.files[0].name);
     console.log('Next File Value: ', getValues('resume'));
   };
