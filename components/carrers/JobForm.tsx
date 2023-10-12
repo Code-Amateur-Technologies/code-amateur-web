@@ -51,7 +51,7 @@ export default function JobForm(props: IJobForm) {
 
     for (const key in data) {
       if (key === "resume") {
-        formData.append(key, data[key][0]);
+        // formData.append(key, data[key][0]);
       } else {
         formData.append(key, data[key]);
       }
