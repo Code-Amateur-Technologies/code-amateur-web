@@ -74,6 +74,9 @@
 .hamburger-line {
   @apply h-1 w-6 my-1 rounded-full bg-black transition ease-in-out transform duration-300;
 }
+.sidebar {
+  @apply h-screen w-[90%] p-4 flex-col flex items-center gap-5 absolute right-0 bg-white text-3xl
+}
 
 /* Home Component */
 .home-firstsection {
