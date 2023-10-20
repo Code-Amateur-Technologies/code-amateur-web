@@ -1,9 +1,11 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/navigation/Header";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
-import WebAnalytics from "./WebAnalytics";
-import Header from "@/components/navigation/Header";
-import Footer from "@/components/Footer";
+import { useEffect } from 'react';
+import { hotjar } from 'react-hotjar';
 import FreshChat from "./FreshChatBot";
+import WebAnalytics from "./WebAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://codeamateur.com/"),
@@ -28,6 +30,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  useEffect(() => {
+    hotjar.initialize(3702405, 6)
+  }, [])
+
   return (
     <html lang="en">
       <FreshChat />
