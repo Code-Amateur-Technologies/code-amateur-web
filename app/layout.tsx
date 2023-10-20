@@ -2,9 +2,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/navigation/Header";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { useEffect } from 'react';
-import { hotjar } from 'react-hotjar';
 import FreshChat from "./FreshChatBot";
+import Hotjar from './Hotjar';
 import WebAnalytics from "./WebAnalytics";
 
 export const metadata: Metadata = {
@@ -31,13 +30,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  useEffect(() => {
-    hotjar.initialize(3702405, 6)
-  }, [])
+
 
   return (
     <html lang="en">
       <FreshChat />
+      <Hotjar />
       <body className="w-full">
         <Header />
         <main className="overflow-x-hidden">{children}</main>
