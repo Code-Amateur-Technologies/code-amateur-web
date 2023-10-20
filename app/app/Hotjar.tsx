@@ -5,7 +5,6 @@ import Script from "next/script";
 const Hotjar = () => {
   return (
     <>
-      <!-- Hotjar Tracking Code for https://www.codeamateur.com/ -->
       <Script id="hotjar">
           (function(h,o,t,j,a,r){
               h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
