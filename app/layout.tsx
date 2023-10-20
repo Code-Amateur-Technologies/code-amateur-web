@@ -1,9 +1,10 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/navigation/Header";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
-import WebAnalytics from "./WebAnalytics";
-import Header from "@/components/navigation/Header";
-import Footer from "@/components/Footer";
 import FreshChat from "./FreshChatBot";
+import Hotjar from './Hotjar';
+import WebAnalytics from "./WebAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://codeamateur.com/"),
@@ -28,9 +29,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+
+
   return (
     <html lang="en">
       <FreshChat />
+      <Hotjar />
       <body className="w-full">
         <Header />
         <main className="overflow-x-hidden">{children}</main>
