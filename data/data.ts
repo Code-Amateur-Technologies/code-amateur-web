@@ -206,21 +206,21 @@ export const clientList: IClient[] = [
     client_name: "LoveLocal",
     client_image: "/assets/clients/logo_love_local.webp",
   },
-  {
-    id: 2,
-    client_name: "Hot Box Cookies",
-    client_image: "/assets/clients/logo_hot_box_cookies.webp",
-  },
-  {
-    id: 3,
-    client_name: "OrderEX",
-    client_image: "/assets/clients/logo_orderex.webp",
-  },
-  {
-    id: 4,
-    client_name: "Hungry Media",
-    client_image: "/assets/clients/logo_hungry_media.webp",
-  },
+  // {
+  //   id: 2,
+  //   client_name: "Hot Box Cookies",
+  //   client_image: "/assets/clients/logo_hot_box_cookies.webp",
+  // },
+  // {
+  //   id: 3,
+  //   client_name: "OrderEX",
+  //   client_image: "/assets/clients/logo_orderex.webp",
+  // },
+  // {
+  //   id: 4,
+  //   client_name: "Hungry Media",
+  //   client_image: "/assets/clients/logo_hungry_media.webp",
+  // },
   {
     id: 5,
     client_name: "YGOIN",
